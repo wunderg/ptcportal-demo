@@ -1,6 +1,4 @@
 import React, { Component, PropTypes } from 'react';
-import TextField from 'material-ui/lib/text-field';
-import FlatButton from 'material-ui/lib/flat-button';
 
 class TextInput extends Component {
   constructor(props) {
@@ -23,14 +21,14 @@ class TextInput extends Component {
 
   render() {
     return (
-      <div className="">
-        <TextField
-          floatingLabelText="Type in Here"
-          onChange={this.handleChange}
-          value={this.state.text}
-        />
-        <FlatButton onClick={this.handleSubmit} label="Add Todo" primary={true} />
-      </div>
+      <div className="row">
+        <div className="col s12">
+          <div className="input-field col s6">
+            <input id="last_name" type="text" className="validate" />
+              <label htmlFor="last_name">Last Name</label>
+            </div>
+          </div>
+        </div>
     );
   }
 }

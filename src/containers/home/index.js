@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { addTodo } from '../../actions';
 
+import TextInput from '../text-input';
 
 class Home extends Component {
   constructor(props) {
@@ -11,10 +12,10 @@ class Home extends Component {
 
 
   render() {
-    console.log(this);
     return (
-      <div className="wrap container-fluid">
-        <h1> Hello World</h1>
+      <div className="row">
+        <h1 className="center"> Hello World</h1>
+        <TextInput />
       </div>
     );
   }
