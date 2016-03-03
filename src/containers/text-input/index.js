@@ -2,12 +2,6 @@ import React, { Component, PropTypes } from 'react';
 import TextField from 'material-ui/lib/text-field';
 import FlatButton from 'material-ui/lib/flat-button';
 
-
-const style = {
-  // maxWidth: 500,
-  // width: 410,
-};
-
 class TextInput extends Component {
   constructor(props) {
     super(props);
@@ -24,16 +18,13 @@ class TextInput extends Component {
   }
 
   handleSubmit() {
-    this.props.addTodo(this.state.text);
     this.setState({ text: '' });
-    this.props.postTodo({ text: this.state.text, completed: false });
   }
 
   render() {
     return (
       <div className="">
         <TextField
-          style={style}
           floatingLabelText="Type in Here"
           onChange={this.handleChange}
           value={this.state.text}
@@ -46,8 +37,6 @@ class TextInput extends Component {
 
 TextInput.propTypes = {
   text: PropTypes.string,
-  addTodo: PropTypes.func,
-  postTodo: PropTypes.func
 };
 
 export default TextInput;
