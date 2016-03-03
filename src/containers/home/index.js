@@ -11,6 +11,7 @@ class Home extends Component {
 
 
   render() {
+    console.log(this);
     return (
       <div className="wrap container-fluid">
         <h1> Hello World</h1>
@@ -24,8 +25,7 @@ Home.propTypes = {
 
 function mapStateToProps(state) {
   return {
-    todos: state.todos,
-    visible: state.visible
+    data: state.main
   };
 }
 
