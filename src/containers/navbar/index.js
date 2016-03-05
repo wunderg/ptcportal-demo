@@ -3,7 +3,7 @@ import Colors from 'material-ui/lib/styles/colors';
 
 const style = {
   logo: {
-    color: Colors.white,
+    color: '#ffffff',
     fontWeight: 'bold',
     marginLeft: 10,
   },
