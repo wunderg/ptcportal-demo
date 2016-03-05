@@ -15,8 +15,12 @@ class Home extends Component {
   render() {
     return (
       <div className="row">
-        <TextInput />
-        <Table data={ this.props.data } />
+        <div className="col s12">
+          <TextInput />
+        </div>
+        <div className="col s12">
+          <Table data={ this.props.data } />
+        </div>
       </div>
     );
   }

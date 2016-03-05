@@ -2,7 +2,7 @@ import React, { PropTypes } from 'react';
 import Row from './row';
 
 const Table = (props) => (
-  <table className="bordered highlight centered responsive-table">
+  <table className="bordered highlight centered">
     <thead>
       <tr>
         <th data-field="Name">Name</th>

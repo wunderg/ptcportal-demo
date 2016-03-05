@@ -1,10 +1,12 @@
-import React, { Component } from 'react';
+import React, {Component, PropTypes} from 'react';
+import Add from '../addStudent';
 
-export default class About extends Component {
-  render() {
-    console.log(this, 'ABOUT');
-    return (
-      <div> ABOUT </div>
-    );
-  }
-}
+
+const About = (props) => (
+  <div className="">
+   about
+   <Add />
+  </div>
+);
+
+export default About;
