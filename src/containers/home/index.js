@@ -31,7 +31,7 @@ Home.propTypes = {
 
 function mapStateToProps(state) {
   return {
-    data: state.main
+    data: state.slocal
   };
 }
 
