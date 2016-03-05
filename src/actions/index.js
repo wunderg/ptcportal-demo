@@ -4,7 +4,7 @@ import * as ACTIONS from './constants';
 export function addTodo(text) {
   const nextId = Math.floor(Math.random() * 100);
   return {
-    type: ACTIONS.ADD_TODO,
+    type: ACTIONS.ADD_STUDENT,
     _id: nextId,
     text
   };

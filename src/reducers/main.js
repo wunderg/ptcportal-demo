@@ -1,4 +1,4 @@
-import {} from '../actions/constants';
+import * as ACTIONS from '../actions/constants';
 
 const INITIAL_STATE = {
   students: [
@@ -46,7 +46,10 @@ const INITIAL_STATE = {
 };
 
 export default (state = INITIAL_STATE, action) => {
+  console.log(state, action);
   switch (action.type) {
+    case ACTIONS.ADD_STUDENT:
+      return state;
     default:
       return state;
   }
