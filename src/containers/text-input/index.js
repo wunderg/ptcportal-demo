@@ -23,9 +23,9 @@ class TextInput extends Component {
     return (
       <div className="row">
         <div className="col s12">
-          <div className="input-field col s6">
-            <input id="last_name" type="text" className="validate" />
-              <label htmlFor="last_name">Last Name</label>
+          <div className="input-field col s4 offset-s4">
+            <input id="search" type="text" className="validate" />
+              <label htmlFor="search">Search</label>
             </div>
           </div>
         </div>

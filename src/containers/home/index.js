@@ -4,6 +4,7 @@ import { bindActionCreators } from 'redux';
 import { addTodo } from '../../actions';
 
 import TextInput from '../text-input';
+import Table from '../table';
 
 class Home extends Component {
   constructor(props) {
@@ -14,8 +15,8 @@ class Home extends Component {
   render() {
     return (
       <div className="row">
-        <h1 className="center"> Hello World</h1>
         <TextInput />
+        <Table />
       </div>
     );
   }
