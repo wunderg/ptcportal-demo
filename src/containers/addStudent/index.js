@@ -9,14 +9,15 @@ class NewStudent extends Component {
     this.onSubmit = this.onSubmit.bind(this);
   }
 
-  onSubmit(e, b) {
+  onSubmit(e) {
+    console.log(this);
     e.preventDefault();
-    const student = {name: this.props.data.name.value, email: this.props.data.email.value}
-    this.props.addStudent(student)
+    const student = { name: this.props.data.name.value, email: this.props.data.email.value };
+    this.props.addStudent(student);
+    this.props.resetForm();
   }
 
   render() {
-    const { handleSubmit } = this.props;
     const { fields: { name, email } } = this.props;
     return (
       <div className="row">
@@ -43,7 +44,10 @@ class NewStudent extends Component {
 
 NewStudent.propTypes = {
   fields: PropTypes.object,
-  handleSubmit: PropTypes.func
+  handleSubmit: PropTypes.func,
+  data: PropTypes.object,
+  addStudent: PropTypes.func,
+  resetForm: PropTypes.func
 };
 
 function mapStateToProps(state) {
