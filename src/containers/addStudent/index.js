@@ -1,5 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import { reduxForm } from 'redux-form';
+import { addStudent } from '../../actions/index';
 
 
 class NewStudent extends Component {
@@ -10,9 +11,10 @@ class NewStudent extends Component {
 
   onSubmit(e, b) {
     e.preventDefault();
-    e.persist();
-    console.dir(e);
+    const student = {name: this.props.data.name.value, email: this.props.data.email.value}
+    this.props.addStudent(student)
   }
+
   render() {
     const { handleSubmit } = this.props;
     const { fields: { name, email } } = this.props;
@@ -44,7 +46,13 @@ NewStudent.propTypes = {
   handleSubmit: PropTypes.func
 };
 
+function mapStateToProps(state) {
+  return {
+    data: state.form.NewStudent
+  };
+}
+
 export default reduxForm({
   form: 'NewStudent',
   fields: ['name', 'email']
-})(NewStudent);
+}, mapStateToProps, { addStudent })(NewStudent);

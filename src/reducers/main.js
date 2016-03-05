@@ -46,7 +46,7 @@ const INITIAL_STATE = {
 };
 
 export default (state = INITIAL_STATE, action) => {
-  console.log(state, action);
+  console.log(state, action, '-inside reducers');
   switch (action.type) {
     case ACTIONS.ADD_STUDENT:
       return state;
