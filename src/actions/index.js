@@ -3,24 +3,28 @@ import * as ACTIONS from './constants';
 
 export function addStudent(student) {
   const nextId = Math.floor(Math.random() * 100);
-  const request = axios.post(`api/students`, student);
+  const data = {
+    _id: nextId,
+    lesson: 0,
+    level: 0,
+    interview: 'not set',
+    decision: 'pending',
+    name: student.name,
+    email: student.email
+  };
+  const request = axios.post(`api/student`, data)
+  .then(res => console.log(res))
+  .then(err => console.log(err));
   return {
     type: ACTIONS.ADD_STUDENT,
-    payload: {
-      _id: nextId,
-      lesson: 0,
-      level: 0,
-      interview: 'not set',
-      decision: 'pending',
-      name: student.name,
-      email: student.email
-    }
+    payload: data
   };
 }
-export function fetchTodos() {
-  const request = axios.get(`api/task`);
+
+export function fetchStudents() {
+  const request = axios.get(`api/students`);
   return {
-    type: ACTIONS.FETCH_TODOS,
+    type: ACTIONS.FETCH_STUDENTS,
     payload: request
   };
 }

@@ -8,4 +8,10 @@ module.exports = (app, express, staticPath) => {
       root: staticPath
     });
   });
+
+  appRouter.get('/add', (req, res) => {
+    res.sendFile('index.html', {
+      root: staticPath
+    });
+  });
 };
