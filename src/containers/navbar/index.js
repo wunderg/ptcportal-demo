@@ -24,7 +24,7 @@ export default class Navbar extends Component {
             <i className="fa fa-align-justify"></i>
           </a>
           <ul className="right hide-on-med-and-down" style={style.link}>
-            <li><a href="" style={style.link}>Add Student</a></li>
+            <li><Link to={'/add'} style={style.link}>Add Student</Link></li>
             <li><a href="" style={style.link}>Results</a></li>
             <li><a href="" style={style.link}>Dashboard</a></li>
             <li><a href="" style={style.link}>Guide</a></li>

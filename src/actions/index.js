@@ -12,7 +12,7 @@ export function addStudent(student) {
     name: student.name,
     email: student.email
   };
-  const request = axios.post(`api/student`, data)
+  axios.post(`api/student`, data)
   .then(res => console.log(res))
   .then(err => console.log(err));
   return {
