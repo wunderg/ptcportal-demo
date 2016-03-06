@@ -3,6 +3,7 @@ import * as ACTIONS from './constants';
 
 export function addStudent(student) {
   const nextId = Math.floor(Math.random() * 100);
+  const request = axios.post(`api/students`, student);
   return {
     type: ACTIONS.ADD_STUDENT,
     payload: {

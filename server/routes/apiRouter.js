@@ -5,7 +5,7 @@ module.exports = (app, express) => {
 
   app.use('/api', apiRouter);
 
-  apiRouter.get('/task', StudentController.get);
-  apiRouter.post('/task', StudentController.post);
-  apiRouter.delete('/task/:id', StudentController.delete);
+  apiRouter.get('/students', StudentController.get);
+  apiRouter.post('/student', StudentController.post);
+  apiRouter.delete('/student/:id', StudentController.delete);
 };

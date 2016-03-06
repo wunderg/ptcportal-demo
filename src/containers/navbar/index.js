@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Colors from 'material-ui/lib/styles/colors';
+import { Link } from 'react-router';
 
 const style = {
   logo: {
@@ -19,7 +19,7 @@ export default class Navbar extends Component {
     return (
       <nav className="blue darken-2">
         <div className="nav-wrapper" style={style.navbar}>
-          <a href="#!" className="brand-logo" style={style.logo}>PTC Portal</a>
+          <Link to={`/`} className="brand-logo" style={style.logo}>PTC Portal</Link>
           <a href="#" style={style.logo} data-activates="mobile-demo" className="button-collapse">
             <i className="fa fa-align-justify"></i>
           </a>

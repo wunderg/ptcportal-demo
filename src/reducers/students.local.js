@@ -9,7 +9,7 @@ const INITIAL_STATE = {
       level: 4,
       interview: 'March 5',
       decision: 'pending',
-      id: 1,
+      _id: 1,
       notes: [
         { lesson1: 'Here the lesson 1 notes', code: 'var x = 5' },
         { lesson2: 'here is the lesson 2 notes', code: 'var x = 10' }
@@ -22,7 +22,7 @@ const INITIAL_STATE = {
       level: 6,
       interview: 'March 5',
       decision: 'pending',
-      id: 2,
+      _id: 2,
       notes: [
         { lesson1: 'Here the lesson 1 notes', code: 'var x = 5' },
         { lesson2: 'here is the lesson 2 notes', code: 'var x = 10' }
@@ -37,7 +37,7 @@ const INITIAL_STATE = {
     level: 4,
     interview: 'March 5',
     decision: 'pending',
-    id: 3,
+    _id: 3,
     notes: [
       { lesson1: 'Here is the lesson 1 notes', code: 'var x = 5;' },
       { lesson2: 'here is the lesson 2 notes', code: 'var x = 10;' }

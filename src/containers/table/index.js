@@ -15,7 +15,7 @@ const Table = (props) => (
     </thead>
 
     <tbody>
-      { props.data.students.map(student => <Row key={student.id} data={student} />) }
+      { props.data.students.map(student => <Row key={student._id} data={student} />) }
     </tbody>
   </table>
 );
