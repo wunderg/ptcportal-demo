@@ -49,7 +49,7 @@ export default (state = INITIAL_STATE, action) => {
   console.log(state, action, '-inside reducers');
   switch (action.type) {
     case ACTIONS.ADD_STUDENT:
-      return state;
+      return {...state, students: state.students.concat(action.payload)};
     default:
       return state;
   }
