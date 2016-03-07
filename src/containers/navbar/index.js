@@ -10,12 +10,15 @@ const style = {
   link: {
     fontWeight: 'bold',
     fontSize: 18
+  },
+  general: {
+    marginBottom: 10
   }
 };
 
 export default () => (
 
-  <nav className="blue darken-2">
+  <nav className="blue darken-2" style={style.general}>
     <div className="nav-wrapper" style={style.navbar}>
       <Link to={`/`} className="brand-logo" style={style.logo}>PTC Portal</Link>
       <a href="#" style={style.logo} data-activates="mobile-demo" className="button-collapse">
