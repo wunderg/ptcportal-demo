@@ -1,37 +1,22 @@
 import React from 'react';
 import { Link } from 'react-router';
 
-const style = {
-  logo: {
-    color: '#ffffff',
-    fontWeight: 'bold',
-    marginLeft: 10,
-  },
-  link: {
-    fontWeight: 'bold',
-    fontSize: 18
-  },
-  general: {
-    marginBottom: 10
-  }
-};
-
 export default () => (
 
-  <nav className="blue darken-2" style={style.general}>
-    <div className="nav-wrapper" style={style.navbar}>
-      <Link to={`/`} className="brand-logo" style={style.logo}>PTC Portal</Link>
-      <a href="#" style={style.logo} data-activates="mobile-demo" className="button-collapse">
+  <nav>
+    <div className="nav-wrapper">
+      <Link to={`/`} className="brand-logo">PTC Portal</Link>
+      <a href="#" data-activates="mobile-demo" className="button-collapse">
         <i className="fa fa-align-justify"></i>
       </a>
-      <ul className="right hide-on-med-and-down" style={style.link}>
-        <li><Link to={'/add'} style={style.link}>Add Student</Link></li>
-        <li><a href="" style={style.link}>Results</a></li>
-        <li><a href="" style={style.link}>Dashboard</a></li>
-        <li><a href="" style={style.link}>Guide</a></li>
-        <li><a href="" style={style.link}>Login</a></li>
+      <ul className="right hide-on-med-and-down">
+        <li><Link to={'/add'}>Add Student</Link></li>
+        <li><a href="">Results</a></li>
+        <li><a href="">Dashboard</a></li>
+        <li><a href="">Guide</a></li>
+        <li><a href="">Login</a></li>
       </ul>
-      <ul className="side-nav" id="mobile-demo" style={style.link}>
+      <ul className="side-nav" id="mobile-demo">
         <li><a href="">Add Student</a></li>
         <li><a href="">Results</a></li>
         <li><a href="">Dashboard</a></li>
