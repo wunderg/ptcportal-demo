@@ -12,7 +12,7 @@ class Home extends Component {
   }
 
   componentWillMount() {
-    console.log(this.props.fetchStudents());
+    this.props.fetchStudents();
   }
 
 
@@ -46,7 +46,8 @@ function mapDispatchToProps(dispatch) {
 
 Home.propTypes = {
   addTodo: PropTypes.func,
-  data: PropTypes.object
+  data: PropTypes.object,
+  fetchStudents: PropTypes.func
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Home);
