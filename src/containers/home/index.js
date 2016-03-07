@@ -17,13 +17,14 @@ class Home extends Component {
 
 
   render() {
+    console.log(this);
     return (
       <div className="row">
         <div className="col s12">
           <TextInput />
         </div>
         <div className="col s12">
-          <Table data={ this.props.data } />
+          <Table data={ this.props.data } history={this.props.history} />
         </div>
       </div>
     );
@@ -47,7 +48,8 @@ function mapDispatchToProps(dispatch) {
 Home.propTypes = {
   addTodo: PropTypes.func,
   data: PropTypes.object,
-  fetchStudents: PropTypes.func
+  fetchStudents: PropTypes.func,
+  history: PropTypes.object
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Home);

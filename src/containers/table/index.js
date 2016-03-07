@@ -5,7 +5,7 @@ const style = {
   cursor: 'pointer'
 };
 
-const Table = (props) => (
+const Table = (props, link) => (
   <table className="bordered highlight centered">
     <thead>
       <tr>

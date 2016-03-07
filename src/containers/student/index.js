@@ -5,6 +5,9 @@ const style = {
 };
 
 class Student extends Component {
+  componentDidMount() {
+    $('ul.tabs').tabs();
+  }
   render() {
     return (
       <div className="row">
