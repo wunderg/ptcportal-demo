@@ -26,7 +26,7 @@ module.exports = {
     new ProgressBarPlugin({
       format: chalk.yellow.bold('build [:bar]') + chalk.blue.bold(':percent') + ' (:elapsed seconds)',
       clear: false
-    })
+    }),
   ],
   resolve: {
     extensions: ['', '.js', '.jsx']
