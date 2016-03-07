@@ -14,4 +14,10 @@ module.exports = (app, express, staticPath) => {
       root: staticPath
     });
   });
+
+  appRouter.get('/student', (req, res) => {
+    res.sendFile('index.html', {
+      root: staticPath
+    });
+  });
 };

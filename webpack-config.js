@@ -24,7 +24,7 @@ module.exports = {
     new webpack.DefinePlugin({ 'process.env.NODE_ENV': JSON.stringify('development'),
     }),
     new ProgressBarPlugin({
-      format: 'build [:bar]' + chalk.green.bold(':percent') + ' (:elapsed seconds)',
+      format: chalk.yellow.bold('build [:bar]') + chalk.blue.bold(':percent') + ' (:elapsed seconds)',
       clear: false
     })
   ],

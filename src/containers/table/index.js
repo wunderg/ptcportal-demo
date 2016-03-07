@@ -1,6 +1,10 @@
 import React, { PropTypes } from 'react';
 import Row from './row';
 
+const style = {
+  cursor: 'pointer'
+};
+
 const Table = (props) => (
   <table className="bordered highlight centered">
     <thead>
@@ -14,7 +18,7 @@ const Table = (props) => (
       </tr>
     </thead>
 
-    <tbody>
+    <tbody style={style}>
       { props.data.students.map(student => <Row key={student._id} data={student} />) }
     </tbody>
   </table>

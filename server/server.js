@@ -31,7 +31,6 @@ app.listen(port, err => {
   if (err) {
     console.log(err);
   }
-
   console.log(`Server is listeinig on ${port}`);
 });
 

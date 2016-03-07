@@ -11,6 +11,7 @@ import App from './containers/app';
 import Home from './containers/home';
 import About from './containers/about';
 import Add from './containers/addStudent';
+import Student from './containers/student';
 
 
 const store = storeConfig();
@@ -22,6 +23,7 @@ render(
         <IndexRoute component={Home} />
         <Route path="/about" component={About} />
         <Route path="/add" component={Add} />
+        <Route path="/student" component={Student} />
       </Route>
     </Router>
   </Provider>,
