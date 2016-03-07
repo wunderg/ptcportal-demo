@@ -1,5 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import Navbar from '../navbar';
+import '../../../global.scss';
 
 class App extends Component {
   constructor(props) {

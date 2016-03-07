@@ -31,7 +31,7 @@ app.listen(port, err => {
   if (err) {
     console.log(err);
   }
-  console.log(`Server is listeinig on ${port}`);
+  console.log(`Port 3000 and 3001`);
 });
 
 if (isDeveloping) {
@@ -55,6 +55,5 @@ if (isDeveloping) {
     if (err) {
       console.log(err);
     }
-    console.log('DevServer at 3001');
   });
 }

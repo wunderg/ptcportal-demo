@@ -7,10 +7,10 @@ module.exports = {
   devtool: 'eval-source-map',
   entry: [
     'webpack-dev-server/client?http://localhost:3001',
-    'babel-polyfill',
-    'webpack/hot/dev-server',
     // 'webpack/hot/only-dev-server',
-    './src/index'
+    'webpack/hot/dev-server',
+    './src/index',
+    'babel-polyfill'
   ],
   output: {
     path: path.join(__dirname, 'dist'),
@@ -48,9 +48,21 @@ module.exports = {
         loaders: ['style', 'raw'],
         include: __dirname
       },
-      { test: /\.(jpe?g|png|gif|svg)$/,
+      { test: /\.(jpe?g|png|gif)$/,
         loader: 'url',
         query: { limit: 10240 }
+      },
+      {
+        test: /\.scss$/,
+        loaders: ['style', 'css', 'sass']
+      },
+      {
+        test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+        loader: 'url-loader?limit=10000&minetype=application/font-woff'
+      },
+      {
+        test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+        loader: 'file-loader'
       }
     ]
   },
