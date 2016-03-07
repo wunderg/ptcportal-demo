@@ -7,7 +7,8 @@ var StatsPlugin = require('stats-webpack-plugin');
 module.exports = {
   entry: [
     'babel-polyfill',
-    path.join(__dirname, 'src/index.js')
+    path.join(__dirname, 'src/index.js'),
+    path.join(__dirname, 'src/init.js')
   ],
   output: {
     path: path.join(__dirname, '/dist'),
@@ -41,27 +42,33 @@ module.exports = {
           presets: ['es2015', 'stage-0', 'react'],
         }
       },
+
       {
         test: /\.json?$/,
         loader: 'json'
       },
+
       {
         test: /\.css?$/,
           loaders: ['style', 'raw'],
           include: __dirname
       },
+
       { test: /\.(jpe?g|png|gif|svg)$/,
         loader: 'url',
         query: {limit: 10240}
       },
+
       {
         test: /\.scss$/,
         loaders: ['style', 'css', 'sass']
       },
+
       {
         test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
         loader: 'url-loader?limit=10000&minetype=application/font-woff'
       },
+
       {
         test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
         loader: 'file-loader'
