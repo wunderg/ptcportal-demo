@@ -1,7 +1,7 @@
 import React from 'react';
 import { browserHistory } from 'react-router';
 
-const onClick = () => browserHistory.push('/student');
+const onClick = (id) => browserHistory.push('/student');
 
 export default (student) => (
   <tr onClick={onClick}>
