@@ -1,0 +1,30 @@
+.nav-wrapper {
+  padding-bottom: 2em;
+  margin-bottom: 2em;
+  border-bottom: 1px solid hsl(0, 5%, 5%);
+  display: flex;
+}
+
+.nav-wrapper ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  background: hsla(240, 95%, 55%, 1);
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1 0 10%;
+  justify-content: flex-end;
+}
+
+.nav-wrapper li a {
+  display: block;
+  text-decoration: none;
+  color: white;
+  padding: .6em 1em
+}
+
+.brand-logo {
+  background: hsla(240, 95%, 55%, 1);
+  color: white;
+  padding: .6em 1em;
+}
