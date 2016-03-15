@@ -73,7 +73,6 @@ decision   : ... //String
 }
 ```
 
-
 ### Server API
 The server uses a stateless RESTful API for all database access. It supports four HTTP verbs: `GET` for retrieving data, `POST` for creating new objects, `PUT` for updating existing objects, and `DELETE` for removing objects. *NOTE: All `POST`, `PUT`, and `DELETE` routes require an authorization token, with the exception of `POST /api/signup`.*
 
@@ -83,6 +82,6 @@ Most routes follow a `/api/:data_type/:data_identifier` pattern. Note that when 
 ```javascript
 GET     api/students                // Get list of students
 POST    api/student                 // Add new student
-DELETE  api/student/:id            // Delete the student
+DELETE  api/student/:id             // Delete the student
 ```
 
