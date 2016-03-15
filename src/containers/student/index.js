@@ -1,15 +1,10 @@
 import React, { Component } from 'react';
-import './style.scss';
-import '../../../node_modules/materialize-css/js/tabs.js';
 
 const style = {
   zIndex: 1,
 };
 
 class Student extends Component {
-  componentDidMount() {
-    $('ul.tabs').tabs();
-  }
 
   render() {
     return (

@@ -19,11 +19,11 @@ class Home extends Component {
   render() {
     console.log(this);
     return (
-      <div className="row">
-        <div className="col s12">
+      <div className="">
+        <div className="">
           <TextInput />
         </div>
-        <div className="col s12">
+        <div className="">
           <Table data={ this.props.data } history={this.props.history} />
         </div>
       </div>
