@@ -59,7 +59,7 @@ and look. To add records to the database just run:
 ```
 
 ### DB Schema
-There are two types of objects stored in the database: users and event. To minimize http requests on the server, when retrieved, all references to other objects will be fully populated with complete objects, not just is numbers. The schema are as follows:
+There is one types of objects stored in the database so far: students. To minimize http requests on the server, when retrieved, all references to other objects will be fully populated with complete objects, not just is numbers. The schema are as follows:
 
 ####[User](server/controllers/student/studentsController.js)
 ```javascript
