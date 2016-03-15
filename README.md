@@ -71,6 +71,7 @@ level      : ... //String
 interview  : ... //String
 decision   : ... //String
 }
+```
 
 
 ### Server API
@@ -83,4 +84,5 @@ Most routes follow a `/api/:data_type/:data_identifier` pattern. Note that when 
 GET     api/students                // Get list of studetns
 POST    api/student                 // Add new student
 DELETE  /users/:username            // Delete the user
+```
 
