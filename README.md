@@ -1,8 +1,5 @@
 # PTC Portal
 
-
-
-
 ## Table of Contents
 
 1. [Team](#team)
@@ -15,7 +12,7 @@
 
 ## Team
 
- ??
+ to be determined
 
 ## Development
 
@@ -26,17 +23,19 @@ From within the root directory:
 ```sh
 npm install
 ```
+
 This will handle both client and server-side dependencies as outlined in [package.json](package.json).
+
+after installation has completed
+```sh
+npm run start-dev
+```
+
+then navigate to `localhost:3001/`
 
 ## Usage
 
 to be determnied
-
-
-to
-
-navigate to `localhost:3001/`
-
 
 ## Contributing
 
@@ -52,6 +51,7 @@ On any project there are many internal APIs. For ease of reference, for both the
 npm test
 ```
 
+TODO//
 Additionally, this repo contains a dummy-data file that will help you test feel
 and look. To add records to the database just run:
 ```sh
@@ -61,28 +61,16 @@ and look. To add records to the database just run:
 ### DB Schema
 There are two types of objects stored in the database: users and event. To minimize http requests on the server, when retrieved, all references to other objects will be fully populated with complete objects, not just is numbers. The schema are as follows:
 
-####[User](server/config/controllers/userController.js)
+####[User](server/controllers/student/studentsController.js)
 ```javascript
 {
-  username           :  ...   // String
-  password           :  ...   // String
-  firstName          :  ...   // String
-  lastName           :  ...   // String
+name       : ... //String
+email      : ... //String
+lesson     : ... //String
+level      : ... //String
+interview  : ... //String
+decision   : ... //String
 }
-
-```
-
-####[Node](server/config/controllers/eventController.js)
-```javascript
-{
-  title        :  ...  // String
-  description  :  ...  // String
-  imageUrl     :  ...  // String
-  created      :  ...  // Date
-  updated      :  ...  // Date
-}
-
-```
 
 
 ### Server API
@@ -92,19 +80,7 @@ The server uses a stateless RESTful API for all database access. It supports fou
 Most routes follow a `/api/:data_type/:data_identifier` pattern. Note that when an aspect of a route is prefaced with a colon `:` it refers to a variable. Do not actually write down a colon in any api calls. Additionally, ALL of the following routes must be prefaced with `/api`.
 
 ```javascript
-GET     /login                // Authenticate user
-POST    /signup               // Create a user
-
-GET     /users                // Get an array of users
-GET     /users/:username      // Get a specific user
-PUT     /users/:username      // Update the user's info
-DELETE  /users/:username      // Delete the user
-
-
-GET     /events             // Get an array of events
-GET     /events/:eventId    // Get a specific event
-POST    /events             // Create a new event
-PUT     /events/:eventId    // Update a event
-DELETE  /events/:eventId    // Delete a event
-
+GET     api/students                // Get list of studetns
+POST    api/student                 // Add new student
+DELETE  /users/:username            // Delete the user
 
