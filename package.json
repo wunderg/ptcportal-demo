@@ -1,7 +1,7 @@
 {
-  "name": "TodoX",
+  "name": "PTC PORTAL",
   "version": "1.0.0",
-  "description": "Simple todo app",
+  "description": "PTC PORTAL",
   "main": "index.js",
   "scripts": {
     "start": "node ./dist/server.js",
