@@ -81,8 +81,8 @@ The server uses a stateless RESTful API for all database access. It supports fou
 Most routes follow a `/api/:data_type/:data_identifier` pattern. Note that when an aspect of a route is prefaced with a colon `:` it refers to a variable. Do not actually write down a colon in any api calls. Additionally, ALL of the following routes must be prefaced with `/api`.
 
 ```javascript
-GET     api/students                // Get list of studetns
+GET     api/students                // Get list of students
 POST    api/student                 // Add new student
-DELETE  /users/:username            // Delete the user
+DELETE  api/student/:id            // Delete the student
 ```
 
