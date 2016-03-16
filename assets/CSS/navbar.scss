@@ -1,72 +1,46 @@
 /*--------------------------------------------------------------
 Navigation
 --------------------------------------------------------------*/
-
-
 .nav-wrapper {
-  padding-bottom: 2em;
+  padding-bottom: 0em;
   margin-bottom: 2em;
-  border-bottom: 1px solid hsl(0, 5%, 5%);
+  border-bottom: 1px solid black;
+  background: coral;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .nav-wrapper ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
-  background: #0298F5;
   display: flex;
-  flex: 1;
-  justify-content: flex-end;
-}
-
-.brand-logo {
-  font-size: 1.8em;
-  font-weight: bold;
-  text-decoration: none;
-  background: #0298F5;
-  color: white;
-  padding: .6em 1em;
+  flex-direction: column;
 }
 
 .nav-wrapper li a {
   display: block;
-  font-size: 1.5em;
   text-decoration: none;
+  font-size: 1.3em;
   color: white;
-  padding: .8em 1em;
+  padding: .6em 1em;
+  // display: none;
+  text-align: center;
+  flex: 1 0 100%;
 }
 
-.nav-wrapper li a:hover {
-  background: white;
-  color: #0298F5;
+.brand-logo {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.5em;
+  padding: 1em;
+  flex: 1 0 auto;
 }
 
-@media screen and (min-width: 55em) {
-  .button-collapse {
-    display: none;
-  }
-}
-
-
-@media screen and (max-width: 55em) {
-  .button-collapse {
-    display: block;
-    background-color: #0298F5;
-    color: white;
-    padding: 1em 1em;
-  }
-
-  .nav-wrapper ul {
-    flex-direction: column;
-    display: none;
-  }
-
-  .brand-logo {
-    flex: 1;
-    text-align: center;
-    padding-left: 2em;
-  }
-
+.button-collapse {
+  color: white;
+  padding: 1.5em;
 }
 

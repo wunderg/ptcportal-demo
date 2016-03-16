@@ -1,11 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router';
 
-export default () => (
+export default (input) => (
   <nav>
     <div className="nav-wrapper">
       <Link to={`/`} className="brand-logo">PTC Portal</Link>
-      <a href="#" className="button-collapse"><i className="fa fa-bars fa-2x"></i>
+      <a href="#" className="button-collapse" onClick={input.handleMenu}><i className="fa fa-bars fa-2x"></i>
       </a>
       <ul className="">
         <li><Link to={'/add'}>Add Student</Link></li>
