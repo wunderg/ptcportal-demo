@@ -7,7 +7,7 @@ export default (input) => (
       <Link to={`/`} className="brand-logo">PTC Portal</Link>
       <a href="#" className="button-collapse" onClick={input.handleMenu}><i className="fa fa-bars fa-2x"></i>
       </a>
-      <ul className="">
+      <ul>
         <li><Link to={'/add'}>Add Student</Link></li>
         <li><a href="">Results</a></li>
         <li><a href="">Dashboard</a></li>
