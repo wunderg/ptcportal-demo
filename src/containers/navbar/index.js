@@ -5,7 +5,7 @@ export default () => (
   <nav>
     <div className="nav-wrapper">
       <Link to={`/`} className="brand-logo">PTC Portal</Link>
-      <a href="#" className="button-collapse">
+      <a href="#" className="button-collapse"><i className="fa fa-bars fa-2x"></i>
       </a>
       <ul className="">
         <li><Link to={'/add'}>Add Student</Link></li>

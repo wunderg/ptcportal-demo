@@ -1,3 +1,8 @@
+/*--------------------------------------------------------------
+Navigation
+--------------------------------------------------------------*/
+
+
 .nav-wrapper {
   padding-bottom: 2em;
   margin-bottom: 2em;
@@ -9,22 +14,59 @@
   list-style-type: none;
   padding: 0;
   margin: 0;
-  background: hsla(240, 95%, 55%, 1);
+  background: #0298F5;
   display: flex;
-  flex-wrap: wrap;
-  flex: 1 0 10%;
+  flex: 1;
   justify-content: flex-end;
+}
+
+.brand-logo {
+  font-size: 1.8em;
+  font-weight: bold;
+  text-decoration: none;
+  background: #0298F5;
+  color: white;
+  padding: .6em 1em;
 }
 
 .nav-wrapper li a {
   display: block;
+  font-size: 1.5em;
   text-decoration: none;
   color: white;
-  padding: .6em 1em
+  padding: .8em 1em;
 }
 
-.brand-logo {
-  background: hsla(240, 95%, 55%, 1);
-  color: white;
-  padding: .6em 1em;
+.nav-wrapper li a:hover {
+  background: white;
+  color: #0298F5;
 }
+
+@media screen and (min-width: 55em) {
+  .button-collapse {
+    display: none;
+  }
+}
+
+
+@media screen and (max-width: 55em) {
+  .button-collapse {
+    display: block;
+    background-color: #0298F5;
+    color: white;
+    padding: 1em 1em;
+  }
+
+  .nav-wrapper ul {
+    flex-direction: column;
+    display: none;
+  }
+
+  .brand-logo {
+    flex: 1;
+    text-align: center;
+    padding-left: 2em;
+  }
+
+}
+
