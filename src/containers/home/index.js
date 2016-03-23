@@ -15,7 +15,6 @@ class Home extends Component {
     this.props.fetchStudents();
   }
 
-
   render() {
     console.log(this);
     return (
