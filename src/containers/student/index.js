@@ -5,13 +5,8 @@ import Sessions from './sessions';
 import Ratings from './ratings';
 import './style.scss';
 
-const style = {
-  zIndex: 1,
-};
-
 class Student extends Component {
-  componentDidMount() {
-  }
+
   render() {
     return (
       <div className="row">
