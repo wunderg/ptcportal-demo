@@ -6,7 +6,7 @@ const style = {
 };
 
 const Table = (props, link) => (
-  <table className="bordered highlight centered">
+  <table className="bordered highlight centered responsive-table">
     <thead>
       <tr>
         <th data-field="Name">Name</th>
