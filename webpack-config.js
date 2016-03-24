@@ -4,7 +4,6 @@ var ProgressBarPlugin = require('progress-bar-webpack-plugin');
 var chalk = require('chalk');
 
 module.exports = {
-  // context: path.join(__dirname, 'src'),
   devtool: 'eval-source-map',
   entry: [
     'webpack-dev-server/client?http://localhost:3001',
@@ -46,22 +45,20 @@ module.exports = {
         loader: 'json'
       },
 
-      // {
-      //   test: /\.css$/,
-      //   loaders: ['style', 'raw'],
-      //   include: __dirname
-      // },
-
       {
-        test: /\.(jpe?g|png|gif)$/,
+        test: /\.css?$/,
+        loaders: ['style', 'raw'],
+        include: __dirname
+      },
+
+      { test: /\.(jpe?g|png|gif)$/,
         loader: 'url',
         query: { limit: 10240 }
       },
 
       {
-        test: /\.scss?$/,
-        loaders: ['style', 'css', 'sass'],
-        include: __dirname
+        test: /\.scss$/,
+        loaders: ['style', 'css', 'sass']
       },
 
       {

@@ -15,14 +15,15 @@ class Home extends Component {
     this.props.fetchStudents();
   }
 
+
   render() {
     console.log(this);
     return (
-      <div className="">
-        <div className="">
+      <div className="row">
+        <div className="col s12">
           <TextInput />
         </div>
-        <div className="">
+        <div className="col s12">
           <Table data={ this.props.data } history={this.props.history} />
         </div>
       </div>

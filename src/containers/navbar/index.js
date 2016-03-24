@@ -1,31 +1,38 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
-import classNames from 'classnames';
+import './style.scss';
 
 class Navbar extends Component {
-  constructor(props) {
-    super(props);
-    console.log(props);
-    this.state = { hide: true, show: false };
 
-    this.toggleMenu = this.toggleMenu.bind(this);
-  }
+  componentDidMount() {
+    $(function() {
+      $('.button-collapse').sideNav({
+        menuWidth: 300, // Default is 240
+        edge: 'right', // Choose the horizontal origin
+        closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
+      }
+                                   );
 
-  toggleMenu() {
-    this.setState({ hide: !this.state.hide, show: !this.state.show });
+    })
   }
 
   render() {
-    const menu = classNames(this.state, { mobile: true });
-    console.log(menu);
     return (
+
       <nav>
         <div className="nav-wrapper">
           <Link to={`/`} className="brand-logo">PTC Portal</Link>
-          <a className="button-collapse" onClick={this.toggleMenu}>
-            <i className="fa fa-bars fa-2x"></i>
+          <a href="#" data-activates="mobile-demo" className="button-collapse">
+            <i className="fa fa-align-justify"></i>
           </a>
-          <ul className="full">
+          <ul className="right hide-on-med-and-down">
+            <li><Link to={'/add'}>Add Student</Link></li>
+            <li><a href="">Results</a></li>
+            <li><a href="">Dashboard</a></li>
+            <li><a href="">Guide</a></li>
+            <li><a href="">Login</a></li>
+          </ul>
+          <ul className="side-nav" id="mobile-demo">
             <li><Link to={'/add'}>Add Student</Link></li>
             <li><a href="">Results</a></li>
             <li><a href="">Dashboard</a></li>
@@ -33,16 +40,9 @@ class Navbar extends Component {
             <li><a href="">Login</a></li>
           </ul>
         </div>
-        <ul className={menu}>
-          <li><Link to={'/add'}>Add Student</Link></li>
-          <li><a href="">Results</a></li>
-          <li><a href="">Dashboard</a></li>
-          <li><a href="">Guide</a></li>
-          <li><a href="">Login</a></li>
-        </ul>
       </nav>
     );
   }
-}
+};
 
 export default Navbar;

@@ -37,7 +37,6 @@ class NewStudent extends Component {
             <i className="fa fa-info fa-2x fa-spin right"></i>
           </button>
         </form>
-        <div className="play">BOX</div>
       </div>
     );
   }
