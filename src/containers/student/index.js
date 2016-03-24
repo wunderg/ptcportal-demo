@@ -10,23 +10,10 @@ class Student extends Component {
   render() {
     return (
       <div className="row">
-
-        {/* <div className="col s12 m6"> */}
-          <Info />
-        {/* </div> */}
-
-        {/* <div className="col s12 m6"> */}
-          <Ratings />
-        {/* </div> */}
-
-        {/* <div className="col s12 m6"> */}
-          <Sessions />
-        {/* </div> */}
-
-        {/* <div className="col s12 m6"> */}
-          <Notes />
-        {/* </div> */}
-
+        <Info />
+        <Ratings />
+        <Sessions />
+        <Notes />
       </div>
     );
   }
