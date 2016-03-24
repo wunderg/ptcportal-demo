@@ -1,8 +1,8 @@
 import React from 'react';
 
 export default (props) => (
-  <div className="card blue-grey darken-1">
-    <div className="card-content white-text">
+  <div className="card">
+    <div className="card-content black-text">
       <span className="card-title">Sessions</span>
       <section>Contacted</section>
       <section>Lesson</section>

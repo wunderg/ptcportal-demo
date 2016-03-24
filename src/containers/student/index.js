@@ -11,21 +11,21 @@ class Student extends Component {
     return (
       <div className="row">
 
-        <div className="col s12 m6">
+        {/* <div className="col s12 m6"> */}
           <Info />
-        </div>
+        {/* </div> */}
 
-        <div className="col s12 m6">
+        {/* <div className="col s12 m6"> */}
           <Ratings />
-        </div>
+        {/* </div> */}
 
-        <div className="col s12 m6">
+        {/* <div className="col s12 m6"> */}
           <Sessions />
-        </div>
+        {/* </div> */}
 
-        <div className="col s12 m6">
+        {/* <div className="col s12 m6"> */}
           <Notes />
-        </div>
+        {/* </div> */}
 
       </div>
     );
