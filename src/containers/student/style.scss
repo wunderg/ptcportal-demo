@@ -1,11 +1,12 @@
+@import url('../../../node_modules/highlight.js/styles/docco.css');
 .row {
   display: flex;
   flex-flow: row wrap;
   align-items: stretch;
 }
 .card {
-  min-width: 350px;
-  flex: 1 1 45%;
+  min-width: 400px;
+  flex: 1 1 40%;
   margin: .5em;
   padding: 1.5em 1em;
   line-height: 2.4rem;
@@ -31,4 +32,9 @@
 
 .card .collapsible {
   margin-top: 1.5rem;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
 }
