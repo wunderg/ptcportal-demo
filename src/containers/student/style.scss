@@ -7,6 +7,10 @@
   min-width: 350px;
   flex: 1 1 45%;
   margin: .5em;
+  padding: 1.5em 1em;
+  line-height: 2.4rem;
+  font-size: 1.3em;
+  padding-top: .5rem;
 
 }
 .card .card-content {
@@ -15,4 +19,16 @@
 
 .card .card-title {
   font-weight: 500;
+}
+
+.stars {
+  display: flex;
+  justify-content: space-between;
+}
+.card hr {
+  margin-top: 0;
+}
+
+.card .collapsible {
+  margin-top: 1.5rem;
 }

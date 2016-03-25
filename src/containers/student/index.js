@@ -7,6 +7,14 @@ import './style.scss';
 
 class Student extends Component {
 
+  componentDidMount() {
+    $(document).ready(function(){
+      $('.collapsible').collapsible({
+        accordion : false // A setting that changes the collapsible behavior to expandable instead of the default accordion style
+      });
+    });
+  }
+
   render() {
     return (
       <div className="row">
