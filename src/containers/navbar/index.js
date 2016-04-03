@@ -26,14 +26,14 @@ class Navbar extends Component {
             <li><Link to={'/add'}>Add Student</Link></li>
             <li><a href="">Results</a></li>
             <li><a href="">Dashboard</a></li>
-            <li><a href="">Guide</a></li>
+            <li><Link to={'/guide'}>Guide</Link></li>
             <li><a href="">Login</a></li>
           </ul>
           <ul className="side-nav" id="mobile-demo">
             <li><Link to={'/add'}>Add Student</Link></li>
             <li><a href="">Results</a></li>
             <li><a href="">Dashboard</a></li>
-            <li><a href="">Guide</a></li>
+            <li><Link to={'/guide'}>Guide</Link></li>
             <li><a href="">Login</a></li>
           </ul>
         </div>
