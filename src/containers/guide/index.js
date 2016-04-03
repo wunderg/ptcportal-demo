@@ -15,6 +15,7 @@ class Guide extends Component {
       $('.scrollspy').scrollSpy();
     });
   }
+
   render() {
     return (
       <div className="row">

@@ -1,5 +1,4 @@
 import React from 'react';
-import Highlight from 'react-highlight';
 
 export default (props) => (
   <div className="card">
@@ -13,9 +12,9 @@ export default (props) => (
         <li>
           <div className="collapsible-header center">First</div>
           <div className="collapsible-body">
-            <Highlight className="javascript">
+            <pre className="javascript">
               {" function(a, b) \n {return a + b} \n function(a, b) {return a + b} \n function(a, b) \n {return a + b} \n function(a, b) {return a + b} "}
-            </Highlight>
+            </pre>
           </div>
         </li>
         <li>
