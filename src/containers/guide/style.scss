@@ -7,6 +7,22 @@
   position: fixed;
 }
 
-.table-of-contents a {
+.table-of-contents a,{
   font-weight: 500;
+}
+
+.card-title {
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.prompts {
+  font-size: 1.3rem;
+  list-style: circle;
+}
+
+.code {
+  font-size: 1.2rem;
+  padding: 0px 15px;
+  margin: 0px;
 }

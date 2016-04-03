@@ -1,5 +1,7 @@
 import React from 'react';
+import Highlight from '../../helpers/highlight.js';
 
+var str = "function each(a, b) \n {for(var i = 0; i < a.length; i++) { \n b(a[i]); }}";
 export default (props) => (
   <div className="card">
     <div className="card-content black-text">
@@ -12,9 +14,8 @@ export default (props) => (
         <li>
           <div className="collapsible-header center">First</div>
           <div className="collapsible-body">
-            <pre className="javascript">
-              {" function(a, b) \n {return a + b} \n function(a, b) {return a + b} \n function(a, b) \n {return a + b} \n function(a, b) {return a + b} "}
-            </pre>
+            <Highlight props={str} />
+                {/* {str.split(" {").map(item => <Highlight props={item} />)} */}
           </div>
         </li>
         <li>

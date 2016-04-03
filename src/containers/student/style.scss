@@ -4,14 +4,13 @@
   align-items: stretch;
 }
 .card {
-  min-width: 400px;
   flex: 1 1 40%;
   margin: .5em;
   padding: 1.5em 1em;
   line-height: 2.4rem;
   font-size: 1.3em;
   padding-top: .5rem;
-
+  min-width: 400px;
 }
 .card .card-content {
   padding-top: 0;

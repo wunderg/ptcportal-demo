@@ -66,5 +66,4 @@ class Guide extends Component {
   }
 }
 
-
 export default Guide;
