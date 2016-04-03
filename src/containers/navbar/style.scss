@@ -1,6 +1,8 @@
 nav {
-  margin: 0 0 1rem 0;
+  position: fixed;
+  margin: 0 0 3rem 0;
   font-size: 1.3rem;
+  z-index: 5;
 
   .brand-logo {
     margin-left: 0.5rem;

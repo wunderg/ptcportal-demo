@@ -4,6 +4,10 @@ body {
   padding: 0;
   background-color: #fafafa
 }
+.container {
+  padding-top: 5rem;
+  margin-top: 1rem;
+}
 
 @import './node_modules/materialize-css/sass/components/_color.scss';
 
