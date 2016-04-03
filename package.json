@@ -1,7 +1,7 @@
 {
-  "name": "TodoX",
+  "name": "PTC Portal",
   "version": "1.0.0",
-  "description": "Simple todo app",
+  "description": "Portal is ideal place to track students progress",
   "main": "index.js",
   "scripts": {
     "start": "node ./dist/server.js",
@@ -50,11 +50,13 @@
     "material-ui": "^0.14.4",
     "materialize-css": "^0.97.5",
     "mongoose": "^4.4.5",
+    "node-sass": "^3.4.2",
     "progress-bar-webpack-plugin": "^1.4.1",
     "raw-loader": "^0.5.1",
     "react": "^0.14.7",
     "react-addons-css-transition-group": "^0.14.7",
     "react-dom": "^0.14.7",
+    "react-highlight": "^0.7.0",
     "react-materialize": "^0.14.2",
     "react-redux": "^4.4.0",
     "react-router": "^2.0.0",
