@@ -51,24 +51,14 @@ module.exports = {
         include: __dirname
       },
 
-      { test: /\.(jpe?g|png|gif)$/,
-        loader: 'url',
-        query: { limit: 10240 }
-      },
-
       {
         test: /\.scss$/,
         loaders: ['style', 'css', 'sass']
       },
 
       {
-        test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-        loader: 'url-loader?limit=10000&minetype=application/font-woff=./dist/'
-      },
-
-      {
-        test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-        loader: 'file-loader'
+        test: /\.(eot|woff|woff2|ttf|svg|png|jpg|gif)$/,
+        loader: 'url-loader?limit=30000&name=./dist/[hash].[ext]'
       }
     ]
   },
