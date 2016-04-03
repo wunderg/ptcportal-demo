@@ -8,7 +8,7 @@ const each = `function each(collection, callback){
 
 export default () => (
 
-  <div className="card blue lighten-5">
+  <div className="card grey lighten-2">
     <div className="card-content">
       <h3>Level 1</h3>
       <hr />
