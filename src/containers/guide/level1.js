@@ -46,8 +46,13 @@ export default () => (
               <h5><b>Solution:</b></h5>
               <Highlight props={each} />
             </div>
+            <div className="code">
+              <h5><b>Helpers:</b></h5>
+              <Highlight props={each} />
+            </div>
           </div>
         </li>
+
         <li>
           <div className="card">
             <div className="card-content">
@@ -55,27 +60,37 @@ export default () => (
               <hr />
               <div className="">
                 <h5><b>Objectives:</b></h5>
+                <ul className="prompts">
+                  <li><i className="fa fa-check"></i><span> Create function each</span></li>
+                  <li><i className="fa fa-check"></i><span> Create function each</span></li>
+                  <li><i className="fa fa-check"></i><span> Create function each</span></li>
+                </ul>
+              </div>
+              <div className="">
+                <h5><b>Technical:</b></h5>
               </div>
               <ul className="prompts">
-                <li><i className="fa fa-check"></i> Create function map</li>
-                <li><i className="fa fa-check"></i> Map should apply callback to every item in the collection</li>
-                <li><i className="fa fa-check"></i> Map should accept collection and callback as parameters</li>
-                <li><i className="fa fa-check"></i> Map should work on arrays and objects</li>
-                <li><i className="fa fa-check"></i> Map should return a new array</li>
+                <li><i className="fa fa-check"></i><span> Create function map</span></li>
+                <li><i className="fa fa-check"></i><span> Map should apply callback to every item in the collection</span></li>
+                <li><i className="fa fa-check"></i><span> Map should accept collection and callback as parameters</span></li>
+                <li><i className="fa fa-check"></i><span> Map should work on arrays and objects</span></li>
+                <li><i className="fa fa-check"></i><span> Map should return a new array</span></li>
               </ul>
             </div>
             <div className="code">
               <h5><b>Boilerplate:</b></h5>
               <Highlight props={map} />
             </div>
+            <div className="code">
+              <h5><b>Solution:</b></h5>
+              <Highlight props={map} />
+            </div>
+            <div className="code">
+              <h5><b>Helpers:</b></h5>
+              <Highlight props={each} />
+            </div>
           </div>
         </li>
-      </ul>
-      <ul className="">
-        <h5><b>Solutions</b></h5>
-        <li>Prompt 1</li>
-        <li>Prompt 2</li>
-        <li>Prompt 3</li>
       </ul>
     </div>
   </div>
