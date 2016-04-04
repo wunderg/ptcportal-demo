@@ -32,6 +32,9 @@ module.exports = {
     extensions: ['', '.js', '.jsx']
   },
   module: {
+
+    noParse: [/autoit.js/],
+
     loaders: [
       {
         test: /\.js$/,
