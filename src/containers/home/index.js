@@ -4,7 +4,7 @@ import { bindActionCreators } from 'redux';
 import { addTodo, fetchStudents } from '../../actions';
 
 import TextInput from '../text-input';
-import Table from '../table';
+import Students from '../students';
 
 class Home extends Component {
   constructor(props) {
@@ -17,14 +17,13 @@ class Home extends Component {
 
 
   render() {
-    console.log(this);
     return (
       <div className="row">
         <div className="col s12">
           <TextInput />
         </div>
         <div className="col s12">
-          <Table data={ this.props.data } history={this.props.history} />
+          <Students data={ this.props.data } history={this.props.history} />
         </div>
       </div>
     );
