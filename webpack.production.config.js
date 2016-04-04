@@ -30,6 +30,9 @@ module.exports = {
     })
   ],
   module: {
+
+    noParse: [/autoit.js/],
+
     loaders: [
       {
         test: /\.js$/,
