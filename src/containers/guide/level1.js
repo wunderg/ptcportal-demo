@@ -20,16 +20,16 @@ const eachSolution =
 }
 
 ***** Pseudo Code *****
-//declare function each
-  //check if collection is array
-    //iterate over array
-      //apply callback on every item in the array
+// declare function each
+  // check if collection is array
+    // iterate over array
+      // apply callback on every item in the array
   // else if collection is not an array
     // iterate over object
-      //apply callback to every value in the object
+      // apply callback to every value in the object
 `
 
-const eachHelpers =
+const eachExample =
 `//test array
 var numbers = [1,2,3,4,5,6];
 
@@ -37,31 +37,65 @@ var numbers = [1,2,3,4,5,6];
 function log(num) {
   console.log(num);
 }
+
+each(numbers, log); => log every value to the console;
 `
 
 const map = `function map(collection, callback) {
   //your code here
 }`
 
+const mapSolution =
+`function map(collection, callback) {
+  var result = [];
+  each(collection, function(item) {
+    result.push(callback(item));
+  });
+  return result;
+}
+***** Pseudo Code *****
+// declare function map
+  // create new array to store results
+
+  // use each to iterate over collection
+    // and pass anonymous funcion as callback
+
+  // apply callback function to every item in the collection
+    // and push it into the results array
+
+  // return new array with modifed items
+`
+
+const mapExample =
+`//test array
+var numbers = [1,2,3,4,5];
+
+//test function
+function double(num) {
+  return num * 2;
+}
+
+map(numbers, double); => [2, 4, 6, 8, 10];
+`
 export default () => (
 
   <div className="card deep-purple lighten-5">
     <div className="card-content">
-      <h3>Level 1</h3>
+      <h3>Level 1 - Basic Each and Map</h3>
       <hr />
       <ul className="lesson-list">
         <li>
           <div className="card">
             <div className="card-content">
-              <h4><b>Lesson 1</b></h4>
+              <h4><b>Lesson 1 - Each</b></h4>
               <hr />
               <div className="">
                 <h5><b>Objectives:</b></h5>
                 <ul className="prompts">
-                  <li><i className="fa fa-check"></i><span> Understand how to distinguish between an array and/or an object</span></li>
-                  <li><i className="fa fa-check"></i><span> Understand how to iterate over an array and/or an object </span></li>
-                  <li><i className="fa fa-check"></i><span> Understand how to access item inside an array and/or object </span></li>
-                  <li><i className="fa fa-check"></i><span> Understand how to apply callback to every item in an array and/or object</span></li>
+                  <li><i className="fa fa-check"></i><span> Teach how to distinguish between an array and/or an object</span></li>
+                  <li><i className="fa fa-check"></i><span> Teach how to iterate over an array and/or an object </span></li>
+                  <li><i className="fa fa-check"></i><span> Teach how to access item inside an array and/or object </span></li>
+                  <li><i className="fa fa-check"></i><span> Teach how to apply callback to every item in an array and/or object</span></li>
                 </ul>
               </div>
               <div className="">
@@ -83,8 +117,8 @@ export default () => (
               <Highlight props={eachSolution} />
             </div>
             <div className="code">
-              <h5><b>Helpers:</b></h5>
-              <Highlight props={eachHelpers} />
+              <h5><b>Example:</b></h5>
+              <Highlight props={eachExample} />
             </div>
           </div>
         </li>
@@ -92,14 +126,19 @@ export default () => (
         <li>
           <div className="card">
             <div className="card-content">
-              <h4><b>Lesson 2</b></h4>
+              <h4><b>Lesson 2 - Map</b></h4>
               <hr />
               <div className="">
                 <h5><b>Objectives:</b></h5>
                 <ul className="prompts">
-                  <li><i className="fa fa-check"></i><span> Create function each</span></li>
-                  <li><i className="fa fa-check"></i><span> Create function each</span></li>
-                  <li><i className="fa fa-check"></i><span> Create function each</span></li>
+                  <li><i className="fa fa-check"></i><span> Teach how to use 'Each' to create 'Map' function</span></li>
+                  <li><i className="fa fa-check"></i><span> Teach how to create function on the fly as a callback</span></li>
+                  <li><i className="fa fa-check"></i><span> Teach that the callback that passed in each is a function that created on the fly</span></li>
+                  <li><i className="fa fa-check"></i><span> Teach that the each callback is getting exexuted inside the 'FOR LOOP'</span></li>
+                  <li><i className="fa fa-check"></i><span> Teach that item is getting modified by callback before its pushed to the new array</span></li>
+                  <li><i className="fa fa-check"></i><span> Teach how talk about function using pseudo-code, make student walk step by step</span></li>
+                  <li><i className="fa fa-check"></i><span> Help student to create an example</span></li>
+                  <li><i className="fa fa-check"></i><span> Help student to walk thru every iteration of the example</span></li>
                 </ul>
               </div>
               <div className="">
@@ -119,11 +158,11 @@ export default () => (
             </div>
             <div className="code">
               <h5><b>Solution:</b></h5>
-              <Highlight props={map} />
+              <Highlight props={mapSolution} />
             </div>
             <div className="code">
-              <h5><b>Helpers:</b></h5>
-              <Highlight props={each} />
+              <h5><b>Example:</b></h5>
+              <Highlight props={mapExample} />
             </div>
           </div>
         </li>
