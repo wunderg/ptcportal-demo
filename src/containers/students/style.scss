@@ -1,0 +1,18 @@
+.student-list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.student {
+  flex: 1;
+  max-width: 500px;
+}
+
+.student .card-content i {
+  padding-top: 15px;
+}
+
+.student .card-reveal i {
+  padding-right: 15px;
+}
