@@ -24,18 +24,18 @@ export default () => (
               <div className="">
                 <h5><b>Objectives:</b></h5>
                 <ul className="prompts">
-                  <li><i className="fa fa-check"></i> Create function each</li>
-                  <li><i className="fa fa-check"></i> Each should accept collection and callback as parameters</li>
-                  <li><i className="fa fa-check"></i> Each should work on arrays and objects</li>
+                  <li><i className="fa fa-check"></i><span> Create function each</span></li>
+                  <li><i className="fa fa-check"></i><span> Create function each</span></li>
+                  <li><i className="fa fa-check"></i><span> Create function each</span></li>
                 </ul>
               </div>
               <div className="">
                 <h5><b>Technical:</b></h5>
               </div>
               <ul className="prompts">
-                <li><i className="fa fa-check"></i> Create function each</li>
-                <li><i className="fa fa-check"></i> Each should accept collection and callback as parameters</li>
-                <li><i className="fa fa-check"></i> Each should work on arrays and objects</li>
+                <li><i className="fa fa-check"></i><span> Create function each</span></li>
+                <li><i className="fa fa-check"></i><span> Each should accept collection and callback as parameters</span></li>
+                <li><i className="fa fa-check"></i><span> Each should work on arrays and objects</span></li>
               </ul>
             </div>
             <div className="code">
