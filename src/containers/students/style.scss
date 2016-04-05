@@ -18,6 +18,14 @@
 }
 
 .progress-text {
+  display: block;
   font-size: .8rem;
   padding-bottom: 0px;
+  margin-bottom: 0px;
+  max-height: 20px;
+}
+
+.students-progress-bar {
+  padding-top: 0px;
+  margin-top: 0px;
 }

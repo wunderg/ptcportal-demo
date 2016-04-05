@@ -14,7 +14,7 @@ export default ({ student }) => (
           <span className="card-title activator grey-text text-darken-4" onClick={onClick}>{student.name}<i className="fa fa-info right"></i></span>
           <hr />
           <span>{student.email}</span>
-          <p className="progress-text">Progress: 5 of 8</p>
+          <span className="progress-text">Current progress: 5 of 8</span>
           <Progress className="students-progress-bar" />
         </div>
         <div className="card-reveal">
