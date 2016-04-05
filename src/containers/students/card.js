@@ -15,7 +15,7 @@ export default ({ student }) => (
           <hr />
           <span>{student.email}</span>
           <p className="progress-text">Progress: 5 of 8</p>
-          <Progress />
+          <Progress className="students-progress-bar" />
         </div>
         <div className="card-reveal">
           <span className="card-title grey-text text-darken-4">Card Title<i className="fa fa-close right"></i></span>
