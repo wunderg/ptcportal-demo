@@ -1,6 +1,8 @@
 import React from 'react';
+import Progress from '../../helpers/progress.js';
 
 import { browserHistory } from 'react-router';
+
 
 const onClick = () => browserHistory.push('/student');
 
@@ -8,11 +10,12 @@ export default ({ student }) => (
   <div className="student">
     {console.log(student)}
     <div className="card">
-      <div className="card-image waves-effect waves-block waves-light">
-        </div>
         <div className="card-content">
-          <span className="card-title activator grey-text text-darken-4">{student.name}<i className="fa fa-info right"></i></span>
-          <p><a href="#">This is a link</a></p>
+          <span className="card-title activator grey-text text-darken-4" onClick={onClick}>{student.name}<i className="fa fa-info right"></i></span>
+          <hr />
+          <span>{student.email}</span>
+          <p className="progress-text">Progress: 5 of 8</p>
+          <Progress />
         </div>
         <div className="card-reveal">
           <span className="card-title grey-text text-darken-4">Card Title<i className="fa fa-close right"></i></span>
