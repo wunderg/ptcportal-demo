@@ -15,7 +15,8 @@
 }
 
 .student .card-reveal i {
-  padding-right: 33px;
+  padding-top: 8px;
+  padding-right: 25px;
 }
 
 .contacted i {
@@ -30,4 +31,12 @@
   max-height: 20px;
 }
 
+.card-email {
+  font-size: 1.2rem;
+  line-height: 20px;
+}
 
+.action-text {
+  font-weight: 600;
+  font-size: 1.3rem;
+}
