@@ -9,14 +9,14 @@ const onClick = () => browserHistory.push('/student');
 export default ({ student }) => (
   <div className="student">
     {console.log(student)}
-    <div className="card">
+    <div className="card student-card">
         <div className="card-content">
           <span className="card-title activator grey-text text-darken-4" >{student.name}<i className="fa fa-edit right"> Actions</i></span>
           <p className='card-email'>{student.email}</p>
           <hr />
-          <p className='contacted'> Contacted: <i className="green-text text-darken-1 fa fa-check right checkmark"></i> </p>
           <p className=''> Inverview:<span className="right"> April 25th</span> </p>
           <p className=''> Decision:<span className="right"> Accepted</span> </p>
+          <p className='contacted'> Contacted: <i className="green-text text-darken-1 fa fa-check right checkmark"></i> </p>
           <span className="progress-text">Current progress: 5 of 8</span>
           <Progress className="students-progress-bar" />
           <p> <a className="waves-effect waves-light btn right details" onClick={onClick}>Details</a></p>
