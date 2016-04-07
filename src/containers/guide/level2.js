@@ -4,7 +4,6 @@ import { filter, filterExample, filterSolution } from './code/filter.js';
 import { reduce, reduceExample, reduceSolution} from './code/reduce.js';
 
 export default () => (
-
   <div className="card deep-purple lighten-5">
     {console.log(filter)}
     <div className="card-content">
