@@ -63,7 +63,7 @@ const mapSolution =
   // apply callback function to every item in the collection
     // and push it into the results array
 
-  // return new array with modifed items
+// return new array with modifed items
 `
 
 const mapExample =
@@ -113,12 +113,12 @@ export default () => (
               <Highlight props={each} />
             </div>
             <div className="code">
-              <h5><b>Solution:</b></h5>
-              <Highlight props={eachSolution} />
-            </div>
-            <div className="code">
               <h5><b>Example:</b></h5>
               <Highlight props={eachExample} />
+            </div>
+            <div className="code">
+              <h5><b>Solution:</b></h5>
+              <Highlight props={eachSolution} />
             </div>
           </div>
         </li>
@@ -157,12 +157,12 @@ export default () => (
               <Highlight props={map} />
             </div>
             <div className="code">
-              <h5><b>Solution:</b></h5>
-              <Highlight props={mapSolution} />
-            </div>
-            <div className="code">
               <h5><b>Example:</b></h5>
               <Highlight props={mapExample} />
+            </div>
+            <div className="code">
+              <h5><b>Solution:</b></h5>
+              <Highlight props={mapSolution} />
             </div>
           </div>
         </li>
