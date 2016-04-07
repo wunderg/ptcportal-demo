@@ -62,8 +62,13 @@ export default () => (
               <div className="">
                 <h5><b>Objectives:</b></h5>
                 <ul className="prompts">
-                  <li><i className="fa fa-check"></i><span> Create function each</span></li>
-                  <li><i className="fa fa-check"></i><span> Create function each</span></li>
+                  <li><i className="fa fa-check"></i><span> Teach how to use 'Each' to create Reduce function</span></li>
+                  <li><i className="fa fa-check"></i><span> Teach about accumulator and startValue</span></li>
+                  <li><i className="fa fa-check"></i><span> Teach that accumulator always takes atleast TWO arguments Memo and Item</span></li>
+                  <li><i className="fa fa-check"></i><span> Teach that startValue is optional</span></li>
+                  <li><i className="fa fa-check"></i><span> Teach that if starting value is not provided Reduce will use first item in the collection as startValue </span></li>
+                  <li><i className="fa fa-check"></i><span> Teach that if starting value is not provided Reduce will NOT iterate over first item as it will become startValue </span></li>
+                  <li><i className="fa fa-check"></i><span> Teach that startValue is starting value, its also a value that get modified by every iteration and also value that will get returned in the end </span></li>
                   <li><i className="fa fa-check"></i><span> Create function each</span></li>
                 </ul>
               </div>

@@ -33,8 +33,8 @@ export const reduceExample =
 var numbers = [1,2,3,4];
 
 //test function
-function sum(a + b) {
-  return a + b;
+function sum(memo, item) {
+  return memo + item;
 }
 
 reduce(numbers, double); => 10;
