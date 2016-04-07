@@ -2,6 +2,8 @@ var path = require('path');
 var webpack = require('webpack');
 var ProgressBarPlugin = require('progress-bar-webpack-plugin');
 var chalk = require('chalk');
+var precss = require('precss');
+var autoprefixer = require('autoprefixer');
 
 module.exports = {
   devtool: 'eval-source-map',
@@ -50,21 +52,27 @@ module.exports = {
 
       {
         test: /\.css?$/,
-        loaders: ['style', 'raw'],
+        loaders: ['style', 'raw', 'postcss'],
         include: __dirname
       },
 
       {
         test: /\.scss$/,
-        loaders: ['style', 'css', 'sass']
+        loaders: ['style', 'css', 'postcss', 'sass']
       },
 
       {
         test: /\.(eot|woff|woff2|ttf|svg|png|jpg|gif)$/,
         loader: 'url-loader?limit=10000&minetype=application/font-woff=./dist/'
-      }
+      },
+
     ]
   },
+
+  postcss: function() {
+    return [precss, autoprefixer];
+  },
+
   stats: {
     colors: true
   }
