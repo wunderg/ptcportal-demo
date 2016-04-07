@@ -1,15 +1,7 @@
 import React from 'react';
 import Highlight from '../../helpers/highlight.js';
 import { filter, filterExample, filterSolution } from './code/filter.js';
-
-
-const reduce = `function map(collection, callback) {
-  //your code here
-}`
-
-const example = `function map(collection, callback) {
-  //your code here
-}`
+import { reduce, reduceExample, reduceSolution} from './code/reduce.js';
 
 export default () => (
 
@@ -27,18 +19,24 @@ export default () => (
               <div className="">
                 <h5><b>Objectives:</b></h5>
                 <ul className="prompts">
-                  <li><i className="fa fa-check"></i><span> Create function each</span></li>
-                  <li><i className="fa fa-check"></i><span> Create function each</span></li>
-                  <li><i className="fa fa-check"></i><span> Create function each</span></li>
+                  <li><i className="fa fa-check"></i><span> Teach what is the predicate function</span></li>
+                  <li><i className="fa fa-check"></i><span> Teach the logic behind filter</span></li>
+                  <li><i className="fa fa-check"></i><span> Teach that item is pushed to array only if predicate return true</span></li>
+                  <li><i className="fa fa-check"></i><span> Teach student to walk step by step thru the function using pseudo code</span></li>
+                  <li><i className="fa fa-check"></i><span> Practice creating function on the fly</span></li>
+                  <li><i className="fa fa-check"></i><span> Help student to create an example</span></li>
+                  <li><i className="fa fa-check"></i><span> Help student to walk thru every iteration of the function using example</span></li>
                 </ul>
               </div>
               <div className="">
                 <h5><b>Technical:</b></h5>
               </div>
               <ul className="prompts">
-                <li><i className="fa fa-check"></i><span> Create function each</span></li>
-                <li><i className="fa fa-check"></i><span> Each should accept collection and callback as parameters</span></li>
-                <li><i className="fa fa-check"></i><span> Each should work on arrays and objects</span></li>
+                <li><i className="fa fa-check"></i><span> Create function filter</span></li>
+                <li><i className="fa fa-check"></i><span> Filter should use each to iterate</span></li>
+                <li><i className="fa fa-check"></i><span> Filter should accept collection and predicate as parameters</span></li>
+                <li><i className="fa fa-check"></i><span> Filter should work on arrays and objects</span></li>
+                <li><i className="fa fa-check"></i><span> Filter should return new array with values that pass predicate test</span></li>
               </ul>
             </div>
             <div className="code">
@@ -82,15 +80,15 @@ export default () => (
             </div>
             <div className="code">
               <h5><b>Boilerplate:</b></h5>
-              <Highlight props={filter} />
-            </div>
-            <div className="code">
-              <h5><b>Solution:</b></h5>
               <Highlight props={reduce} />
             </div>
             <div className="code">
-              <h5><b>Helpers:</b></h5>
-              <Highlight props={example} />
+              <h5><b>Example:</b></h5>
+              <Highlight props={reduceExample} />
+            </div>
+            <div className="code">
+              <h5><b>Solution:</b></h5>
+              <Highlight props={reduceSolution} />
             </div>
           </div>
         </li>
