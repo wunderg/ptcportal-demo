@@ -25,7 +25,7 @@ export default ({ student }) => (
           <span className="card-title purple-text text-darken-5">Actions<i className="fa fa-close right"></i></span>
           <p className='action-text'> Complete Lesson: <a className="waves-effect waves-light btn right">Done</a> </p>
           <p className='action-text'> Introduction Email: <a href="mailto:student@email.com?subject=Coaching By Hack Reactor&body=Hello -Student Name Here -,%0D%0A%0D%0A Welcome to your Personal Coaching .%0D%0A%0D%0A Here will body of the email where we can put whatever we like" className="waves-effect waves-light btn right">Send</a></p>
-          <p className='action-text'> 1st Remainder Email:<a className="waves-effect waves-light btn right">Send</a></p>
+          <p className='action-text'> Reminder Email:<a className="waves-effect waves-light btn right">Send</a></p>
           <p className='action-text'> On-Hold Email:<a className="waves-effect waves-light btn right">Send</a></p>
         </div>
       </div>
