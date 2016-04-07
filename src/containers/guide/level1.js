@@ -1,43 +1,8 @@
 import React from 'react';
 import Highlight from '../../helpers/highlight.js';
 import { each, eachExample, eachSolution} from './code/each.js';
+import { map, mapExample, mapSolution } from './code/map.js';
 
-const map = `function map(collection, callback) {
-  //your code here
-}`
-
-const mapSolution =
-`function map(collection, callback) {
-  var result = [];
-  each(collection, function(item) {
-    result.push(callback(item));
-  });
-  return result;
-}
-***** Pseudo Code *****
-// declare function map
-  // create new array to store results
-
-  // use each to iterate over collection
-    // and pass anonymous funcion as callback
-
-  // apply callback function to every item in the collection
-    // and push it into the results array
-
-// return new array with modifed items
-`
-
-const mapExample =
-`//test array
-var numbers = [1,2,3,4,5];
-
-//test function
-function double(num) {
-  return num * 2;
-}
-
-map(numbers, double); => [2, 4, 6, 8, 10];
-`
 export default () => (
 
   <div className="card deep-purple lighten-5">
