@@ -10,7 +10,7 @@ import Level6 from './level6.js';
 import Level7 from './level7.js';
 
 class Guide extends Component {
-  componentWillMount() {
+  componentDidMount() {
     $(function() {
       $('.scrollspy').scrollSpy();
     });
