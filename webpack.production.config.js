@@ -3,6 +3,8 @@
 var path = require('path');
 var webpack = require('webpack');
 var StatsPlugin = require('stats-webpack-plugin');
+var precss = require('precss');
+var autoprefixer = require('autoprefixer');
 
 module.exports = {
   entry: [
@@ -52,13 +54,13 @@ module.exports = {
 
       {
         test: /\.css?$/,
-          loaders: ['style', 'raw'],
+          loaders: ['style', 'raw', 'postcss'],
           include: __dirname
       },
 
       {
         test: /\.scss$/,
-        loaders: ['style', 'css', 'sass']
+        loaders: ['style', 'css', 'postcss' 'sass']
       },
 
       {
@@ -66,5 +68,9 @@ module.exports = {
         loader: 'url-loader?limit=30000&name=../[hash].[ext]'
       }
     ]
+  },
+    postcss: function() {
+    return [precss, autoprefixer];
   }
+
 };
