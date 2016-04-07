@@ -65,21 +65,24 @@ export default () => (
                   <li><i className="fa fa-check green-text text-lighten-2 green-text text-lighten-2"></i><span> Teach how to use 'Each' to create Reduce function</span></li>
                   <li><i className="fa fa-check green-text text-lighten-2"></i><span> Teach about accumulator and startValue</span></li>
                   <li><i className="fa fa-check green-text text-lighten-2"></i><span> Teach that accumulator always takes atleast TWO arguments Memo and Item</span></li>
+                  <li><i className="fa fa-check green-text text-lighten-2"></i><span> Teach that startValue will get modified(Memo) by accumulator on every iteration </span></li>
+                  <li><i className="fa fa-check green-text text-lighten-2"></i><span> Teach that startValue is the value that will get returned in the end as the final result </span></li>
                   <li><i className="fa fa-check green-text text-lighten-2"></i><span> Teach that startValue is optional</span></li>
                   <li><i className="fa fa-check green-text text-lighten-2"></i><span> Teach that if starting value is not provided Reduce will use first item in the collection as the startValue </span></li>
                   <li><i className="fa fa-check green-text text-lighten-2"></i><span> Teach that if starting value is not provided Reduce will NOT iterate over the first item because it will become the startValue </span></li>
-                  <li><i className="fa fa-check green-text text-lighten-2"></i><span> Teach that startValue is starting value, its also a value that get modified(Memo) by every iteration and also value that will get returned in the end as the final result </span></li>
                 </ul>
               </div>
               <div className="">
                 <h5><b>Technical:</b></h5>
               </div>
               <ul className="prompts">
-                <li><i className="fa fa-check green-text text-lighten-2"></i><span> Create function map</span></li>
-                <li><i className="fa fa-check green-text text-lighten-2"></i><span> Map should apply callback to every item in the collection</span></li>
-                <li><i className="fa fa-check green-text text-lighten-2"></i><span> Map should accept collection and callback as parameters</span></li>
-                <li><i className="fa fa-check green-text text-lighten-2"></i><span> Map should work on arrays and objects</span></li>
-                <li><i className="fa fa-check green-text text-lighten-2"></i><span> Map should return a new array</span></li>
+                <li><i className="fa fa-check green-text text-lighten-2"></i><span> Create function reduce</span></li>
+                <li><i className="fa fa-check green-text text-lighten-2"></i><span> Reduce should apply accumulator to every item in the collection</span></li>
+                <li><i className="fa fa-check green-text text-lighten-2"></i><span> Reduce should pass result of accumulator(MEMO) to every invocation of accumulator</span></li>
+                <li><i className="fa fa-check green-text text-lighten-2"></i><span> Reduce should use first item in the collection if start is not provided</span></li>
+                <li><i className="fa fa-check green-text text-lighten-2"></i><span> Reduce should NOT invoke accumulator on first item if start in not provided</span></li>
+                <li><i className="fa fa-check green-text text-lighten-2"></i><span> Reduce should return a new array</span></li>
+                <li><i className="fa fa-check green-text text-lighten-2"></i><span> Reduce should use start value as final result</span></li>
               </ul>
             </div>
             <div className="code">
