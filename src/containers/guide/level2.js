@@ -1,40 +1,7 @@
 import React from 'react';
 import Highlight from '../../helpers/highlight.js';
+import { filter, filterExample, filterSolution } from './code/filter.js';
 
-const filter = `function filter(collection, predicate){
-  //your code here
-}`
-
-const filterSolution = `function filter(collection, callback) {
-  var result = [];
-  each(collection, function(item) {
-    if (predicate(item)) {
-      result.push(item);
-    }
-  });
-  return result;
-}
-
-***** Pseudo Code *****
-//declare function filter that accepts collection and test function
-  //create new array to store results
-
-  //use each to iterate over the collection
-    //and pass anonymous function as callback
-
-     //if test with current will be truthy
-       // push item into the result
-
-// return result;
-`
-
-const filterExample = `var numbers = [1,2,3,4,5,6];
-function isEven(num) {
-  return num % 2 === 0;
-}
-
-filter(numbers, isEven); => [2, 4, 6];
-`
 
 const reduce = `function map(collection, callback) {
   //your code here
@@ -47,6 +14,7 @@ const example = `function map(collection, callback) {
 export default () => (
 
   <div className="card deep-purple lighten-5">
+    {console.log(filter)}
     <div className="card-content">
       <h3>Level 2 - Filter and Reduce</h3>
       <hr />
