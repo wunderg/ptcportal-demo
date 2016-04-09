@@ -1,6 +1,6 @@
 export const map = `function map(collection, callback) {
   //your code here
-}`
+}`;
 
 export const mapSolution =
 `function map(collection, callback) {
@@ -21,7 +21,7 @@ export const mapSolution =
     // and push it into the results array
 
 // return new array with modifed items
-`
+`;
 
 export const mapExample =
 `//test array
@@ -33,4 +33,14 @@ function double(num) {
 }
 
 map(numbers, double); => [2, 4, 6, 8, 10];
+`;
+
+export const mapUsingReduce =
 `
+function map(collection, callback) {
+  return reduce(collection, function(result, item) {
+    result.push(callback(item));
+    return result;
+  }, [])
+}
+`;

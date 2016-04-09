@@ -1,6 +1,6 @@
 export const filter = `function filter(collection, predicate){
   //your code here
-}`
+}`;
 
 export const filterSolution = `function filter(collection, callback) {
   var result = [];
@@ -23,7 +23,7 @@ export const filterSolution = `function filter(collection, callback) {
        // push item into the result
 
 // return result;
-`
+`;
 
 export const filterExample = `var numbers = [1,2,3,4,5,6];
 function isEven(num) {
@@ -31,4 +31,15 @@ function isEven(num) {
 }
 
 filter(numbers, isEven); => [2, 4, 6];
-`
+`;
+
+export const filterUsingReduce =
+`function filter(collection, predicate) {
+  return reduce(collection, function(result, item) {
+    if(predicate(item)) {
+      result.push(item);
+    }
+    return result;
+  }, [])
+}
+`;
