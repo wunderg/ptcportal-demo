@@ -36,11 +36,10 @@ map(numbers, double); => [2, 4, 6, 8, 10];
 `;
 
 export const mapUsingReduce =
-`
-function map(collection, callback) {
+`function map(collection, callback) {
   return reduce(collection, function(result, item) {
     result.push(callback(item));
     return result;
-  }, [])
+  }, []);
 }
 `;

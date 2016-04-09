@@ -1,25 +1,19 @@
 import React from 'react';
 import Highlight from '../../helpers/highlight.js';
-
-const each = `function each(collection, callback){
-  //your code here
-}`
-
-const map = `function map(collection, callback) {
-  //your code here
-}`
+import { map, mapExample, mapUsingReduce } from './code/map.js';
+import { filter, filterExample, filterUsingReduce } from './code/filter.js';
 
 export default () => (
 
   <div className="card deep-purple lighten-5">
     <div className="card-content">
-      <h3>Level 4</h3>
+      <h3>Level 4 - Map And Filter Using Reduce</h3>
       <hr />
       <ul className="lesson-list">
         <li>
           <div className="card">
             <div className="card-content">
-              <h4><b>Lesson 1</b></h4>
+              <h4><b>Lesson 1 - Map usign Reduce</b></h4>
               <hr />
               <div className="">
                 <h5><b>Objectives:</b></h5>
@@ -40,15 +34,15 @@ export default () => (
             </div>
             <div className="code">
               <h5><b>Boilerplate:</b></h5>
-              <Highlight props={each} />
+              <Highlight props={map} />
+            </div>
+            <div className="code">
+              <h5><b>Example</b></h5>
+              <Highlight props={mapExample} />
             </div>
             <div className="code">
               <h5><b>Solution:</b></h5>
-              <Highlight props={each} />
-            </div>
-            <div className="code">
-              <h5><b>Helpers:</b></h5>
-              <Highlight props={each} />
+              <Highlight props={mapUsingReduce} />
             </div>
           </div>
         </li>
@@ -56,7 +50,7 @@ export default () => (
         <li>
           <div className="card">
             <div className="card-content">
-              <h4><b>Lesson 2</b></h4>
+              <h4><b>Lesson 2 - Filter using Reduce</b></h4>
               <hr />
               <div className="">
                 <h5><b>Objectives:</b></h5>
@@ -79,15 +73,15 @@ export default () => (
             </div>
             <div className="code">
               <h5><b>Boilerplate:</b></h5>
-              <Highlight props={map} />
+              <Highlight props={filter} />
+            </div>
+            <div className="code">
+              <h5><b>Example</b></h5>
+              <Highlight props={filterExample} />
             </div>
             <div className="code">
               <h5><b>Solution:</b></h5>
-              <Highlight props={map} />
-            </div>
-            <div className="code">
-              <h5><b>Helpers:</b></h5>
-              <Highlight props={each} />
+              <Highlight props={filterUsingReduce} />
             </div>
           </div>
         </li>
