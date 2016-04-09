@@ -1,16 +1,6 @@
 import React from 'react';
-import Highlight from '../../helpers/highlight.js';
-
-const each = `function each(collection, callback){
-  //your code here
-}`;
-
-const map = `function map(collection, callback) {
-  //your code here
-}`;
 
 export default () => (
-
   <div className="card deep-purple lighten-5">
     <div className="card-content">
       <h3>How To Use This Guide</h3>
