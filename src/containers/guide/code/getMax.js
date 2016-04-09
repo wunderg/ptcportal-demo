@@ -19,4 +19,12 @@ export const getMaxSolution =
     return memo;
   });
 }
+
+***** Pseudo Code *****
+// define getmax function
+  //return reduce with collection and callback
+  //start will be first item in the collection
+    //if item greater then memo
+      //memo will be equal item
+    //return memo
 `;

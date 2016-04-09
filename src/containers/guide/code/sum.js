@@ -20,4 +20,12 @@ export const sumSolution =
     return memo;
   }, startValue);
 }
+
+***** Pseudo Code *****
+//function sum accepts collection and optional startValue
+  //if startValue is not defined initiate at 0
+  //return reduce with collection, callback and startVallue
+    //pass memo and item into the callback
+    //add memo and item
+    //return memo
 `;

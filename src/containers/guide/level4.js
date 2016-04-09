@@ -4,7 +4,6 @@ import { map, mapExample, mapUsingReduce } from './code/map.js';
 import { filter, filterExample, filterUsingReduce } from './code/filter.js';
 
 export default () => (
-
   <div className="card deep-purple lighten-5">
     <div className="card-content">
       <h3>Level 4 - Map And Filter Using Reduce</h3>
@@ -18,18 +17,19 @@ export default () => (
               <div className="">
                 <h5><b>Objectives:</b></h5>
                 <ul className="prompts">
-                  <li><i className="fa fa-check green-text text-lighten-2"></i><span> Create function each</span></li>
-                  <li><i className="fa fa-check green-text text-lighten-2"></i><span> Create function each</span></li>
-                  <li><i className="fa fa-check green-text text-lighten-2"></i><span> Create function each</span></li>
+                  <li><i className="fa fa-check green-text text-lighten-2"></i><span> Teach how to write Map using Reduce</span></li>
+                  <li><i className="fa fa-check green-text text-lighten-2"></i><span> Teach that an empty array can be a startValue</span></li>
+                  <li><i className="fa fa-check green-text text-lighten-2"></i><span> Help student to create example</span></li>
+                  <li><i className="fa fa-check green-text text-lighten-2"></i><span> Help student to walk thru every iteration - STEP by STEP</span></li>
                 </ul>
               </div>
               <div className="">
                 <h5><b>Technical:</b></h5>
               </div>
               <ul className="prompts">
-                <li><i className="fa fa-check green-text text-lighten-2"></i><span> Create function each</span></li>
-                <li><i className="fa fa-check green-text text-lighten-2"></i><span> Each should accept collection and callback as parameters</span></li>
-                <li><i className="fa fa-check green-text text-lighten-2"></i><span> Each should work on arrays and objects</span></li>
+                <li><i className="fa fa-check green-text text-lighten-2"></i><span> Create function Map</span></li>
+                <li><i className="fa fa-check green-text text-lighten-2"></i><span> Map should accept collection and callback as parameters</span></li>
+                <li><i className="fa fa-check green-text text-lighten-2"></i><span> Map should use Reduce</span></li>
               </ul>
             </div>
             <div className="code">

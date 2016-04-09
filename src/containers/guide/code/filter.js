@@ -42,4 +42,12 @@ export const filterUsingReduce =
     return result;
   }, [])
 }
+
+***** Pseudo Code *****
+//declare filter that accepts collection and predicate
+  // return reduce and pass in collection, accumulator and []
+  // accumulator will accept 2 args result and item
+    //if predicate with item will return true
+     // push item into the result
+  // return result;
 `;

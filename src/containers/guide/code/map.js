@@ -10,6 +10,7 @@ export const mapSolution =
   });
   return result;
 }
+
 ***** Pseudo Code *****
 // declare function map
   // create new array to store results
@@ -42,4 +43,11 @@ export const mapUsingReduce =
     return result;
   }, []);
 }
+
+***** Pseudo Code *****
+// declare function map
+  // return reduce and pass in collection, accumulator and []
+  // accumulator will accept 2 args result and item
+    //push result of callback with item into the result
+    //return result
 `;
