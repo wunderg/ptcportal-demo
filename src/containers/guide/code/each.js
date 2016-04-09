@@ -1,4 +1,3 @@
-
 export const each =
 `function each(collection, callback){
   //your code here
