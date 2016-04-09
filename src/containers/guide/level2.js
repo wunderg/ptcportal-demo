@@ -1,11 +1,10 @@
 import React from 'react';
 import Highlight from '../../helpers/highlight.js';
 import { filter, filterExample, filterSolution } from './code/filter.js';
-import { reduce, reduceExample, reduceSolution} from './code/reduce.js';
+import { reduce, reduceExample, reduceSolution } from './code/reduce.js';
 
 export default () => (
   <div className="card deep-purple lighten-5">
-    {console.log(filter)}
     <div className="card-content">
       <h3>Level 2 - Filter and Reduce</h3>
       <hr />
