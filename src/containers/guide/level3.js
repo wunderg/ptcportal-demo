@@ -1,5 +1,7 @@
 import React from 'react';
 import Highlight from '../../helpers/highlight.js';
+import { getMax } from './code/getMax.js';
+import { sum } from './code/sum.js';
 
 const each = `function each(collection, callback){
   //your code here
