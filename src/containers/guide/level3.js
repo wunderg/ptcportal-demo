@@ -34,9 +34,10 @@ export default () => (
                 <h5><b>Technical:</b></h5>
               </div>
               <ul className="prompts">
-                <li><i className="fa fa-check green-text text-lighten-2"></i><span> Create function each</span></li>
-                <li><i className="fa fa-check green-text text-lighten-2"></i><span> Each should accept collection and callback as parameters</span></li>
-                <li><i className="fa fa-check green-text text-lighten-2"></i><span> Each should work on arrays and objects</span></li>
+                <li><i className="fa fa-check green-text text-lighten-2"></i><span> Create function sum</span></li>
+                <li><i className="fa fa-check green-text text-lighten-2"></i><span> Sum should use Reduce as the iterator</span></li>
+                <li><i className="fa fa-check green-text text-lighten-2"></i><span> Sum should accept collection and OPTIONAL startValue</span></li>
+                <li><i className="fa fa-check green-text text-lighten-2"></i><span> Sum should return biggest number in a given array</span></li>
               </ul>
             </div>
             <div className="code">
