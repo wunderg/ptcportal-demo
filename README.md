@@ -21,7 +21,7 @@
 From within the root directory:
 
 ```sh
-npm install
+npm run dev-install
 ```
 
 This will handle both client and server-side dependencies as outlined in [package.json](package.json).

@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node ./dist/server.js",
+    "install-dev": "npm install --ignore-scripts",
     "start-dev": "NODE_ENV=development babel-node ./server/server.js",
     "build-client": "NODE_ENV=production webpack --config ./webpack.production.config.js --profile",
     "build-server": "babel -d ./dist ./server -s",
