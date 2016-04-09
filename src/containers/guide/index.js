@@ -12,7 +12,7 @@ import Level7 from './level7.js';
 
 class Guide extends Component {
   componentDidMount() {
-    $(function() {
+    $(function () {
       $('.scrollspy').scrollSpy();
     });
   }
