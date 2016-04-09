@@ -13,13 +13,13 @@ export default () => (
 
   <div className="card deep-purple lighten-5">
     <div className="card-content">
-      <h3>Workflow</h3>
+      <h3>How To Use This Guide</h3>
       <hr />
       <ul className="lesson-list">
         <li>
           <div className="card">
             <div className="card-content">
-              <h4><b>Lesson 1</b></h4>
+              <h4><b>Workflow</b></h4>
               <hr />
               <div className="">
                 <h5><b>Objectives:</b></h5>
@@ -38,25 +38,13 @@ export default () => (
                 <li><i className="fa fa-check green-text text-lighten-2"></i><span> Each should work on arrays and objects</span></li>
               </ul>
             </div>
-            <div className="code">
-              <h5><b>Boilerplate:</b></h5>
-              <Highlight props={each} />
-            </div>
-            <div className="code">
-              <h5><b>Solution:</b></h5>
-              <Highlight props={each} />
-            </div>
-            <div className="code">
-              <h5><b>Helpers:</b></h5>
-              <Highlight props={each} />
-            </div>
           </div>
         </li>
 
         <li>
           <div className="card">
             <div className="card-content">
-              <h4><b>Lesson 2</b></h4>
+              <h4><b>Tips</b></h4>
               <hr />
               <div className="">
                 <h5><b>Objectives:</b></h5>
@@ -76,18 +64,6 @@ export default () => (
                 <li><i className="fa fa-check green-text text-lighten-2"></i><span> Map should work on arrays and objects</span></li>
                 <li><i className="fa fa-check green-text text-lighten-2"></i><span> Map should return a new array</span></li>
               </ul>
-            </div>
-            <div className="code">
-              <h5><b>Boilerplate:</b></h5>
-              <Highlight props={map} />
-            </div>
-            <div className="code">
-              <h5><b>Solution:</b></h5>
-              <Highlight props={map} />
-            </div>
-            <div className="code">
-              <h5><b>Helpers:</b></h5>
-              <Highlight props={each} />
             </div>
           </div>
         </li>
