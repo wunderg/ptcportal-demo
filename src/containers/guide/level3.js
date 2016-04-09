@@ -13,13 +13,13 @@ export default () => (
 
   <div className="card deep-purple lighten-5">
     <div className="card-content">
-      <h3>Level 3</h3>
+      <h3>Level 3 - Sum and GetMin using Reduce</h3>
       <hr />
       <ul className="lesson-list">
         <li>
           <div className="card">
             <div className="card-content">
-              <h4><b>Lesson 1</b></h4>
+              <h4><b>Lesson 1 - Sum</b></h4>
               <hr />
               <div className="">
                 <h5><b>Objectives:</b></h5>
@@ -56,7 +56,7 @@ export default () => (
         <li>
           <div className="card">
             <div className="card-content">
-              <h4><b>Lesson 2</b></h4>
+              <h4><b>Lesson 2 - GetMin</b></h4>
               <hr />
               <div className="">
                 <h5><b>Objectives:</b></h5>

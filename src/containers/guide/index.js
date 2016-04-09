@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './style.scss';
 
+import Level0 from './level0.js';
 import Level1 from './level1.js';
 import Level2 from './level2.js';
 import Level3 from './level3.js';
@@ -20,6 +21,10 @@ class Guide extends Component {
     return (
       <div className="row">
         <div className="col s12 m9 l10">
+
+          <div id="level0" className="section scrollspy">
+            <Level0 />
+          </div>
 
           <div id="level1" className="section scrollspy">
             <Level1 />
@@ -52,6 +57,7 @@ class Guide extends Component {
         </div>
         <div className="col hide-on-small-only m3 l2">
           <ul className="section table-of-contents">
+            <li><a href="#level0">Workflow</a></li>
             <li><a href="#level1">Level 1</a></li>
             <li><a href="#level2">Level 2</a></li>
             <li><a href="#level3">Level 3</a></li>
