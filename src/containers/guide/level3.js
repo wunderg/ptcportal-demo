@@ -8,7 +8,7 @@ export default () => (
 
   <div className="card deep-purple lighten-5">
     <div className="card-content">
-      <h3>Level 3 - Sum and GetMin using Reduce</h3>
+      <h3>Level 3 - Sum and GetMax using Reduce</h3>
       <hr />
       <ul className="lesson-list">
         <li>
