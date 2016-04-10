@@ -9,6 +9,7 @@ import Level4 from './level4.js';
 import Level5 from './level5.js';
 import Level6 from './level6.js';
 import Level7 from './level7.js';
+import Interview from './interview.js';
 
 class Guide extends Component {
   componentDidMount() {
@@ -54,6 +55,10 @@ class Guide extends Component {
             <Level7 />
           </div>
 
+          <div id="interview" className="section scrollspy">
+            <Interview />
+          </div>
+
         </div>
         <div className="col hide-on-small-only m3 l2">
           <ul className="section table-of-contents">
@@ -65,6 +70,7 @@ class Guide extends Component {
             <li><a href="#level5">Level 5</a></li>
             <li><a href="#level6">Level 6</a></li>
             <li><a href="#level7">Level 7</a></li>
+            <li><a href="#interview">Interview</a></li>
           </ul>
         </div>
       </div>
