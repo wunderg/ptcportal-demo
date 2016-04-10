@@ -1,13 +1,7 @@
 import React from 'react';
 import Highlight from '../../helpers/highlight.js';
-
-const each = `function each(collection, callback){
-  //your code here
-}`;
-
-const map = `function map(collection, callback) {
-  //your code here
-}`;
+import { contains, containsExample, containsSolution } from './code/contains.js';
+import { every, everyExample, everySolution } from './code/every.js';
 
 export default () => (
 
@@ -40,15 +34,15 @@ export default () => (
             </div>
             <div className="code">
               <h5><b>Boilerplate:</b></h5>
-              <Highlight props={each} />
+              <Highlight props={contains} />
+            </div>
+            <div className="code">
+              <h5><b>Example:</b></h5>
+              <Highlight props={containsExample} />
             </div>
             <div className="code">
               <h5><b>Solution:</b></h5>
-              <Highlight props={each} />
-            </div>
-            <div className="code">
-              <h5><b>Helpers:</b></h5>
-              <Highlight props={each} />
+              <Highlight props={containsSolution} />
             </div>
           </div>
         </li>
@@ -79,15 +73,15 @@ export default () => (
             </div>
             <div className="code">
               <h5><b>Boilerplate:</b></h5>
-              <Highlight props={map} />
+              <Highlight props={every} />
+            </div>
+            <div className="code">
+              <h5><b>Example:</b></h5>
+              <Highlight props={everyExample} />
             </div>
             <div className="code">
               <h5><b>Solution:</b></h5>
-              <Highlight props={map} />
-            </div>
-            <div className="code">
-              <h5><b>Helpers:</b></h5>
-              <Highlight props={each} />
+              <Highlight props={everySolution} />
             </div>
           </div>
         </li>
