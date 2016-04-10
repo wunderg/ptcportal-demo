@@ -1,13 +1,7 @@
 import React from 'react';
 import Highlight from '../../helpers/highlight.js';
-
-const each = `function each(collection, callback){
-  //your code here
-}`
-
-const map = `function map(collection, callback) {
-  //your code here
-}`
+import { objectProps, objectPropsExample, objectPropsSolution, eachModified, reduceModified } from './code/objectProps.js';
+import { indexOf, indexOfExample, indexOfSolution, eachModifiedIndex, reduceModifiedIndex } from './code/indexOf.js';
 
 export default () => (
 
@@ -40,15 +34,17 @@ export default () => (
             </div>
             <div className="code">
               <h5><b>Boilerplate:</b></h5>
-              <Highlight props={each} />
+              <Highlight props={objectProps} />
+            </div>
+            <div className="code">
+              <h5><b>Example:</b></h5>
+              <Highlight props={objectPropsExample} />
             </div>
             <div className="code">
               <h5><b>Solution:</b></h5>
-              <Highlight props={each} />
-            </div>
-            <div className="code">
-              <h5><b>Helpers:</b></h5>
-              <Highlight props={each} />
+              <Highlight props={objectPropsSolution} />
+              <Highlight props={eachModified} />
+              <Highlight props={reduceModified} />
             </div>
           </div>
         </li>
@@ -79,15 +75,17 @@ export default () => (
             </div>
             <div className="code">
               <h5><b>Boilerplate:</b></h5>
-              <Highlight props={map} />
+              <Highlight props={indexOf} />
+            </div>
+            <div className="code">
+              <h5><b>Example:</b></h5>
+              <Highlight props={indexOfExample} />
             </div>
             <div className="code">
               <h5><b>Solution:</b></h5>
-              <Highlight props={map} />
-            </div>
-            <div className="code">
-              <h5><b>Helpers:</b></h5>
-              <Highlight props={each} />
+              <Highlight props={eachModifiedIndex} />
+              <Highlight props={reduceModifiedIndex} />
+              <Highlight props={indexOfSolution} />
             </div>
           </div>
         </li>
