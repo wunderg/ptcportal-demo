@@ -51,6 +51,7 @@ export default () => (
                   <li><i className="fa fa-check green-text text-lighten-2"></i><span> Make sure to PRAISE STUDENT on every lesson completed</span></li>
                   <li><i className="fa fa-check green-text text-lighten-2"></i><span> Even simple 'Good Job' is sufficent</span></li>
                   <li><i className="fa fa-check green-text text-lighten-2"></i><span> Show student how to use chrome debbuger to walk thru every iteration</span></li>
+                  <li><i className="fa fa-check green-text text-lighten-2"></i><span> Every session push them a little further</span></li>
                 </ul>
               </div>
             </div>

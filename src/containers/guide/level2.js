@@ -67,7 +67,7 @@ export default () => (
                   <li><i className="fa fa-check green-text text-lighten-2"></i><span> Teach that startValue is the value that will get returned in the end as the final result </span></li>
                   <li><i className="fa fa-check green-text text-lighten-2"></i><span> Teach that startValue is optional</span></li>
                   <li><i className="fa fa-check green-text text-lighten-2"></i><span> Teach that if starting value is not provided Reduce will use first item in the collection as the startValue </span></li>
-                  <li><i className="fa fa-check green-text text-lighten-2"></i><span> Teach that if starting value is not provided Reduce will NOT iterate over the first item because it will become the startValue </span></li>
+                  <li><i className="fa fa-check green-text text-lighten-2"></i><span> Teach that if starting value is not provided Reduce should NOT iterate over the first item because it will become the startValue </span></li>
                 </ul>
               </div>
               <div className="">
