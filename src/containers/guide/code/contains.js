@@ -25,10 +25,5 @@ export const containsExample =
 `//test array
 var numbers = [2,4,5,6];
 
-//test function
-function isEven(num) {
-  return num % 2 === 0;
-}
-
-contains(numbers, isEven); => false
+contains(numbers, 4); => true;
 `;
