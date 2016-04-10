@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './style.scss';
 
-import Level0 from './level0.js';
+import Level0 from './howto.js';
 import Level1 from './level1.js';
 import Level2 from './level2.js';
 import Level3 from './level3.js';

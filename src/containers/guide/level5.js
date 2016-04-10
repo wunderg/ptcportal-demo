@@ -18,18 +18,23 @@ export default () => (
               <div className="">
                 <h5><b>Objectives:</b></h5>
                 <ul className="prompts">
-                  <li><i className="fa fa-check green-text text-lighten-2"></i><span> Create function each</span></li>
-                  <li><i className="fa fa-check green-text text-lighten-2"></i><span> Create function each</span></li>
-                  <li><i className="fa fa-check green-text text-lighten-2"></i><span> Create function each</span></li>
+                  <li><i className="fa fa-check green-text text-lighten-2"></i><span> Teach how to write Contains using Reduce </span></li>
+                  <li><i className="fa fa-check green-text text-lighten-2"></i><span> Teach that Boolean value can be a startValue</span></li>
+                  <li><i className="fa fa-check green-text text-lighten-2"></i><span> Teach that that startValue will become result on first iteration</span></li>
+                  <li><i className="fa fa-check green-text text-lighten-2"></i><span> Teach that result will need to be updated only once</span></li>
+                  <li><i className="fa fa-check green-text text-lighten-2"></i><span> Refer to reduce implementation</span></li>
+                  <li><i className="fa fa-check green-text text-lighten-2"></i><span> Help student to create example</span></li>
+                  <li><i className="fa fa-check green-text text-lighten-2"></i><span> Help student to walk thru every iteration - STEP by STEP</span></li>
                 </ul>
               </div>
               <div className="">
                 <h5><b>Technical:</b></h5>
               </div>
               <ul className="prompts">
-                <li><i className="fa fa-check green-text text-lighten-2"></i><span> Create function each</span></li>
-                <li><i className="fa fa-check green-text text-lighten-2"></i><span> Each should accept collection and callback as parameters</span></li>
-                <li><i className="fa fa-check green-text text-lighten-2"></i><span> Each should work on arrays and objects</span></li>
+                <li><i className="fa fa-check green-text text-lighten-2"></i><span> Create function Contains </span></li>
+                <li><i className="fa fa-check green-text text-lighten-2"></i><span> Contains should accept collection and target as parameters</span></li>
+                <li><i className="fa fa-check green-text text-lighten-2"></i><span> Conatins should use Reduce</span></li>
+                <li><i className="fa fa-check green-text text-lighten-2"></i><span> Conatins should start with Boolean value</span></li>
               </ul>
             </div>
             <div className="code">
@@ -55,20 +60,23 @@ export default () => (
               <div className="">
                 <h5><b>Objectives:</b></h5>
                 <ul className="prompts">
-                  <li><i className="fa fa-check green-text text-lighten-2"></i><span> Create function each</span></li>
-                  <li><i className="fa fa-check green-text text-lighten-2"></i><span> Create function each</span></li>
-                  <li><i className="fa fa-check green-text text-lighten-2"></i><span> Create function each</span></li>
+                  <li><i className="fa fa-check green-text text-lighten-2"></i><span> Teach how to write Every using Reduce </span></li>
+                  <li><i className="fa fa-check green-text text-lighten-2"></i><span> Teach that Boolean value can be a startValue</span></li>
+                  <li><i className="fa fa-check green-text text-lighten-2"></i><span> Teach that that startValue will become result on first iteration</span></li>
+                  <li><i className="fa fa-check green-text text-lighten-2"></i><span> Teach that result will need to be updated only once</span></li>
+                  <li><i className="fa fa-check green-text text-lighten-2"></i><span> Refer to reduce implementation</span></li>
+                  <li><i className="fa fa-check green-text text-lighten-2"></i><span> Help student to create example</span></li>
+                  <li><i className="fa fa-check green-text text-lighten-2"></i><span> Help student to walk thru every iteration - STEP by STEP</span></li>
                 </ul>
               </div>
               <div className="">
                 <h5><b>Technical:</b></h5>
               </div>
               <ul className="prompts">
-                <li><i className="fa fa-check green-text text-lighten-2"></i><span> Create function map</span></li>
-                <li><i className="fa fa-check green-text text-lighten-2"></i><span> Map should apply callback to every item in the collection</span></li>
-                <li><i className="fa fa-check green-text text-lighten-2"></i><span> Map should accept collection and callback as parameters</span></li>
-                <li><i className="fa fa-check green-text text-lighten-2"></i><span> Map should work on arrays and objects</span></li>
-                <li><i className="fa fa-check green-text text-lighten-2"></i><span> Map should return a new array</span></li>
+                <li><i className="fa fa-check green-text text-lighten-2"></i><span> Create function Every </span></li>
+                <li><i className="fa fa-check green-text text-lighten-2"></i><span> Every should accept collection and predicate as parameters</span></li>
+                <li><i className="fa fa-check green-text text-lighten-2"></i><span> Every should use Reduce</span></li>
+                <li><i className="fa fa-check green-text text-lighten-2"></i><span> Every should start with Boolean value</span></li>
               </ul>
             </div>
             <div className="code">
