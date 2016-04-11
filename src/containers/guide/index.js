@@ -60,7 +60,7 @@ class Guide extends Component {
           </div>
 
         </div>
-        <div className="col hide-on-med-and-down m3 l2">
+        <div className="col hide-on-small-only m3 l2">
           <ul className="section table-of-contents">
             <li><a href="#level0">Workflow</a></li>
             <li><a href="#level1">Level 1</a></li>
