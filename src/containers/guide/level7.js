@@ -3,11 +3,11 @@ import Highlight from '../../helpers/highlight.js';
 
 const each = `function each(collection, callback){
   //your code here
-}`
+}`;
 
 const map = `function map(collection, callback) {
   //your code here
-}`
+}`;
 
 export default () => (
 
