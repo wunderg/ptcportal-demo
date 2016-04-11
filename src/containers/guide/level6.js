@@ -18,8 +18,8 @@ export default () => (
               <div className="">
                 <h5><b>Objectives:</b></h5>
                 <ul className="prompts">
-                  <li><i className="fa fa-check green-text text-lighten-2"></i><span> Create function each</span></li>
-                  <li><i className="fa fa-check green-text text-lighten-2"></i><span> Create function each</span></li>
+                  <li><i className="fa fa-check green-text text-lighten-2"></i><span> Teach student how to edit each to give additional functionality</span></li>
+                  <li><i className="fa fa-check green-text text-lighten-2"></i><span> Teach how to pass arguments down the line by passing them into the callback</span></li>
                   <li><i className="fa fa-check green-text text-lighten-2"></i><span> Create function each</span></li>
                 </ul>
               </div>
