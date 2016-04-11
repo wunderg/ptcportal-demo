@@ -4,8 +4,8 @@ export const indexOf =
 }`;
 
 export const eachModifiedIndex =
-`function indexOf(collection, callback) {
-  if (Array.isArray(collection)) {
+`function each(collection, callback) {
+  if (Array.isArray(collection) || typeof collection === 'string') {
     for (var i = 0; i < collection.length ; i++) {
       callback(collection[i], I, collection);
     }
@@ -33,36 +33,29 @@ export const reduceModifiedIndex =
 `;
 
 export const indexOfSolution =
-`function indexOf(collection, callback) {
-  if (Array.isArray(collection)) {
-    for (var i = 0; i < collection.length ; i++) {
-      callback(collection[i]);
+`function indexOf(collection, target) {
+  return reduce(collection, function(result, item, INDEX) {
+    if (item === target) {
+      result = INDEX;
     }
-  } else {
-    for (var prop in collection) {
-      callback(collection[prop]);
-    }
-  }
+    return result;
+  }, null);
 }
 
 ***** Pseudo Code *****
 // declare function indexOf
-  // check if collection is array
-    // iterate over array
-      // apply callback on every item in the array
-  // else if collection is not an array
-    // iterate over object
-      // apply callback to every value in the object
-`
+  //return reduce with collection, callback and null
+  //callback will accept 3 arguments - result, item, INDEX
+  //start will be first item in the collection
+    //if item is equal to target
+      //then result = to item
+    //return result
+`;
 
 export const indexOfExample =
 `//test array
 var numbers = [1,2,3,4,5,6];
 
-//test function
-function log(num) {
-  console.log(num);
-}
-
-indexOf(numbers, log); => log every value to the console;
-`
+indexOf(numbers, 4); => 3;
+indexOf(numbers, 9); => null;
+`;

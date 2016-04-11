@@ -18,18 +18,18 @@ export default () => (
               <div className="">
                 <h5><b>Objectives:</b></h5>
                 <ul className="prompts">
-                  <li><i className="fa fa-check green-text text-lighten-2"></i><span> Teach student how to edit each to give additional functionality</span></li>
+                  <li><i className="fa fa-check green-text text-lighten-2"></i><span> Teach student how to edit each and reduce to give additional functionality</span></li>
                   <li><i className="fa fa-check green-text text-lighten-2"></i><span> Teach how to pass arguments down the line by passing them into the callback</span></li>
-                  <li><i className="fa fa-check green-text text-lighten-2"></i><span> Create function each</span></li>
+                  <li><i className="fa fa-check green-text text-lighten-2"></i><span> Teach how to extract those arguments in the following functions</span></li>
                 </ul>
               </div>
               <div className="">
                 <h5><b>Technical:</b></h5>
               </div>
               <ul className="prompts">
-                <li><i className="fa fa-check green-text text-lighten-2"></i><span> Create function each</span></li>
-                <li><i className="fa fa-check green-text text-lighten-2"></i><span> Each should accept collection and callback as parameters</span></li>
-                <li><i className="fa fa-check green-text text-lighten-2"></i><span> Each should work on arrays and objects</span></li>
+                <li><i className="fa fa-check green-text text-lighten-2"></i><span> Create function objectProps</span></li>
+                <li><i className="fa fa-check green-text text-lighten-2"></i><span> ObjectProps should accept collection</span></li>
+                <li><i className="fa fa-check green-text text-lighten-2"></i><span> ObjectProps should use reduce and empty array as a startingValue</span></li>
               </ul>
             </div>
             <div className="code">
@@ -57,20 +57,20 @@ export default () => (
               <div className="">
                 <h5><b>Objectives:</b></h5>
                 <ul className="prompts">
-                  <li><i className="fa fa-check green-text text-lighten-2"></i><span> Create function each</span></li>
-                  <li><i className="fa fa-check green-text text-lighten-2"></i><span> Create function each</span></li>
-                  <li><i className="fa fa-check green-text text-lighten-2"></i><span> Create function each</span></li>
+                  <li><i className="fa fa-check green-text text-lighten-2"></i><span> Teach student how to edit each and reduce to give additional functionality</span></li>
+                  <li><i className="fa fa-check green-text text-lighten-2"></i><span> Teach how to pass arguments down the line by passing them into the callback</span></li>
+                  <li><i className="fa fa-check green-text text-lighten-2"></i><span> Teach how to extract those arguments in the following functions</span></li>
                 </ul>
               </div>
               <div className="">
                 <h5><b>Technical:</b></h5>
               </div>
               <ul className="prompts">
-                <li><i className="fa fa-check green-text text-lighten-2"></i><span> Create function map</span></li>
-                <li><i className="fa fa-check green-text text-lighten-2"></i><span> Map should apply callback to every item in the collection</span></li>
-                <li><i className="fa fa-check green-text text-lighten-2"></i><span> Map should accept collection and callback as parameters</span></li>
-                <li><i className="fa fa-check green-text text-lighten-2"></i><span> Map should work on arrays and objects</span></li>
-                <li><i className="fa fa-check green-text text-lighten-2"></i><span> Map should return a new array</span></li>
+                <li><i className="fa fa-check green-text text-lighten-2"></i><span> Create function indexOf</span></li>
+                <li><i className="fa fa-check green-text text-lighten-2"></i><span> IndexOf should accept collection and target</span></li>
+                <li><i className="fa fa-check green-text text-lighten-2"></i><span> IndexOf should use reduce and no startingValue</span></li>
+                <li><i className="fa fa-check green-text text-lighten-2"></i><span> Explain that KEY in reduce would represent both KEY for object and INDEX for array</span></li>
+                <li><i className="fa fa-check green-text text-lighten-2"></i><span> Make sure that Each can operate on strings by adding || - (OR)</span></li>
               </ul>
             </div>
             <div className="code">
