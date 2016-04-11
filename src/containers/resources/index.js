@@ -11,9 +11,18 @@ class Resources extends Component {
             <h3>Student Resources</h3>
             <hr />
             <div className="card-panel">
-              <h4><b>Feedback and Questions</b></h4>
+              <h4><b>Coding Practice</b></h4>
               <hr />
-              <p>Write <a href="mailto:josh.shaman@hackreactor.com">josh.shaman@hackreactor.com</a> with any suggested revisions, feedback, and questions.</p>
+              <p><a>Awesome Link</a></p>
+              <p><a>Awesome Link</a></p>
+              <p><a>Awesome Link</a></p>
+              <p><a>Awesome Link</a></p>
+              <h4><b>Books</b></h4>
+              <hr />
+              <p><a>Awesome Link</a></p>
+              <p><a>Awesome Link</a></p>
+              <p><a>Awesome Link</a></p>
+              <p><a>Awesome Link</a></p>
             </div>
           </div>
         </div>
