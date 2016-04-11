@@ -25,21 +25,25 @@ class Navbar extends Component {
           <ul className="right hide-on-med-and-down">
             <li><Link to={'/add'}>Add Student</Link></li>
             <li><a href="">Results</a></li>
-            <li><a href="">Dashboard</a></li>
+            <li><Link to={'/'}>Dashboard</Link></li>
             <li><Link to={'/guide'}>Guide</Link></li>
+            <li><Link to={'/resources'}>Resources</Link></li>
+            <li><Link to={'/faq'}>FAQ</Link></li>
             <li><a href="">Login</a></li>
           </ul>
           <ul className="side-nav" id="mobile-demo">
             <li><Link to={'/add'}>Add Student</Link></li>
             <li><a href="">Results</a></li>
-            <li><a href="">Dashboard</a></li>
+            <li><Link to={'/'}>Dashboard</Link></li>
             <li><Link to={'/guide'}>Guide</Link></li>
+            <li><Link to={'/resources'}>Resources</Link></li>
+            <li><Link to={'/faq'}>FAQ</Link></li>
             <li><a href="">Login</a></li>
           </ul>
         </div>
       </nav>
     );
   }
-};
+}
 
 export default Navbar;
