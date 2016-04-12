@@ -16,6 +16,7 @@ export const extendSolution =
 
 ***** Pseudo Code *****
 // declare function extend
+  // create array with all of the arguments
   //return reduce and pass in collection and accumulator
   //accumulator will accept result and item
     //starting value in not provided - collection[0] = start
