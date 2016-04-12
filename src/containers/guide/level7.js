@@ -1,5 +1,6 @@
 import React from 'react';
 import Highlight from '../../helpers/highlight.js';
+import { hash, hashSolution, hashExample } from './code/hash.js';
 
 const each = `function each(collection, callback){
   //your code here
@@ -40,15 +41,15 @@ export default () => (
             </div>
             <div className="code">
               <h5><b>Boilerplate:</b></h5>
-              <Highlight props={each} />
+              <Highlight props={hash} />
+            </div>
+            <div className="code">
+              <h5><b>Example:</b></h5>
+              <Highlight props={hashExample} />
             </div>
             <div className="code">
               <h5><b>Solution:</b></h5>
-              <Highlight props={each} />
-            </div>
-            <div className="code">
-              <h5><b>Helpers:</b></h5>
-              <Highlight props={each} />
+              <Highlight props={hashSolution} />
             </div>
           </div>
         </li>
