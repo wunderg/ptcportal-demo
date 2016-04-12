@@ -1,6 +1,7 @@
 import React from 'react';
 import Highlight from '../../helpers/highlight.js';
 import { hash, hashSolution, hashExample } from './code/hash.js';
+import { extend, extendSolution, extendExample } from './code/extend.js';
 
 const each = `function each(collection, callback){
   //your code here
@@ -80,15 +81,15 @@ export default () => (
             </div>
             <div className="code">
               <h5><b>Boilerplate:</b></h5>
-              <Highlight props={map} />
-            </div>
-            <div className="code">
-              <h5><b>Solution:</b></h5>
-              <Highlight props={map} />
+              <Highlight props={extend} />
             </div>
             <div className="code">
               <h5><b>Helpers:</b></h5>
-              <Highlight props={each} />
+              <Highlight props={extendExample} />
+            </div>
+            <div className="code">
+              <h5><b>Solution:</b></h5>
+              <Highlight props={extendSolution} />
             </div>
           </div>
         </li>
