@@ -27,6 +27,5 @@ export const hashSolution =
 `;
 
 export const hashExample =
-`
-hash('abbccc'); => {a: 1, b: 2, c: 3};
+`hash('abbccc'); => {a: 1, b: 2, c: 3};
 `;

@@ -26,8 +26,6 @@ export const extendSolution =
 `;
 
 export const extendExample =
-`
-
-extend({car: 'Dodge'}, {make: 'Ram'}, {color: 'White'});
+`extend({car: 'Dodge'}, {make: 'Ram'}, {color: 'White'});
 => {car: 'Dodge', make: 'Ram', color: 'White'}
 `;
