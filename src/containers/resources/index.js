@@ -24,15 +24,13 @@ class Resources extends Component {
           <div className="card deep-purple lighten-5">
             <div className="card-content">
               <h3>Instructor Resources</h3>
+                <h5><b>Email Templates</b></h5>
               <hr />
               <div className="card-panel">
-                <h4><b>Email Templates</b></h4>
+                <h5><b>Initial Contact</b></h5>
                 <hr />
-
                 <Initial />
 
-                <p><a>Awesome Link</a></p>
-                <p><a>Awesome Link</a></p>
               </div>
             </div>
           </div>

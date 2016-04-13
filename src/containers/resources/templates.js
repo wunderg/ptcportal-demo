@@ -1,30 +1,33 @@
 import React from 'react';
 
 export const Initial = () => (
-  <div>
+  <section>
     <h5>Hey [student]</h5>
 
-    <p>I'm [yourName], currently a Hacker-in-Residence at Hack Reactor Remote. I’m contacting you because you’ve enrolled in the Personal Tech Coaching program. Let’s work out a schedule and get started!
+    <p>
+    I'm [yourName], currently a Hacker-in-Residence at Hack Reactor Remote. I’m contacting you because you’ve enrolled in the Personal Tech Coaching program. Let’s work out a schedule and get started!
 
       <br />
       <br />
-      The first thing I want to ask is if you're currently enrolled in any of the other Hack Reactor programs (such as Remote Prep or Fulcrum)? If you are, you should stick with that program and skip out on the coaching (at least for now), though you're of course welcome to e-mail me with any questions you might have!
+    The first thing I want to ask is if you're currently enrolled in any of the other Hack Reactor programs (such as Remote Prep or Fulcrum)? If you are, you should stick with that program and skip out on the coaching (at least for now), though you're of course welcome to e-mail me with any questions you might have!
 
       <br />
       <br />
-      Let me know what is best time for you this week. I have slot at 6.30pm–7–30pm CST this Wednesday or Tuesday. For your reference, we’ll meet for 45–60 minutes twice a week.
-          <br />
-          <br />
+    Let me know what is best time for you this week. I have slot  at [ **6.30pm–7–30pm CST this Wednesday or Tuesday** ]. For your reference, we’ll meet for 45–60 minutes twice a week.
+      <br />
+      <br />
 
 
-          A little bit about me and what I do here: as an HiR I've been [on an engineering team, teach remote prep classes, do this coaching, help with outcomes, run a help desk, do technical interviews, etc]; I've been into tech/programming since [1967 but had been away from it for a few years - some tech background]; I like [jazz, penguins, and travel - some non-tech background].
+    A little bit about me and what I do here: as an HiR I've been [on an engineering team, teach remote prep classes, do this coaching, help with outcomes, run a help desk, do technical interviews, etc]; I've been into tech/programming since [1967 but had been away from it for a few years - some tech background]; I like [jazz, penguins, and travel - some non-tech background].
 
-            <br />
-            <br />
-            Reply to me here ( [first.last]@hackreactor.com ) and let me know what time works for you this week - [restate_someTime], and if you've got any other questions or scheduling concerns.
+     <br />
+     <br />
+    Reply to me here ( [first.last]@hackreactor.com ) and let me know what time works for you this week - [restate_someTime], and if you've got any other questions or scheduling concerns.
 
+    <br/>
+    <br/>
             Thanks!
 
-          </p>
-        </div>
+   </p>
+        </section>
 );
