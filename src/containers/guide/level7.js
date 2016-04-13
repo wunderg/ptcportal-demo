@@ -3,14 +3,6 @@ import Highlight from '../../helpers/highlight.js';
 import { hash, hashSolution, hashExample } from './code/hash.js';
 import { extend, extendSolution, extendExample } from './code/extend.js';
 
-const each = `function each(collection, callback){
-  //your code here
-}`;
-
-const map = `function map(collection, callback) {
-  //your code here
-}`;
-
 export default () => (
 
   <div className="card deep-purple lighten-5">
@@ -26,18 +18,22 @@ export default () => (
               <div className="">
                 <h5><b>Objectives:</b></h5>
                 <ul className="prompts">
-                  <li><i className="fa fa-check green-text text-lighten-2"></i><span> Create function each</span></li>
-                  <li><i className="fa fa-check green-text text-lighten-2"></i><span> Create function each</span></li>
-                  <li><i className="fa fa-check green-text text-lighten-2"></i><span> Create function each</span></li>
+                  <li><i className="fa fa-check green-text text-lighten-2"></i><span> Teach how to write hashTable function</span></li>
+                  <li><i className="fa fa-check green-text text-lighten-2"></i><span> Teach how to start Reduce with an object</span></li>
+                  <li><i className="fa fa-check green-text text-lighten-2"></i><span> Teach how to check if property exists on the object</span></li>
+                  <li><i className="fa fa-check green-text text-lighten-2"></i><span> Refer to reduce implementation</span></li>
+                  <li><i className="fa fa-check green-text text-lighten-2"></i><span> Help student to create example</span></li>
+                  <li><i className="fa fa-check green-text text-lighten-2"></i><span> Help student to walk thru every iteration - STEP by STEP</span></li>
                 </ul>
               </div>
               <div className="">
                 <h5><b>Technical:</b></h5>
               </div>
               <ul className="prompts">
-                <li><i className="fa fa-check green-text text-lighten-2"></i><span> Create function each</span></li>
-                <li><i className="fa fa-check green-text text-lighten-2"></i><span> Each should accept collection and callback as parameters</span></li>
-                <li><i className="fa fa-check green-text text-lighten-2"></i><span> Each should work on arrays and objects</span></li>
+                <li><i className="fa fa-check green-text text-lighten-2"></i><span> Create function HashTable</span></li>
+                <li><i className="fa fa-check green-text text-lighten-2"></i><span> HashTable should accept string as an argument</span></li>
+                <li><i className="fa fa-check green-text text-lighten-2"></i><span> HashTable should return an object</span></li>
+                <li><i className="fa fa-check green-text text-lighten-2"></i><span> Return object should calculate number of occurences of each letter in the string</span></li>
               </ul>
             </div>
             <div className="code">
