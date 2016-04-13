@@ -23,7 +23,7 @@ class Faq extends Component {
               <p>Note:  All admissions decision information should come from the admissions team. If a student is listed in Pipedrive as being accepted, the decision may not have been sent out to them yet.</p>
             </div>
             <div className="card-panel">
-              <h5><b>Q: What if my student has already been accepted to Hack Reactor?</b></h5>
+              <h5><b>Q: One of my students is looking to apply early because he is afraid of the seats filling up for the remote class. Is the class filling up something the PTC students need to worry about if they put off interviewing?</b></h5>
               <hr />
               <p>A: Our cap is high so I wouldn't worry much about that - messaging to student should be: “The greater concern is to take the interview before you are ready.”</p>
             </div>
