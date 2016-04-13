@@ -59,20 +59,25 @@ export default () => (
               <div className="">
                 <h5><b>Objectives:</b></h5>
                 <ul className="prompts">
-                  <li><i className="fa fa-check green-text text-lighten-2"></i><span> Create function each</span></li>
-                  <li><i className="fa fa-check green-text text-lighten-2"></i><span> Create function each</span></li>
-                  <li><i className="fa fa-check green-text text-lighten-2"></i><span> Create function each</span></li>
+                  <li><i className="fa fa-check green-text text-lighten-2"></i><span> Teach how to write extend function</span></li>
+                  <li><i className="fa fa-check green-text text-lighten-2"></i><span> Teach how to get hold of all 'arguments' object</span></li>
+                  <li><i className="fa fa-check green-text text-lighten-2"></i><span> Teach how to convert arguments object into the array</span></li>
+                  <li><i className="fa fa-check green-text text-lighten-2"></i><span> Teach how to extend properties of a given object</span></li>
+                  <li><i className="fa fa-check green-text text-lighten-2"></i><span> Teach how to use Each inside Reduce</span></li>
+                  <li><i className="fa fa-check green-text text-lighten-2"></i><span> Refer to reduce implementation</span></li>
+                  <li><i className="fa fa-check green-text text-lighten-2"></i><span> Help student to create example</span></li>
+                  <li><i className="fa fa-check green-text text-lighten-2"></i><span> Help student to walk thru every iteration - STEP by STEP</span></li>
                 </ul>
               </div>
               <div className="">
                 <h5><b>Technical:</b></h5>
               </div>
               <ul className="prompts">
-                <li><i className="fa fa-check green-text text-lighten-2"></i><span> Create function map</span></li>
-                <li><i className="fa fa-check green-text text-lighten-2"></i><span> Map should apply callback to every item in the collection</span></li>
-                <li><i className="fa fa-check green-text text-lighten-2"></i><span> Map should accept collection and callback as parameters</span></li>
-                <li><i className="fa fa-check green-text text-lighten-2"></i><span> Map should work on arrays and objects</span></li>
-                <li><i className="fa fa-check green-text text-lighten-2"></i><span> Map should return a new array</span></li>
+                  <li><i className="fa fa-check green-text text-lighten-2"></i><span> Create extend function</span></li>
+                  <li><i className="fa fa-check green-text text-lighten-2"></i><span> Extend will accept an unknown number of objects</span></li>
+                  <li><i className="fa fa-check green-text text-lighten-2"></i><span> Extend should convert 'arguments' object into an array</span></li>
+                  <li><i className="fa fa-check green-text text-lighten-2"></i><span> Extend should combine all of the objets propeties into one object</span></li>
+                  <li><i className="fa fa-check green-text text-lighten-2"></i><span> Extend should use each to iterate over objects</span></li>
               </ul>
             </div>
             <div className="code">
@@ -80,7 +85,7 @@ export default () => (
               <Highlight props={extend} />
             </div>
             <div className="code">
-              <h5><b>Helpers:</b></h5>
+              <h5><b>Example:</b></h5>
               <Highlight props={extendExample} />
             </div>
             <div className="code">
