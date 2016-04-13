@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import './style.scss';
+import Highlight from '../../helpers/highlight.js';
+import { Initial } from './templates.js';
 
 class Resources extends Component {
   componentDidMount(){
@@ -18,7 +20,7 @@ class Resources extends Component {
             <li className="tab col s3"><h5><a className="active" href="#teacher">Instructor</a></h5></li>
           </ul>
         </div>
-        <div id="student" className="col s12">
+        <div id="teacher" className="col s12">
           <div className="card deep-purple lighten-5">
             <div className="card-content">
               <h3>Instructor Resources</h3>
@@ -26,15 +28,16 @@ class Resources extends Component {
               <div className="card-panel">
                 <h4><b>Email Templates</b></h4>
                 <hr />
-                <p><a>Awesome Link</a></p>
-                <p><a>Awesome Link</a></p>
+
+                <Initial />
+
                 <p><a>Awesome Link</a></p>
                 <p><a>Awesome Link</a></p>
               </div>
             </div>
           </div>
         </div>
-        <div id="teacher" className="col s12">
+        <div id="student" className="col s12">
           <div className="card deep-purple lighten-5">
             <div className="card-content">
               <h3>Student Resources</h3>
