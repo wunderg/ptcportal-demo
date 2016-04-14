@@ -11,6 +11,11 @@ class Faq extends Component {
             <h3>Frequently Asked Questions</h3>
             <hr />
             <div className="card-panel">
+              <h5><b>Q: What should I do if student raise any red flags - rude and agressive, lack of growth mindset, etc..?</b></h5>
+              <hr />
+              <p>A: Immediately notify the admissions manager (now @joshshaman) who will help you take make any further decisions.</p>
+            </div>
+            <div className="card-panel">
               <h5><b>Q: What should I do if I don’t hear back from a student?</b></h5>
               <hr />
               <p>A: Send a follow up email and If you still don’t hear back from a student, notify the admissions associate (now @angelinadavis) who will take over from there.</p>
