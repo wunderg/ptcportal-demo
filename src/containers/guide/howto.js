@@ -15,65 +15,44 @@ export default () => (
                 <ul className="prompts">
                   <li>
                     <i className="fa fa-check green-text text-lighten-2"></i>
-                    <span> Student have to complete every exercise</span>
+                    <span> Student has to start at Level 1</span>
                   </li>
                   <li>
                     <i className="fa fa-check green-text text-lighten-2"></i>
-                    <span> Student have to write every function from scratch</span>
+                    <span> Every session must start with Level 1 and move up levels from there.</span>
                   </li>
                   <li>
                     <i className="fa fa-check green-text text-lighten-2"></i>
-                    <span> Student have to start at Level 1</span>
+                    <span> If a level has been completed before, only one lesson should be chosen from that level in proceeding sessions.</span>
                   </li>
                   <li>
                     <i className="fa fa-check green-text text-lighten-2"></i>
-                    <span> Student have to write every function that will be used in the lesson</span>
+                    <span> For example, in the third session, a student would complete each from lesson 1, reduce from lesson 2 and both sum and getMax from lesson 3.</span>
                   </li>
                   <li>
                     <i className="fa fa-check green-text text-lighten-2"></i>
-                    <span> Student have to talk thru every solution on a high level as well as line by line</span>
+                    <span> Student has to write every function from scratch line by line without referencing outside material.</span>
                   </li>
                   <li>
                     <i className="fa fa-check green-text text-lighten-2"></i>
-                    <span> Every session will start with Level 1.</span>
+                    <span> Student has to talk thru explaining every solution on a high-level and line by line. </span>
                   </li>
                   <li>
                     <i className="fa fa-check green-text text-lighten-2"></i>
-                    <span> If level had been completed previously only one lesson could be choosen</span>
+                    <span> Never copy and paste code from this guide to student. </span>
                   </li>
                   <li>
                     <i className="fa fa-check green-text text-lighten-2"></i>
-                    <span> Before the Mock Interview student have to finish level 1-7 within ONE session</span>
+                    <span> Use Pseudo-code to show student how you would talk about the function. </span>
                   </li>
                   <li>
                     <i className="fa fa-check green-text text-lighten-2"></i>
-                    <span> Never copy and paste code from this guide to student</span>
+                    <span> Before Mock Interview, student should be able to complete level 1-7 within ONE session timeframe. </span>
                   </li>
                   <li>
                     <i className="fa fa-check green-text text-lighten-2"></i>
-                    <span> Student have to write every function line by line - NO CHEATING</span>
+                    <span> Note: If a student is not comfortable in writing functions without examples, have them reference their own implementations. </span>
                   </li>
-                  <li>
-                    <i className="fa fa-check green-text text-lighten-2"></i>
-                    <span> Use Pseudo-code to show student on how you would talk about the function</span>
-                  </li>
-                  <li>
-                    <i className="fa fa-check green-text text-lighten-2"></i>
-                    <span> Have them explain every function in details</span>
-                  </li>
-                  <li>
-                    <i className="fa fa-check green-text text-lighten-2"></i>
-                    <span> If student comfortable to write function without example it is OK</span>
-                  </li>
-                  <li>
-                    <i className="fa fa-check green-text text-lighten-2"></i>
-                    <span> Especially after first few lessons, when he is comfortable with each and reduce</span>
-                  </li>
-                  <li>
-                    <i className="fa fa-check green-text text-lighten-2"></i>
-                    <span> For the best results always have student to refer to his own implementations</span>
-                  </li>
-
                 </ul>
               </div>
             </div>
