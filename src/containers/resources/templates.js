@@ -9,10 +9,6 @@ export const Initial = () => (
 
       <br />
       <br />
-    The first thing I want to ask is if you're currently enrolled in any of the other Hack Reactor programs (such as Remote Prep or Fulcrum)? If you are, you should stick with that program and skip out on the coaching (at least for now), though you're of course welcome to e-mail me with any questions you might have!
-
-      <br />
-      <br />
     Let me know what is best time for you this week. I have slot  at [ **6.30pm–7–30pm CST this Wednesday or Tuesday** ]. For your reference, we’ll meet for 45–60 minutes twice a week.
       <br />
       <br />
