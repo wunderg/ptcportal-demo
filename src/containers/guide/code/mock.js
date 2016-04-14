@@ -26,11 +26,12 @@ export const map = `function map(collection, callback) {
 }`;
 
 export const filterUsingReduce =
-`function = filter(collection predicate())
+  `//copy and paste code below for student to debug
+function = filter(collection predicate())
   var reduce(collection, predicate(item) {
     if(!item)
       result.put(collection);
-    }
+
     result = result + 1;
   }, '')
 }`;
