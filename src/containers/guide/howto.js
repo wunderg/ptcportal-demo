@@ -31,11 +31,11 @@ export default () => (
                   </li>
                   <li>
                     <i className="fa fa-check green-text text-lighten-2"></i>
-                    <span> Student has to write every function from scratch line by line without referencing outside material.</span>
+                    <span> Student has to write every function from scratch line by line without referencing to any outside material.</span>
                   </li>
                   <li>
                     <i className="fa fa-check green-text text-lighten-2"></i>
-                    <span> Student has to talk thru explaining every solution on a high-level and line by line. </span>
+                    <span> Student has to explain every solution on a high-level and aslo line by line. </span>
                   </li>
                   <li>
                     <i className="fa fa-check green-text text-lighten-2"></i>
@@ -87,7 +87,7 @@ export default () => (
                   </li>
                   <li><i className="fa fa-check green-text text-lighten-2"></i><span> No well-actually's. When someone says something that's almost - but not entirely - correct, and you say, "well, actually…" and then give a minor correction. This is especially annoying when the correction has no bearing on the actual conversation. </span></li>
                   <li><i className="fa fa-check green-text text-lighten-2"></i><span> Walking thru every iteration is the best way learn</span></li>
-                  <li><i className="fa fa-check green-text text-lighten-2"></i><span> Help student to develop 'Code Compiler' in his head</span></li>
+                  <li><i className="fa fa-check green-text text-lighten-2"></i><span> Help student to develop 'Code Compiler' in his/her head</span></li>
                   <li><i className="fa fa-check green-text text-lighten-2"></i><span> Let student to write his solution before the suggestions</span></li>
                   <li><i className="fa fa-check green-text text-lighten-2"></i><span> Lead a student to correct answer with suggestions and small hints</span></li>
                   <li><i className="fa fa-check green-text text-lighten-2"></i><span> Be encouraging, polite and supportive thru every step</span></li>
