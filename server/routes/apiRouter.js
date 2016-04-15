@@ -13,7 +13,7 @@ module.exports = (app, express) => {
   apiRouter.param('id', (req, res, next, id) => {
     //validate user or check some data
     next();
-  })
+  });
 
   apiRouter.get('/students', StudentController.get);
   apiRouter.post('/student', StudentController.post);
