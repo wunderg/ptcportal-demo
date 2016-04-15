@@ -3,7 +3,6 @@ import Highlight from '../../helpers/highlight.js';
 import { array, multiply, each, useMult, reject, reduce, map, filterUsingReduce, numberOfWins, defaultProps } from './code/mock.js';
 
 export default () => (
-
   <div className="card deep-purple lighten-5">
     <div className="card-content">
       <h3>Mock Interview</h3>
