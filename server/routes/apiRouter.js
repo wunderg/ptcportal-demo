@@ -6,8 +6,8 @@ module.exports = (app, express) => {
   app.use('/api', apiRouter);
 
   apiRouter.use((req, res, next) => {
-    console.log('route');
-    next()
+    console.log('API CALL');
+    next();
   });
 
   apiRouter.param('id', (req, res, next, id) => {
