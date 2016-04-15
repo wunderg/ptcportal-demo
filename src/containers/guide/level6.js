@@ -21,6 +21,9 @@ export default () => (
                   <li><i className="fa fa-check green-text text-lighten-2"></i><span> Teach student how to edit each and reduce to give additional functionality</span></li>
                   <li><i className="fa fa-check green-text text-lighten-2"></i><span> Teach how to pass arguments down the line by passing them into the callback</span></li>
                   <li><i className="fa fa-check green-text text-lighten-2"></i><span> Teach how to extract those arguments in the following functions</span></li>
+                  <li><i className="fa fa-check green-text text-lighten-2"></i><span> Refer to reduce implementation</span></li>
+                  <li><i className="fa fa-check green-text text-lighten-2"></i><span> Help student to create example</span></li>
+                  <li><i className="fa fa-check green-text text-lighten-2"></i><span> Help student to walk thru every iteration - STEP by STEP</span></li>
                 </ul>
               </div>
               <div className="">

@@ -13,8 +13,7 @@ class Faq extends Component {
             <div className="card-panel">
               <h5><b>Q: What should I do if student raise any red flags - rude and agressive, lack of growth mindset, etc..?</b></h5>
               <hr />
-              <p>A: Immediately notify the admissions manager (now @joshshaman) who will help you take make any further decisions.</p>
-            </div>
+              <p>A: Immediately notify the admissions manager (now @joshshaman) who will help you take make any further decisions.</p> </div>
             <div className="card-panel">
               <h5><b>Q: What should I do if I don’t hear back from a student?</b></h5>
               <hr />

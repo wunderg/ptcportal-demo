@@ -53,6 +53,10 @@ export default () => (
                     <i className="fa fa-check green-text text-lighten-2"></i>
                     <span> Note: If a student is not comfortable in writing functions without examples, have them reference their own implementations. </span>
                   </li>
+                  <li>
+                    <i className="fa fa-check green-text text-lighten-2"></i>
+                    <span>If you have concerns about the student in terms of red flags such as memorization or inability to actually reason and logic and think like an engineer, you should address these concerns to the Admissions Manager<a href="josh.shaman@hackreactor.com">josh.shaman@hackreactor.com</a> prior to having the student schedule an interview.</span>
+                  </li>
                 </ul>
               </div>
             </div>
