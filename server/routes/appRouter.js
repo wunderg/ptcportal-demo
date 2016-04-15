@@ -26,4 +26,16 @@ module.exports = (app, express, staticPath) => {
       root: staticPath
     });
   });
+
+  appRouter.get('/faq', (req, res) => {
+    res.sendFile('index.html', {
+      root: staticPath
+    });
+  });
+
+  appRouter.get('/resources', (req, res) => {
+    res.sendFile('index.html', {
+      root: staticPath
+    });
+  });
 };
