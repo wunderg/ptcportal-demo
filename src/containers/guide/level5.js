@@ -18,7 +18,7 @@ export default () => (
               <div className="">
                 <h5><b>Objectives:</b></h5>
                 <ul className="prompts">
-                  <li><i className="fa fa-check green-text text-lighten-2"></i><span> Teach how to write Contains using Reduce </span></li>
+                  <li><i className="fa fa-check green-text text-lighten-2"></i><span> Teach how to write function Contains using Reduce </span></li>
                   <li><i className="fa fa-check green-text text-lighten-2"></i><span> Teach that Boolean value can be a startValue</span></li>
                   <li><i className="fa fa-check green-text text-lighten-2"></i><span> Teach that that startValue will become result on first iteration</span></li>
                   <li><i className="fa fa-check green-text text-lighten-2"></i><span> Teach that result will need to be updated only once</span></li>
