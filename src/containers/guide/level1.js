@@ -20,7 +20,7 @@ export default () => (
                 <ul className="prompts">
                   <li><i className="fa fa-check green-text text-lighten-2"></i><span> Teach how to distinguish between an array and/or an object</span></li>
                   <li><i className="fa fa-check green-text text-lighten-2"></i><span> Teach how to iterate over an array and/or an object </span></li>
-                  <li><i className="fa fa-check green-text text-lighten-2"></i><span> Teach how to access item inside an array and/or object </span></li>
+                  <li><i className="fa fa-check green-text text-lighten-2"></i><span> Teach how to access item with a callback from an array and/or object </span></li>
                   <li><i className="fa fa-check green-text text-lighten-2"></i><span> Teach how to apply callback to every item in an array and/or object</span></li>
                 </ul>
               </div>
@@ -59,8 +59,8 @@ export default () => (
                 <ul className="prompts">
                   <li><i className="fa fa-check green-text text-lighten-2"></i><span> Teach how to use 'Each' to create 'Map' function</span></li>
                   <li><i className="fa fa-check green-text text-lighten-2"></i><span> Teach how to create function on the fly as a callback</span></li>
-                  <li><i className="fa fa-check green-text text-lighten-2"></i><span> Teach that the callback that passed in each is a function that created on the fly</span></li>
-                  <li><i className="fa fa-check green-text text-lighten-2"></i><span> Teach that the each callback is getting exexuted inside the 'FOR LOOP'</span></li>
+                  <li><i className="fa fa-check green-text text-lighten-2"></i><span> Teach that the callback that passed in each is a function that is created on the fly</span></li>
+                  <li><i className="fa fa-check green-text text-lighten-2"></i><span> Teach that the each callback is getting executed inside the 'FOR LOOP'</span></li>
                   <li><i className="fa fa-check green-text text-lighten-2"></i><span> Teach that item is getting modified by callback before its pushed to the new array</span></li>
                   <li><i className="fa fa-check green-text text-lighten-2"></i><span> Teach how talk about function using pseudo-code, make student walk step by step</span></li>
                   <li><i className="fa fa-check green-text text-lighten-2"></i><span> Help student to create an example</span></li>
