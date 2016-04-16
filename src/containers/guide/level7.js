@@ -4,7 +4,6 @@ import { hash, hashSolution, hashExample } from './code/hash.js';
 import { extend, extendSolution, extendExample } from './code/extend.js';
 
 export default () => (
-
   <div className="card deep-purple lighten-5">
     <div className="card-content">
       <h3>Level 7 - Hash Table and Extend</h3>
@@ -60,8 +59,8 @@ export default () => (
                 <h5><b>Objectives:</b></h5>
                 <ul className="prompts">
                   <li><i className="fa fa-check green-text text-lighten-2"></i><span> Teach how to write extend function</span></li>
-                  <li><i className="fa fa-check green-text text-lighten-2"></i><span> Teach how to get hold of all 'arguments' object</span></li>
-                  <li><i className="fa fa-check green-text text-lighten-2"></i><span> Teach how to convert arguments object into the array</span></li>
+                  <li><i className="fa fa-check green-text text-lighten-2"></i><span> Teach how to get hold of the 'arguments' object</span></li>
+                  <li><i className="fa fa-check green-text text-lighten-2"></i><span> Teach how to convert 'arguments' object into the array</span></li>
                   <li><i className="fa fa-check green-text text-lighten-2"></i><span> Teach how to extend properties of a given object</span></li>
                   <li><i className="fa fa-check green-text text-lighten-2"></i><span> Teach how to use Each inside Reduce</span></li>
                   <li><i className="fa fa-check green-text text-lighten-2"></i><span> Refer to reduce implementation</span></li>
@@ -77,7 +76,7 @@ export default () => (
                   <li><i className="fa fa-check green-text text-lighten-2"></i><span> Extend will accept an unknown number of objects</span></li>
                   <li><i className="fa fa-check green-text text-lighten-2"></i><span> Extend should convert 'arguments' object into an array</span></li>
                   <li><i className="fa fa-check green-text text-lighten-2"></i><span> Extend should combine all of the objets propeties into one object</span></li>
-                  <li><i className="fa fa-check green-text text-lighten-2"></i><span> Extend should use each to iterate over objects</span></li>
+                  <li><i className="fa fa-check green-text text-lighten-2"></i><span> Extend should use 'each' to iterate over objects</span></li>
               </ul>
             </div>
             <div className="code">
