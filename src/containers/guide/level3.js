@@ -20,12 +20,12 @@ export default () => (
                 <h5><b>Objectives:</b></h5>
                 <ul className="prompts">
                   <li><i className="fa fa-check green-text text-lighten-2"></i><span> Teach how to write basic sum function using reduce</span></li>
-                  <li><i className="fa fa-check green-text text-lighten-2"></i><span> Teach about callback that get passed into reduce</span></li>
+                  <li><i className="fa fa-check green-text text-lighten-2"></i><span> Teach about callback-accumulator that get passed into the reduce</span></li>
                   <li><i className="fa fa-check green-text text-lighten-2"></i><span> Teach that at least 2 arguments have to be passed in - MEMO and ITEM</span></li>
                   <li><i className="fa fa-check green-text text-lighten-2"></i><span> Teach about basic structure of reduce - must have clear return statement </span></li>
                   <li><i className="fa fa-check green-text text-lighten-2"></i><span> Teach that the return from the callback will be a MEMO on next iteration </span></li>
-                  <li><i className="fa fa-check green-text text-lighten-2"></i><span> Teach how startValue can be passed in as a THIRD argument into REDUCE</span></li>
-                  <li><i className="fa fa-check green-text text-lighten-2"></i><span> Teach that if there is no startValue REDUCE will use first item as start</span></li>
+                  <li><i className="fa fa-check green-text text-lighten-2"></i><span> Teach how startValue can be passed in as a THIRD argument into the REDUCE</span></li>
+                  <li><i className="fa fa-check green-text text-lighten-2"></i><span> Teach that if there is no startValue REDUCE will use first item as startValue</span></li>
                   <li><i className="fa fa-check green-text text-lighten-2"></i><span> Help student to create example</span></li>
                   <li><i className="fa fa-check green-text text-lighten-2"></i><span> Help student to walk thru every iteration - STEP by STEP</span></li>
                 </ul>
