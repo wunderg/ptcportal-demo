@@ -51,7 +51,6 @@ export default () => (
             </div>
           </div>
         </li>
-
         <li>
           <div className="card">
             <div className="card-content">
