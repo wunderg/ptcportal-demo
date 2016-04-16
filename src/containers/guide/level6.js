@@ -4,7 +4,6 @@ import { objectProps, objectPropsExample, objectPropsSolution, eachModified, red
 import { indexOf, indexOfExample, indexOfSolution, eachModifiedIndex, reduceModifiedIndex } from './code/indexOf.js';
 
 export default () => (
-
   <div className="card deep-purple lighten-5">
     <div className="card-content">
       <h3>Level 6 - ObjectProps and IndexOf using Reduce</h3>
@@ -18,8 +17,8 @@ export default () => (
               <div className="">
                 <h5><b>Objectives:</b></h5>
                 <ul className="prompts">
-                  <li><i className="fa fa-check green-text text-lighten-2"></i><span> Teach student how to edit each and reduce to give additional functionality</span></li>
-                  <li><i className="fa fa-check green-text text-lighten-2"></i><span> Teach how to pass arguments down the line by passing them into the callback</span></li>
+                  <li><i className="fa fa-check green-text text-lighten-2"></i><span> Teach student how to edit each and reduce to give additional functionality to current function</span></li>
+                  <li><i className="fa fa-check green-text text-lighten-2"></i><span> Teach how to pass arguments down the chain by passing them into the callback</span></li>
                   <li><i className="fa fa-check green-text text-lighten-2"></i><span> Teach how to extract those arguments in the following functions</span></li>
                   <li><i className="fa fa-check green-text text-lighten-2"></i><span> Refer to reduce implementation</span></li>
                   <li><i className="fa fa-check green-text text-lighten-2"></i><span> Help student to create example</span></li>
