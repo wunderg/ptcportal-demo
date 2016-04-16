@@ -20,8 +20,8 @@ export default () => (
                   <li><i className="fa fa-check green-text text-lighten-2"></i><span> Teach how to write Map using Reduce</span></li>
                   <li><i className="fa fa-check green-text text-lighten-2"></i><span> Teach that an empty array can be a startValue</span></li>
                   <li><i className="fa fa-check green-text text-lighten-2"></i><span> Teach that an startValue will become result on first iteration</span></li>
-                  <li><i className="fa fa-check green-text text-lighten-2"></i><span> Teach that result will be updated on every iteration</span></li>
-                  <li><i className="fa fa-check green-text text-lighten-2"></i><span> Refer to reduce implementation</span></li>
+                  <li><i className="fa fa-check green-text text-lighten-2"></i><span> Teach that the result will be updated on every iteration</span></li>
+                  <li><i className="fa fa-check green-text text-lighten-2"></i><span> Refer to reduce implementation for the logic</span></li>
                   <li><i className="fa fa-check green-text text-lighten-2"></i><span> Help student to create example</span></li>
                   <li><i className="fa fa-check green-text text-lighten-2"></i><span> Help student to walk thru every iteration - STEP by STEP</span></li>
                 </ul>
@@ -62,7 +62,7 @@ export default () => (
                   <li><i className="fa fa-check green-text text-lighten-2"></i><span> Teach that an empty array can be a startValue</span></li>
                   <li><i className="fa fa-check green-text text-lighten-2"></i><span> Teach that an startValue will become result on first iteration</span></li>
                   <li><i className="fa fa-check green-text text-lighten-2"></i><span> Teach that result will be updated on every iteration</span></li>
-                  <li><i className="fa fa-check green-text text-lighten-2"></i><span> Refer to reduce implementation</span></li>
+                  <li><i className="fa fa-check green-text text-lighten-2"></i><span> Refer to reduce implementation for the logic</span></li>
                   <li><i className="fa fa-check green-text text-lighten-2"></i><span> Help student to create example</span></li>
                   <li><i className="fa fa-check green-text text-lighten-2"></i><span> Help student to walk thru every iteration - STEP by STEP</span></li>
                 </ul>
