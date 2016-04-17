@@ -14,7 +14,7 @@ function requestLogin(creds) {
 
 function recieveLogin(user) {
   return {
-    type: ACTIONS.LOGIN_SUCESS,
+    type: ACTIONS.LOGIN_SUCCESS,
     isFetching: false,
     isAuthenticated: true,
     id_token: user.id_token
@@ -32,6 +32,10 @@ function loginError(message) {
 }
 
 export function loginUser(creds, dispatch) {
-  console.log(creds, 'action', dispatch);
-  return dispatch(requestLogin(creds));
+  return () => {
+    dispatch(requestLogin(creds));
+    return axios.post('api/login', creds)
+      .then(res => console.log(res))
+      .catch(err => console.log(err));
+  };
 }

@@ -18,7 +18,7 @@ class Login extends Component {
 
     };
 
-    this.props.loginUser(creds, this.props.dispatch );
+    this.props.loginUser(creds, this.props.dispatch);
     // const student = { name: this.props.data.email.value, email: this.props.data.email.value };
     // this.props.addStudent(student);
     this.props.resetForm();
