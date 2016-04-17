@@ -33,5 +33,5 @@ function loginError(message) {
 
 export function loginUser(creds, dispatch) {
   console.log(creds, 'action', dispatch);
-    return dispatch(requestLogin(creds));
+  return dispatch(requestLogin(creds));
 }

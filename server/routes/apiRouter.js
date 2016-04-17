@@ -1,4 +1,5 @@
 import StudentController from '../controllers/students/studentsController';
+import UserController from '../controllers/user/userController.js';
 
 module.exports = (app, express) => {
   var apiRouter = new express.Router();
