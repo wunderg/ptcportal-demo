@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import { reduxForm } from 'redux-form';
 import './style.scss';
-// import { addStudent } from '../../actions/index';
+import { loginUser } from '../../actions/login.js';
 
 class Login extends Component {
   constructor(props) {
@@ -12,13 +12,20 @@ class Login extends Component {
   onSubmit(e) {
     console.log(this);
     e.preventDefault();
+    let creds = {
+      email: this.props.data.email.value,
+      pass: this.props.data.pass.value
+
+    };
+
+    this.props.loginUser(creds, this.props.dispatch );
     // const student = { name: this.props.data.email.value, email: this.props.data.email.value };
     // this.props.addStudent(student);
     this.props.resetForm();
   }
 
   render() {
-    const { fields: { email, password } } = this.props;
+    const { fields: { email, pass } } = this.props;
     return (
         <div className="middle valign-wrapper">
           <form className="login-form" onSubmit={this.onSubmit} >
@@ -27,7 +34,7 @@ class Login extends Component {
               <label htmlFor="icon_prefix">Email</label>
             </div>
             <div className="input-field">
-              <input type="password" className="validate form-control" {...password} />
+              <input type="password" className="validate form-control" {...pass} />
               <label htmlFor="icon_telephone">Password</label>
             </div>
             <div className="center-align login-buttons">
@@ -61,5 +68,5 @@ function mapStateToProps(state) {
 
 export default reduxForm({
   form: 'login',
-  fields: ['email', 'password']
-}, mapStateToProps, {})(Login);
+  fields: ['email', 'pass']
+}, mapStateToProps, { loginUser })(Login);
