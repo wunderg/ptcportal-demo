@@ -38,4 +38,10 @@ module.exports = (app, express, staticPath) => {
       root: staticPath
     });
   });
+
+  appRouter.get('/login', (req, res) => {
+    res.sendFile('index.html', {
+      root: staticPath
+    });
+  });
 };
