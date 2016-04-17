@@ -17,7 +17,7 @@ function recieveLogin(user) {
     type: ACTIONS.LOGIN_SUCCESS,
     isFetching: false,
     isAuthenticated: true,
-    id_token: user.id_token
+    id_token: user.data.id_token
   };
 }
 
@@ -35,7 +35,7 @@ export function loginUser(creds, dispatch) {
   return () => {
     dispatch(requestLogin(creds));
     return axios.post('api/login', creds)
-      .then(res => console.log(res))
-      .catch(err => console.log(err));
+      .then(res => dispatch(recieveLogin(res)))
+      .catch(err => dispatch(loginError(err)));
   };
 }
