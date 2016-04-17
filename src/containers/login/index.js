@@ -12,7 +12,7 @@ class Login extends Component {
   onSubmit(e) {
     console.log(this);
     e.preventDefault();
-    let creds = {
+    const creds = {
       email: this.props.data.email.value,
       pass: this.props.data.pass.value
 
@@ -57,7 +57,9 @@ Login.propTypes = {
   fields: PropTypes.object,
   handleSubmit: PropTypes.func,
   data: PropTypes.object,
-  resetForm: PropTypes.func
+  resetForm: PropTypes.func,
+  loginUser: PropTypes.func,
+  dispatch: PropTypes.func
 };
 
 function mapStateToProps(state) {
