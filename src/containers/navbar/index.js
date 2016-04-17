@@ -29,7 +29,7 @@ class Navbar extends Component {
             <li><Link to={'/guide'}>Guide</Link></li>
             <li><Link to={'/resources'}>Resources</Link></li>
             <li><Link to={'/faq'}>FAQ</Link></li>
-            <li><a href="">Login</a></li>
+            <li><Link to={'/login'}>Login</Link></li>
           </ul>
           <ul className="side-nav" id="mobile-demo">
             <li><Link to={'/add'}>Add Student</Link></li>
@@ -38,7 +38,7 @@ class Navbar extends Component {
             <li><Link to={'/guide'}>Guide</Link></li>
             <li><Link to={'/resources'}>Resources</Link></li>
             <li><Link to={'/faq'}>FAQ</Link></li>
-            <li><a href="">Login</a></li>
+            <li><Link to={'/login'}>Login</Link></li>
           </ul>
         </div>
       </nav>
