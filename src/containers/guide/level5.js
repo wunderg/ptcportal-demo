@@ -1,6 +1,6 @@
 import React from 'react';
 import Highlight from '../../helpers/highlight.js';
-import { contains, containsExample, containsSolution } from './code/contains.js';
+import {each, reduce, contains, containsExample, containsSolution } from './code/contains.js';
 import { every, everyExample, everySolution } from './code/every.js';
 
 export default () => (
@@ -18,7 +18,7 @@ export default () => (
               <div className="">
                 <h5><b>Objectives:</b></h5>
                 <ul className="prompts">
-                  <li><i className="fa fa-check green-text text-lighten-2"></i><span> NOTE: During this level, arguments for EACH and REDUCE should be called 'a','b','c' and etc...</span></li>
+                  <li><i className="fa fa-check green-text text-lighten-2"></i><span> NOTE: During this level we are going to test student understanding of inner working of each and reduce by switching arguments names for EACH and REDUCE for - 'a', 'b', 'c' and so forth for all following function arguments, see a boilerplate below</span></li>
                   <li><i className="fa fa-check green-text text-lighten-2"></i><span> Teach how to write function Contains using Reduce </span></li>
                   <li><i className="fa fa-check green-text text-lighten-2"></i><span> Teach that Boolean value can be a startValue</span></li>
                   <li><i className="fa fa-check green-text text-lighten-2"></i><span> Teach that that startValue will become result on first iteration</span></li>
@@ -37,6 +37,11 @@ export default () => (
                 <li><i className="fa fa-check green-text text-lighten-2"></i><span> Conatins should use Reduce</span></li>
                 <li><i className="fa fa-check green-text text-lighten-2"></i><span> Conatins should start with Boolean value</span></li>
               </ul>
+            </div>
+            <div className="code">
+              <h5><b>Each and Reduce Boilerplate</b></h5>
+              <Highlight props={each} />
+              <Highlight props={reduce} />
             </div>
             <div className="code">
               <h5><b>Boilerplate:</b></h5>

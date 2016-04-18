@@ -12,12 +12,13 @@ class Resources extends Component {
 
   render() {
     return (
-
       <div className="row resource">
         <div className="col s12">
           <ul className="tabs">
             <li className="tab col s3"><h5><a href="#student">Student</a></h5></li>
-            <li className="tab col s3"><h5><a className="active" href="#teacher">Instructor</a></h5></li>
+            <li className="tab col s3">
+              <h5><a className="active" href="#teacher">Instructor</a></h5>
+            </li>
           </ul>
         </div>
         <div id="teacher" className="col s12">
@@ -41,18 +42,18 @@ class Resources extends Component {
               <h3>Student Resources</h3>
               <hr />
               <div className="card-panel">
-                <h4><b>Coding Practice</b></h4>
-                <hr />
-                <p><a>Awesome Link</a></p>
-                <p><a>Awesome Link</a></p>
-                <p><a>Awesome Link</a></p>
-                <p><a>Awesome Link</a></p>
                 <h4><b>Books</b></h4>
                 <hr />
-                <p><a>Awesome Link</a></p>
-                <p><a>Awesome Link</a></p>
-                <p><a>Awesome Link</a></p>
-                <p><a>Awesome Link</a></p>
+                <p><a href="https://github.com/getify/You-Dont-Know-JS">You Don't Know JS</a></p>
+                <p><a href="http://eloquentjavascript.net/">Eloquent JavaScript</a></p>
+                <p><a href="http://superherojs.com/">Superhero JS</a></p>
+                <p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence">Operator Precedence</a></p>
+                <h4><b>Coding Practice</b></h4>
+                <hr />
+                <p><a href="http://www.codewars.com/kata/search/my-languages?q=&tags=Arrays&beta=false&order_by=rank_id+asc">Code Wars</a> - Sorted By Arrays</p>
+                <p><a href="https://coderbyte.com/">CoderByte</a></p>
+                <p><a href="https://www.hackerrank.com/">Hacker Rank</a></p>
+                <p><a>Awesome Link By You</a></p>
               </div>
             </div>
           </div>

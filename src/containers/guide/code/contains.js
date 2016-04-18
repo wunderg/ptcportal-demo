@@ -1,3 +1,12 @@
+export const each =
+`function each(a, b){
+  //your code here
+}`;
+
+export const reduce = `function reduce(a, b, c) {
+  //your code here
+}`;
+
 export const contains =
 `function contains(collection, target){
   //your code here
