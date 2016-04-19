@@ -31,7 +31,6 @@ userSchema.pre('save', next => {
   });
 });
 
-
 userSchema.methods.comparePassword = (canditatePassword, callback) => {
   bcrypt.compare(canditatePassword, this.password, (err, isMatch) => {
     if (err) {
@@ -40,3 +39,4 @@ userSchema.methods.comparePassword = (canditatePassword, callback) => {
     callback(null, isMatch);
   });
 };
+export default mongoose.model('users', userSchema);

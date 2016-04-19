@@ -1,3 +1,4 @@
+
 module.exports = (app, express, staticPath) => {
   var appRouter = new express.Router();
 
