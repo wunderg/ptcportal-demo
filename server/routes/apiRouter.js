@@ -16,7 +16,8 @@ module.exports = (app, express) => {
     next();
   });
 
-  apiRouter.post('/login', UserController.post);
+  apiRouter.post('/login', UserController.signin);
+  apiRouter.post('/signup', UserController.signup);
   apiRouter.get('/students', StudentController.get);
   apiRouter.post('/student', StudentController.post);
   apiRouter.delete('/student/:id', StudentController.delete);

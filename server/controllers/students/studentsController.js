@@ -1,4 +1,4 @@
-import Student from './studentsModel';
+import Student from '../../models/studentsModel.js';
 
 export default {
   get(req, res) {
