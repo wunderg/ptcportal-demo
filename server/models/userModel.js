@@ -30,3 +30,13 @@ userSchema.pre('save', next => {
     });
   });
 });
+
+
+userSchema.methods.comparePassword = (canditatePassword, callback) => {
+  bcrypt.compare(canditatePassword, this.password, (err, isMatch) => {
+    if (err) {
+      return callback(err);
+    }
+    callback(null, isMatch);
+  });
+};
