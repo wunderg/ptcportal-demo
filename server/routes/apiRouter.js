@@ -3,7 +3,6 @@ import passport from 'passport';
 import StudentController from '../controllers/students/studentsController';
 import UserController from '../controllers/user/userController.js';
 
-
 import '../services/passport.js';
 
 const requireSignin = passport.authenticate('local', { session: false });

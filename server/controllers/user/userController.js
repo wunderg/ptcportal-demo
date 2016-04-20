@@ -1,16 +1,21 @@
 import User from '../../models/userModel.js';
+import jwt from 'jwt-simple';
+
+const token = (user) => {
+  const timestamp = new Date().getTime();
+  return jwt.encode({ sub: user.email, iat: timestamp }, 'secret_goes_here');
+};
 
 export default {
   signin(req, res) {
     console.log('User', req.body);
-    res.json({ id_token: 1234567890 });
+    res.json({ id_token: token(req.body) });
   },
 
   signup(req, res, next) {
     const email = req.body.email;
     const password = req.body.pass;
 
-    console.log(email, password);
     User.findOne({ email }, (err, user) => {
       if (err) {
         return next(err);
@@ -35,7 +40,7 @@ export default {
           next(err);
         }
 
-        res.json({ user });
+        res.json({ id_token: token(req.body) });
       });
     });
   }
