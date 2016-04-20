@@ -7,8 +7,6 @@ import UserController from '../controllers/user/userController.js';
 import '../services/passport.js';
 
 const requireSignin = passport.authenticate('local', { session: false });
-
-module.exports = (app, express) => {
   var apiRouter = new express.Router();
 
   app.use('/api', apiRouter);
@@ -17,6 +15,7 @@ module.exports = (app, express) => {
     console.log('API CALL');
     next();
   });
+
 
   // apiRouter.param('id', (req, res, next, id) => {
   //   //validate user or check some data
