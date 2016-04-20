@@ -16,6 +16,10 @@ export default {
     const email = req.body.email;
     const password = req.body.pass;
 
+    if (!email || !password) {
+      return res.status(422).send({ error: 'Must provide email and password' });
+    }
+
     User.findOne({ email }, (err, user) => {
       if (err) {
         return next(err);
@@ -25,9 +29,6 @@ export default {
         return res.status(422).send({ error: 'User already exist' });
       }
 
-      if (!email || !password) {
-        res.status(422).send({ error: 'Must provide email and password' });
-      }
 
       var newUser = new User({
         email,
