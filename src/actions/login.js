@@ -11,6 +11,7 @@ function requestSignup(creds) {
 }
 
 function recieveSignup(user) {
+  localStorage.setItem('id_token', user.data.id_token);
   return {
     type: ACTIONS.SIGNUP_SUCCESS,
     isFetching: false,
@@ -48,6 +49,7 @@ function requestLogin(creds) {
 }
 
 function recieveLogin(user) {
+  localStorage.setItem('id_token', user.data.id_token);
   return {
     type: ACTIONS.LOGIN_SUCCESS,
     isFetching: false,
