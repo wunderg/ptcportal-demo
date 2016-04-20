@@ -32,7 +32,7 @@ userSchema.pre('save', function (next) {
   });
 });
 
-userSchema.methods.comparePassword = (canditatePassword, callback) => {
+userSchema.methods.comparePassword = function (canditatePassword, callback) {
   bcrypt.compare(canditatePassword, this.password, (err, isMatch) => {
     if (err) {
       return callback(err);
