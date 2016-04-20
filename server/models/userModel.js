@@ -12,8 +12,9 @@ const userSchema = new mongoose.Schema({
 });
 
 
-userSchema.pre('save', next => {
+userSchema.pre('save', function (next) {
   const user = this;
+  console.log(this);
 
   bcrypt.genSalt(10, (err, salt) => {
     if (err) {
@@ -39,4 +40,4 @@ userSchema.methods.comparePassword = (canditatePassword, callback) => {
     callback(null, isMatch);
   });
 };
-export default mongoose.model('users', userSchema);
+export default mongoose.model('user', userSchema);

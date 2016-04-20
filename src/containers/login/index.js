@@ -7,12 +7,10 @@ class Login extends Component {
   constructor(props) {
     super(props);
     this.onSignup = this.onSignup.bind(this);
-    this.onLogin = this.onLogin.bind(this);
-    this.submit = this.submit.bind(this);
+    this.onSubmit = this.onSubmit.bind(this);
   }
 
-  onLogin(e) {
-    // console.log(this);
+  onSubmit(e) {
     e.preventDefault();
     const creds = {
       email: this.props.data.email.value,
@@ -37,15 +35,11 @@ class Login extends Component {
     this.props.resetForm();
   }
 
-  submit(e) {
-    e.preventDefault();
-  }
-
   render() {
     const { fields: { email, pass } } = this.props;
     return (
         <div className="middle valign-wrapper">
-          <form className="login-form" onSubmit={this.submit}>
+          <form className="login-form" onSubmit={this.onSubmit}>
             <div className="input-field">
               <input type="text" className="validate form-control" {...email} />
               <label htmlFor="icon_prefix">Email</label>

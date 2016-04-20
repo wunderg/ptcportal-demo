@@ -8,8 +8,9 @@ export default {
 
   signup(req, res, next) {
     const email = req.body.email;
-    const password = req.body.password;
+    const password = req.body.pass;
 
+    console.log(email, password);
     User.findOne({ email }, (err, user) => {
       if (err) {
         return next(err);
@@ -28,6 +29,7 @@ export default {
         password
       });
 
+      console.log(newUser);
       newUser.save(err2 => {
         if (err2) {
           next(err);
