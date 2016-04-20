@@ -1,16 +1,18 @@
 import React, { Component, PropTypes } from 'react';
 import { reduxForm } from 'redux-form';
 import './style.scss';
-import { loginUser } from '../../actions/login.js';
+import { loginUser, signupUser } from '../../actions/login.js';
 
 class Login extends Component {
   constructor(props) {
     super(props);
-    this.onSubmit = this.onSubmit.bind(this);
+    this.onSignup = this.onSignup.bind(this);
+    this.onLogin = this.onLogin.bind(this);
+    this.submit = this.submit.bind(this);
   }
 
-  onSubmit(e) {
-    console.log(this);
+  onLogin(e) {
+    // console.log(this);
     e.preventDefault();
     const creds = {
       email: this.props.data.email.value,
@@ -19,16 +21,31 @@ class Login extends Component {
     };
 
     this.props.loginUser(creds, this.props.dispatch);
-    // const student = { name: this.props.data.email.value, email: this.props.data.email.value };
-    // this.props.addStudent(student);
     this.props.resetForm();
+  }
+
+  onSignup(e) {
+    console.log(this);
+    e.preventDefault();
+    const creds = {
+      email: this.props.data.email.value,
+      pass: this.props.data.pass.value
+
+    };
+
+    this.props.signupUser(creds, this.props.dispatch);
+    this.props.resetForm();
+  }
+
+  submit(e) {
+    e.preventDefault();
   }
 
   render() {
     const { fields: { email, pass } } = this.props;
     return (
         <div className="middle valign-wrapper">
-          <form className="login-form" onSubmit={this.onSubmit} >
+          <form className="login-form" onSubmit={this.submit}>
             <div className="input-field">
               <input type="text" className="validate form-control" {...email} />
               <label htmlFor="icon_prefix">Email</label>
@@ -38,11 +55,11 @@ class Login extends Component {
               <label htmlFor="icon_telephone">Password</label>
             </div>
             <div className="center-align login-buttons">
-            <button className="btn waves-effect waves-light" type="submit">
+            <button onClick={this.onSignup} className="btn waves-effect waves-light">
               SignUP
               <i className="fa fa-info fa-2x fa-spin right"></i>
             </button>
-            <button className="btn waves-effect waves-light" type="submit">
+            <button onClcik={this.onLogin} className="btn waves-effect waves-light">
               Login
               <i className="fa fa-info fa-2x fa-spin right"></i>
             </button>
@@ -59,7 +76,10 @@ Login.propTypes = {
   data: PropTypes.object,
   resetForm: PropTypes.func,
   loginUser: PropTypes.func,
-  dispatch: PropTypes.func
+  dispatch: PropTypes.func,
+  onSignup: PropTypes.func,
+  onLogin: PropTypes.func,
+  signupUser: PropTypes.func
 };
 
 function mapStateToProps(state) {
@@ -71,4 +91,4 @@ function mapStateToProps(state) {
 export default reduxForm({
   form: 'login',
   fields: ['email', 'pass']
-}, mapStateToProps, { loginUser })(Login);
+}, mapStateToProps, { loginUser, signupUser })(Login);
