@@ -23,6 +23,7 @@ export function addStudent(student) {
 
 export function fetchStudents() {
   const token = localStorage.getItem('id_token') || null;
+
   const config = {
     headers: { Authorization: token }
   };
