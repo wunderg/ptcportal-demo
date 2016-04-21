@@ -18,12 +18,15 @@ class Login extends Component {
 
     };
 
-    this.props.loginUser(creds, this.props.dispatch);
+    this.props.loginUser(creds, this.props.dispatch).then((res) => {
+      if (res.isAuthenticated) {
+        this.context.router.push('/');
+      }
+    });
     this.props.resetForm();
   }
 
   onSignup(e) {
-    console.log(this);
     e.preventDefault();
     const creds = {
       email: this.props.data.email.value,
@@ -31,13 +34,17 @@ class Login extends Component {
 
     };
 
-    this.props.signupUser(creds, this.props.dispatch);
+    this.props.signupUser(creds, this.props.dispatch).then((res) => {
+      if (res.isAuthenticated) {
+        this.context.router.push('/');
+      }
+    });
     this.props.resetForm();
   }
 
   render() {
     const { fields: { email, pass }, user } = this.props;
-    console.log(this.props);
+    console.log(this);
     return (
         <div className="middle valign-wrapper">
           <form className="login-form" onSubmit={this.onSubmit}>
@@ -66,17 +73,19 @@ class Login extends Component {
   }
 }
 
+Login.contextTypes = {
+  router: PropTypes.object.isRequired
+};
+
 Login.propTypes = {
   fields: PropTypes.object,
-  handleSubmit: PropTypes.func,
   data: PropTypes.object,
   resetForm: PropTypes.func,
   loginUser: PropTypes.func,
   dispatch: PropTypes.func,
   onSignup: PropTypes.func,
-  onLogin: PropTypes.func,
   signupUser: PropTypes.func,
-  user: PropTypes.object
+  user: PropTypes.object,
 };
 
 function mapStateToProps(state) {
