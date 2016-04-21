@@ -5,8 +5,8 @@ import UserController from '../controllers/user/userController.js';
 
 import '../services/passport.js';
 
-const requireSignin = passport.authenticate('local', { session: false });
 const requireAuth = passport.authenticate('jwt', { session: false });
+const requireSignin = passport.authenticate('local', { session: false });
 
 module.exports = (app, express) => {
   var apiRouter = new express.Router();
