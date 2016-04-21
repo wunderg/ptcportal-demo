@@ -10,6 +10,13 @@ class Login extends Component {
     this.onSubmit = this.onSubmit.bind(this);
   }
 
+  componentWillReceiveProps(props) {
+    if (props.user.isAuthenticated) {
+      this.context.router.push('/');
+      this.props.resetForm();
+    }
+  }
+
   onSubmit(e) {
     e.preventDefault();
     const creds = {
@@ -18,12 +25,7 @@ class Login extends Component {
 
     };
 
-    this.props.loginUser(creds, this.props.dispatch).then((res) => {
-      if (res.isAuthenticated) {
-        this.context.router.push('/');
-      }
-    });
-    this.props.resetForm();
+    this.props.loginUser(creds, this.props.dispatch);
   }
 
   onSignup(e) {
@@ -34,12 +36,7 @@ class Login extends Component {
 
     };
 
-    this.props.signupUser(creds, this.props.dispatch).then((res) => {
-      if (res.isAuthenticated) {
-        this.context.router.push('/');
-      }
-    });
-    this.props.resetForm();
+    this.props.signupUser(creds, this.props.dispatch);
   }
 
   render() {

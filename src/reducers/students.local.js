@@ -46,7 +46,6 @@ const INITIAL_STATE = {
 };
 
 export default (state = INITIAL_STATE, action) => {
-  console.log(action);
   switch (action.type) {
     case ACTIONS.ADD_STUDENT:
       return {...state, students: state.students.concat(action.payload)};
