@@ -36,10 +36,12 @@ class Login extends Component {
   }
 
   render() {
-    const { fields: { email, pass } } = this.props;
+    const { fields: { email, pass }, user } = this.props;
+    console.log(this.props);
     return (
         <div className="middle valign-wrapper">
           <form className="login-form" onSubmit={this.onSubmit}>
+            <div className="error-message center">{user.message}</div>
             <div className="input-field">
               <input type="text" className="validate form-control" {...email} />
               <label htmlFor="icon_prefix">Email</label>
@@ -73,12 +75,14 @@ Login.propTypes = {
   dispatch: PropTypes.func,
   onSignup: PropTypes.func,
   onLogin: PropTypes.func,
-  signupUser: PropTypes.func
+  signupUser: PropTypes.func,
+  user: PropTypes.object
 };
 
 function mapStateToProps(state) {
   return {
-    data: state.form.login
+    data: state.form.login,
+    user: state.user
   };
 }
 

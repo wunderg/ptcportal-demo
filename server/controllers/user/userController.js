@@ -9,6 +9,13 @@ const token = (user) => {
 export default {
   signin(req, res) {
     console.log('User', req.body);
+    const email = req.body.email;
+    const password = req.body.pass;
+
+    if (!email || !password) {
+      return res.status(422).send({ error: 'Must provide email and password' });
+    }
+
     res.json({ id_token: token(req.body) });
   },
 

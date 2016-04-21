@@ -7,7 +7,7 @@ import User from '../models/userModel.js';
 const localOptions = { usernameField: 'email', passwordField: 'pass' };
 
 const localLogin = new LocalStrategy(localOptions, (email, password, done) => {
-  console.log('SERVICES', email, password);
+  console.log('SERVICES', email, password, done);
   User.findOne({ email }, (err, user) => {
     if (err) {
       return done(err);
