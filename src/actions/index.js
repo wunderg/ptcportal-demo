@@ -22,7 +22,12 @@ export function addStudent(student) {
 }
 
 export function fetchStudents() {
-  const request = axios.get(`api/students`);
+  const token = localStorage.getItem('id_token') || null;
+  const config = {
+    headers: { Authorization: `Bearer ${token}` }
+  };
+
+  const request = axios.get(`api/students`, config);
   return {
     type: ACTIONS.FETCH_STUDENTS,
     payload: request

@@ -13,7 +13,7 @@ module.exports = (app, express) => {
   app.use('/api', apiRouter);
 
   apiRouter.use((req, res, next) => {
-    console.log('API CALL');
+    console.log('API CALL', req.headers);
     next();
   });
 

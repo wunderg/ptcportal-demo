@@ -35,7 +35,7 @@ function signupError(message) {
 }
 
 export function signupUser(creds) {
-  return (dispatch) => {
+  return dispatch => {
     dispatch(requestSignup(creds));
     return axios.post('api/signup', creds)
       .then(res => dispatch(recieveSignup(res)))
@@ -73,7 +73,7 @@ function loginError(message) {
 }
 
 export function loginUser(creds) {
-  return (dispatch) => {
+  return dispatch => {
     dispatch(requestLogin(creds));
     return axios.post('api/login', creds)
       .then(res => dispatch(recieveLogin(res)))
