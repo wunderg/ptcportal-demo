@@ -8,7 +8,7 @@ const onClick = () => browserHistory.push('/student');
 
 export default ({ student }) => (
   <div className="student">
-    {console.log(student)}
+    {/* {console.log(student)} */}
     <div className="card student-card">
         <div className="card-content">
           <span className="card-title activator grey-text text-darken-4" >{student.name}<i className="fa fa-edit right"> Actions</i></span>

@@ -22,7 +22,7 @@ const createStoreWithMiddleware = applyMiddleware(
   jwt,
   promise,
   thunkMiddleware,
-  logger
+  //  logger
 )(createStore);
 
 export default function storeConfig(initialState) {

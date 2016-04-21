@@ -25,7 +25,7 @@ class Login extends Component {
 
     };
 
-    this.props.loginUser(creds, this.props.dispatch);
+    this.props.loginUser(creds);
   }
 
   onSignup(e) {
@@ -36,7 +36,7 @@ class Login extends Component {
 
     };
 
-    this.props.signupUser(creds, this.props.dispatch);
+    this.props.signupUser(creds);
   }
 
   render() {
