@@ -19,10 +19,10 @@ const rootReducer = combineReducers({
 });
 
 const createStoreWithMiddleware = applyMiddleware(
-  jwt,
+  // jwt,
   promise,
   thunkMiddleware,
-  //  logger
+   logger
 )(createStore);
 
 export default function storeConfig(initialState) {

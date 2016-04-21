@@ -6,6 +6,7 @@ import UserController from '../controllers/user/userController.js';
 import '../services/passport.js';
 
 const requireSignin = passport.authenticate('local', { session: false });
+const requireAuth = passport.authenticate('jwt', { session: false });
 
 module.exports = (app, express) => {
   var apiRouter = new express.Router();
@@ -13,7 +14,7 @@ module.exports = (app, express) => {
   app.use('/api', apiRouter);
 
   apiRouter.use((req, res, next) => {
-    console.log('API CALL', req.headers);
+    console.log('API CALL', req.headers.authorization);
     next();
   });
 
@@ -24,7 +25,7 @@ module.exports = (app, express) => {
 
   apiRouter.post('/login', requireSignin, UserController.signin);
   apiRouter.post('/signup', UserController.signup);
-  apiRouter.get('/students', StudentController.get);
+  apiRouter.get('/students', requireAuth, StudentController.get);
   apiRouter.post('/student', StudentController.post);
   apiRouter.delete('/student/:id', StudentController.delete);
 };
