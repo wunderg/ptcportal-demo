@@ -44,7 +44,6 @@ class Login extends Component {
 
   render() {
     const { fields: { email, pass }, user } = this.props;
-    console.log(this);
     return (
         <div className="middle valign-wrapper">
           <form className="login-form" onSubmit={this.onSubmit}>
