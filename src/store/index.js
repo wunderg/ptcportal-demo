@@ -10,7 +10,7 @@ import user from '../reducers/user.js';
 import jwt from '../middlewares/token.js';
 
 const logger = createLogger({
-  collapsed: () => true
+  collapsed: () => true,
 });
 
 const rootReducer = combineReducers({
