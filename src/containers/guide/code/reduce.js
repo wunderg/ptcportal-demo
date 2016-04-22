@@ -1,6 +1,6 @@
 export const reduce = `function reduce(collection, accumulator, startValue) {
   //your code here
-}`
+}`;
 
 export const reduceSolution =
 `function reduce(collection, accumulator, startValue) {
@@ -26,7 +26,7 @@ export const reduceSolution =
         // start will be the result of accumulator with start and item
 
 //return start
-`
+`;
 
 export const reduceExample =
 `//test array
@@ -37,5 +37,5 @@ function sum(memo, item) {
   return memo + item;
 }
 
-reduce(numbers, double); => 10;
-`
+reduce(numbers, sum); => 10;
+`;
