@@ -9,7 +9,9 @@ import user from '../reducers/user.js';
 
 import jwt from '../middlewares/token.js';
 
-const logger = createLogger();
+const logger = createLogger({
+  collapsed: () => true
+});
 
 const rootReducer = combineReducers({
   form: formReducer,
