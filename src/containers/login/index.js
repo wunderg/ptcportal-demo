@@ -10,6 +10,12 @@ class Login extends Component {
     this.onSubmit = this.onSubmit.bind(this);
   }
 
+  componentWillMount(props) {
+    if (this.props.user.isAuthenticated) {
+      this.context.router.push('/dashboard');
+    }
+  }
+
   componentWillReceiveProps(props) {
     if (props.user.isAuthenticated) {
       this.context.router.push('/dashboard');

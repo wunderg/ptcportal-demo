@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { addTodo, fetchStudents } from '../../actions';
+import { fetchStudents } from '../../actions';
 
 import TextInput from '../text-input';
 import Students from '../students';
@@ -41,11 +41,10 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
   return bindActionCreators(
-    { addTodo, fetchStudents }, dispatch);
+    { fetchStudents }, dispatch);
 }
 
 Home.propTypes = {
-  addTodo: PropTypes.func,
   data: PropTypes.object,
   fetchStudents: PropTypes.func,
   history: PropTypes.object
