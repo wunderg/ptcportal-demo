@@ -12,7 +12,7 @@ class Login extends Component {
 
   componentWillReceiveProps(props) {
     if (props.user.isAuthenticated) {
-      this.context.router.push('/');
+      this.context.router.push('/dashboard');
       this.props.resetForm();
     }
   }
