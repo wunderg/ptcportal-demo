@@ -6,6 +6,7 @@ import { Provider } from 'react-redux';
 import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 
 import storeConfig from './store';
+import requireAuth from './containers/auth/require_auth.js';
 
 import App from './containers/app';
 import Home from './containers/home';
@@ -24,9 +25,10 @@ render(
   <Provider store={store}>
     <Router history={browserHistory}>
       <Route path="/" component={App}>
-        <IndexRoute component={Home} />
+        <IndexRoute component={Login} />
         <Route path="/about" component={About} />
-        <Route path="/add" component={Add} />
+        <Route path="/dashboard" component={Home} />
+        <Route path="/add" component={requireAuth(Add)} />
         <Route path="/student" component={Student} />
         <Route path="/guide" component={Guide} />
         <Route path="/faq" component={Faq} />
