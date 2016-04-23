@@ -27,7 +27,7 @@ render(
       <Route path="/" component={App}>
         <IndexRoute component={Login} />
         <Route path="/about" component={About} />
-        <Route path="/dashboard" component={Dashboard} />
+        <Route path="/dashboard" component={requireAuth(Dashboard)} />
         <Route path="/add" component={requireAuth(Add)} />
         <Route path="/student" component={Student} />
         <Route path="/guide" component={Guide} />

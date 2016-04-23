@@ -6,17 +6,20 @@ import { fetchStudents } from '../../actions';
 import TextInput from '../text-input';
 import Students from '../students';
 
-class Home extends Component {
+class Dashboard extends Component {
   constructor(props) {
     super(props);
   }
 
   componentWillMount() {
-    this.props.fetchStudents();
+    if (this.props.user.isAuthenticated) {
+      this.props.fetchStudents();
+    }
   }
 
 
   render() {
+    console.log(this);
     return (
       <div className="row">
         <div className="col s12">
@@ -30,12 +33,14 @@ class Home extends Component {
   }
 }
 
-Home.propTypes = {
+Dashboard.contextTypes = {
+  router: PropTypes.object
 };
 
 function mapStateToProps(state) {
   return {
-    data: state.slocal
+    data: state.slocal,
+    user: state.user
   };
 }
 
@@ -43,10 +48,10 @@ function mapDispatchToProps(dispatch) {
   return bindActionCreators({ fetchStudents }, dispatch);
 }
 
-Home.propTypes = {
+Dashboard.propTypes = {
   data: PropTypes.object,
   fetchStudents: PropTypes.func,
   history: PropTypes.object
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Home);
+export default connect(mapStateToProps, mapDispatchToProps)(Dashboard);
