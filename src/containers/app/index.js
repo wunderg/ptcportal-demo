@@ -1,4 +1,6 @@
 import React, { Component, PropTypes } from 'react';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 import Navbar from '../navbar';
 import '../../../global.scss';
 
@@ -10,7 +12,7 @@ class App extends Component {
   render() {
     return (
       <div classNameName="">
-        <Navbar />
+        <Navbar isAuthenticated={this.props.user.isAuthenticated} />
         <div className="container">
           { this.props.children }
         </div>
@@ -23,4 +25,11 @@ App.propTypes = {
   children: PropTypes.object
 };
 
-export default App;
+function mapStateToProps(state) {
+  return {
+    data: state.slocal,
+    user: state.user
+  };
+}
+
+export default connect(mapStateToProps)(App);

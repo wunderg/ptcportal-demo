@@ -15,7 +15,27 @@ class Navbar extends Component {
   }
 
   render() {
-    return (
+    if (!this.props.isAuthenticated) {
+      return (
+      <nav>
+        <div className="nav-wrapper">
+          <Link to={`/`} className="brand-logo">PTC Portal</Link>
+          <a href="#" data-activates="mobile-demo" className="button-collapse">
+            <i className="fa fa-align-justify"></i>
+          </a>
+          <ul className="right hide-on-med-and-down">
+            <li><Link to={'/login'}>Sign In</Link></li>
+            <li><Link to={'/login'}>Sing Up</Link></li>
+          </ul>
+          <ul className="side-nav" id="mobile-demo">
+            <li><Link to={'/login'}>Sign In</Link></li>
+            <li><Link to={'/login'}>Sing Up</Link></li>
+          </ul>
+        </div>
+      </nav>
+    );
+    }
+   return (
       <nav>
         <div className="nav-wrapper">
           <Link to={`/`} className="brand-logo">PTC Portal</Link>
@@ -24,21 +44,21 @@ class Navbar extends Component {
           </a>
           <ul className="right hide-on-med-and-down">
             <li><Link to={'/add'}>Add Student</Link></li>
-            <li><a href="">Results</a></li>
+            <li><Link to={'/results'}>Results</Link></li>
             <li><Link to={'/dashboard'}>Dashboard</Link></li>
             <li><Link to={'/guide'}>Guide</Link></li>
             <li><Link to={'/resources'}>Resources</Link></li>
             <li><Link to={'/faq'}>FAQ</Link></li>
-            <li><Link to={'/login'}>Login</Link></li>
+            <li><Link to={'/logout'}>Logout</Link></li>
           </ul>
           <ul className="side-nav" id="mobile-demo">
             <li><Link to={'/add'}>Add Student</Link></li>
-            <li><a href="">Results</a></li>
+            <li><Link to={'/results'}>Results</Link></li>
             <li><Link to={'/dashboard'}>Dashboard</Link></li>
             <li><Link to={'/guide'}>Guide</Link></li>
             <li><Link to={'/resources'}>Resources</Link></li>
             <li><Link to={'/faq'}>FAQ</Link></li>
-            <li><Link to={'/login'}>Login</Link></li>
+            <li><Link to={'/logout'}>Loqout</Link></li>
           </ul>
         </div>
       </nav>
