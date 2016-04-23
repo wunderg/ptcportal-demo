@@ -23,7 +23,7 @@ class NewStudent extends Component {
       <div className="row">
         <form className="col s12" onSubmit={this.onSubmit} >
           <div className="row">
-            <div class="divider"></div>
+            <div className="divider"></div>
             <div className="input-field col s6 offset-s3">
               <input type="text" className="validate form-control" {...name} />
               <label htmlFor="icon_prefix">Name</label>
