@@ -9,7 +9,7 @@ import storeConfig from './store';
 import requireAuth from './containers/auth/require_auth.js';
 
 import App from './containers/app';
-import Home from './containers/home';
+import Dashboard from './containers/dashboard';
 import About from './containers/about';
 import Add from './containers/addStudent';
 import Student from './containers/student';
@@ -27,7 +27,7 @@ render(
       <Route path="/" component={App}>
         <IndexRoute component={Login} />
         <Route path="/about" component={About} />
-        <Route path="/dashboard" component={Home} />
+        <Route path="/dashboard" component={Dashboard} />
         <Route path="/add" component={requireAuth(Add)} />
         <Route path="/student" component={Student} />
         <Route path="/guide" component={Guide} />
