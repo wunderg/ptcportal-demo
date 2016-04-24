@@ -45,6 +45,12 @@ module.exports = (app, express, staticPath) => {
     });
   });
 
+  appRouter.get('/signup', (req, res) => {
+    res.sendFile('index.html', {
+      root: staticPath
+    });
+  });
+
   appRouter.get('/dashboard', (req, res) => {
     res.sendFile('index.html', {
       root: staticPath
