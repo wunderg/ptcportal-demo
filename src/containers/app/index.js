@@ -2,6 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import Navbar from '../navbar';
+import Spinner from '../../helpers/spinner.js';
 import '../../../global.scss';
 
 import { loginWithToken } from '../../actions/login.js';
@@ -19,6 +20,10 @@ class App extends Component {
   }
 
   render() {
+    if (this.props.user.isFetching) {
+      return <Spinner />
+    }
+
     return (
       <div classNameName="">
         <Navbar isAuthenticated={this.props.user.isAuthenticated} />
