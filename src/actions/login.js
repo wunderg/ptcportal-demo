@@ -5,6 +5,8 @@ function saveToLocalStorage(token) {
   localStorage.setItem('id_token', token);
 }
 
+
+
 function requestSignup(creds) {
   return {
     type: ACTIONS.SIGNUP_REQUEST,
@@ -120,4 +122,12 @@ function tokenLoginError(message) {
     isAuthenticated: false,
     message
   };
+}
+
+function logout() {
+  localStorage.setItem('id_token', null);
+  return {
+    type: ACTIONS.LOGOUT,
+    isAuthenticated: false,
+  }
 }
