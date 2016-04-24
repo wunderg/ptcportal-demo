@@ -1,4 +1,4 @@
-
+export const LOGOUT = 'LOGOUT';
 export const ADD_STUDENT = 'ADD_STUDENT';
 export const FETCH_STUDENTS = 'FETCH_STUDENTS';
 export const LOGIN_REQUEST = 'LOGIN_REQUEST';
