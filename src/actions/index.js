@@ -21,6 +21,20 @@ export function addStudent(student) {
   };
 }
 
+// export function fetchStudents() {
+//   const token = localStorage.getItem('id_token') || null;
+//
+//   const config = {
+//     headers: { Authorization: token }
+//   };
+//
+//   const request = axios.get(`api/students`, config);
+//   return {
+//     type: ACTIONS.FETCH_STUDENTS,
+//     payload: request
+//   };
+// }
+
 export function fetchStudents() {
   const token = localStorage.getItem('id_token') || null;
 
@@ -28,9 +42,32 @@ export function fetchStudents() {
     headers: { Authorization: token }
   };
 
-  const request = axios.get(`api/students`, config);
+  return dispatch => {
+    dispatch(requestFetchStudents());
+    return axios.get(`api/students`, config)
+    .then(res => dispatch(fetchStudentsSuccess(res)))
+    .catch(err => dispatch(fetchStudentFail(err)))
+  }
+}
+
+function requestFetchStudents() {
+
   return {
-    type: ACTIONS.FETCH_STUDENTS,
-    payload: request
+    type: ACTIONS.FETCH_STUDENTS_REQUEST,
+    isFetching: true
+  };
+}
+
+function fetchStudentsSuccess(data) {
+  return {
+    type: ACTIONS.FETCH_STUDENTS_SUCCESS,
+    data
+  };
+}
+
+function fetchStudentFail(message) {
+  return {
+    type: ACTIONS.FETCH_STUDENTS_FAILURE,
+    message
   };
 }
