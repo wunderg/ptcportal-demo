@@ -1,56 +1,15 @@
 import * as ACTIONS from '../actions/constants';
 
-const INITIAL_STATE = {
-  students: [
-    {
-      name: 'Oleg',
-      email: 'oleg@oleg.com',
-      lesson: 3,
-      level: 4,
-      interview: 'March 5',
-      decision: 'pending',
-      _id: 1,
-      notes: [
-        { lesson1: 'Here the lesson 1 notes', code: 'var x = 5' },
-        { lesson2: 'here is the lesson 2 notes', code: 'var x = 10' }
-      ]
-    },
-    {
-      name: 'Joh',
-      email: 'Joh@Joh.com',
-      lesson: 2,
-      level: 6,
-      interview: 'March 5',
-      decision: 'pending',
-      _id: 2,
-      notes: [
-        { lesson1: 'Here the lesson 1 notes', code: 'var x = 5' },
-        { lesson2: 'here is the lesson 2 notes', code: 'var x = 10' }
-      ]
-    }
-  ],
-  instructor: 'George',
-  currentStudent: {
-    name: 'Oleg',
-    email: 'oleg@oleg.com',
-    lesson: 3,
-    level: 4,
-    interview: 'March 5',
-    decision: 'pending',
-    _id: 3,
-    notes: [
-      { lesson1: 'Here is the lesson 1 notes', code: 'var x = 5;' },
-      { lesson2: 'here is the lesson 2 notes', code: 'var x = 10;' }
-    ]
-  }
-};
-
-export default (state = INITIAL_STATE, action) => {
+export default (state = {isFetching: true}, action) => {
   switch (action.type) {
     case ACTIONS.ADD_STUDENT:
       return {...state, students: state.students.concat(action.payload)};
-    case ACTIONS.FETCH_STUDENTS:
-      return {...state, students: action.payload.data}
+    case ACTIONS.FETCH_STUDENTS_REQUEST:
+      return {...state, isFetching: true}
+    case ACTIONS.FETCH_STUDENTS_SUCCESS:
+      return {...state, isFetching: false, students: action.data.data}
+    case ACTIONS.FETCH_STUDENTS_FAILURE:
+      return {...state, isFetching: false, message: action.data.message}
     default:
       return state;
   }
