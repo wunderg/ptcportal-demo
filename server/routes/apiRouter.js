@@ -14,7 +14,7 @@ module.exports = (app, express) => {
   app.use('/api', apiRouter);
 
   apiRouter.use((req, res, next) => {
-    // console.log('API CALL', req.headers.authorization);
+    console.log('API CALL');
     next();
   });
 

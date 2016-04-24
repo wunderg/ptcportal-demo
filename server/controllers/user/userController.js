@@ -8,12 +8,10 @@ const token = (user) => {
 
 export default {
   tokenLogin(req, res) {
-    console.log(req.user);
     return res.json({name: req.user.email})
   },
 
   signin(req, res) {
-    // console.log('User', req.body);
     const email = req.body.email;
     const password = req.body.pass;
 
@@ -47,7 +45,6 @@ export default {
         password
       });
 
-      // console.log(newUser);
       newUser.save(err2 => {
         if (err2) {
           next(err);
