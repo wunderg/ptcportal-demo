@@ -17,25 +17,25 @@ class Navbar extends Component {
   render() {
     if (!this.props.isAuthenticated) {
       return (
-      <nav>
-        <div className="nav-wrapper">
-          <Link to={`/`} className="brand-logo">PTC Portal</Link>
-          <a href="#" data-activates="mobile-demo" className="button-collapse">
-            <i className="fa fa-align-justify"></i>
-          </a>
-          <ul className="right hide-on-med-and-down">
-            <li><Link to={'/login'}>Sign In</Link></li>
-            <li><Link to={'/login'}>Sing Up</Link></li>
-          </ul>
-          <ul className="side-nav" id="mobile-demo">
-            <li><Link to={'/login'}>Sign In</Link></li>
-            <li><Link to={'/login'}>Sing Up</Link></li>
-          </ul>
-        </div>
-      </nav>
-    );
+        <nav>
+          <div className="nav-wrapper">
+            <Link to={`/`} className="brand-logo">PTC Portal</Link>
+            <a href="#" data-activates="mobile-demo" className="button-collapse">
+              <i className="fa fa-align-justify"></i>
+            </a>
+            <ul className="right hide-on-med-and-down">
+              <li><Link to={'/login'}>Sign In</Link></li>
+              <li><Link to={'/login'}>Sing Up</Link></li>
+            </ul>
+            <ul className="side-nav" id="mobile-demo">
+              <li><Link to={'/login'}>Sign In</Link></li>
+              <li><Link to={'/login'}>Sing Up</Link></li>
+            </ul>
+          </div>
+        </nav>
+      );
     }
-   return (
+    return (
       <nav>
         <div className="nav-wrapper">
           <Link to={`/`} className="brand-logo">PTC Portal</Link>
