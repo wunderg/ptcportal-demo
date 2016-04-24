@@ -4,9 +4,18 @@ import { bindActionCreators } from 'redux';
 import Navbar from '../navbar';
 import '../../../global.scss';
 
+import { loginWithToken } from '../../actions/login.js';
+
 class App extends Component {
   constructor(props) {
     super(props);
+  }
+
+  componentWillMount() {
+    const token = localStorage.getItem('id_token')
+    if (!this.props.user.isAuthenticated && token) {
+       this.props.loginWithToken(token);
+    }
   }
 
   render() {
@@ -32,4 +41,4 @@ function mapStateToProps(state) {
   };
 }
 
-export default connect(mapStateToProps)(App);
+export default connect(mapStateToProps, { loginWithToken })(App);

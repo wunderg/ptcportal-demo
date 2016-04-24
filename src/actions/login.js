@@ -53,12 +53,14 @@ function requestLogin(creds) {
 }
 
 function recieveLogin(user) {
-  saveToLocalStorage(user.data.id_token);
+  if (user.data && user.data.id_token) {
+    saveToLocalStorage(user.data.id_token);
+  }
   return {
     type: ACTIONS.LOGIN_SUCCESS,
     isFetching: false,
     isAuthenticated: true,
-    id_token: user.data.id_token
+    name: user
   };
 }
 
@@ -78,5 +80,44 @@ export function loginUser(creds) {
     return axios.post('api/login', creds)
       .then(res => dispatch(recieveLogin(res)))
       .catch(err => dispatch(loginError(err)));
+  };
+}
+
+export function loginWithToken(token) {
+  const config = {
+    headers: { Authorization: token }
+  };
+  return dispatch => {
+    dispatch(requestLoginWithToken());
+    return axios.get('api/tokenlogin', config)
+    .then(res => dispatch(recieveTokenLogin(res)))
+    .catch(err => dispatch(tokenLoginError(err)));
+  };
+}
+
+function requestLoginWithToken() {
+  return {
+    type: ACTIONS.TOKEN_LOGIN_REQUEST,
+    isFetching: true,
+    isAuthenticated: false,
+  };
+}
+
+function recieveTokenLogin(user) {
+  return {
+    type: ACTIONS.TOKEN_LOGIN_SUCCESS,
+    isFetching: false,
+    isAuthenticated: true,
+    name: user
+  };
+}
+
+
+function tokenLoginError(message) {
+  return {
+    type: ACTIONS.TOKEN_LOGIN_FAILURE,
+    isFetching: false,
+    isAuthenticated: false,
+    message
   };
 }
