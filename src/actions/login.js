@@ -5,8 +5,6 @@ function saveToLocalStorage(token) {
   localStorage.setItem('id_token', token);
 }
 
-
-
 function requestSignup(creds) {
   return {
     type: ACTIONS.SIGNUP_REQUEST,
@@ -25,7 +23,6 @@ function recieveSignup(user) {
     id_token: user.data.id_token
   };
 }
-
 
 function signupError(message) {
   return {
@@ -65,7 +62,6 @@ function recieveLogin(user) {
     name: user
   };
 }
-
 
 function loginError(message) {
   return {
@@ -114,7 +110,6 @@ function recieveTokenLogin(user) {
   };
 }
 
-
 function tokenLoginError(message) {
   return {
     type: ACTIONS.TOKEN_LOGIN_FAILURE,
@@ -124,10 +119,9 @@ function tokenLoginError(message) {
   };
 }
 
-function logout() {
-  localStorage.setItem('id_token', null);
+export function logout() {
+  localStorage.removeItem('id_token');
   return {
-    type: ACTIONS.LOGOUT,
-    isAuthenticated: false,
+    type: ACTIONS.LOGOUT
   }
 }

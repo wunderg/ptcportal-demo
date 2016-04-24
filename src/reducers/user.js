@@ -20,6 +20,8 @@ export default (state = {}, action) => {
       return {...state, isFetching: false, isAuthenticated: true, message: '', name: action.name.data.name};
     case ACTIONS.TOKEN_LOGIN_FAILURE:
       return {...state, isFetching: false, isAuthenticated: false, message: action.message.data};
+    case ACTIONS.LOGOUT:
+      return {...state, isFetching: false, isAuthenticated: false, name: null};
     default:
       return state;
   }

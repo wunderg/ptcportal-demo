@@ -49,7 +49,7 @@ class Navbar extends Component {
             <li><Link to={'/guide'}>Guide</Link></li>
             <li><Link to={'/resources'}>Resources</Link></li>
             <li><Link to={'/faq'}>FAQ</Link></li>
-            <li><Link to={'/logout'}>Logout</Link></li>
+            <li onClick={this.props.logout}><Link to={''}>Loqout</Link></li>
           </ul>
           <ul className="side-nav" id="mobile-demo">
             <li><Link to={'/add'}>Add Student</Link></li>
@@ -58,7 +58,7 @@ class Navbar extends Component {
             <li><Link to={'/guide'}>Guide</Link></li>
             <li><Link to={'/resources'}>Resources</Link></li>
             <li><Link to={'/faq'}>FAQ</Link></li>
-            <li><Link to={'/logout'}>Loqout</Link></li>
+            <li onClick={this.props.logout}><Link to={''}>Loqout</Link></li>
           </ul>
         </div>
       </nav>

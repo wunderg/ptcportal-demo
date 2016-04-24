@@ -5,6 +5,7 @@ import { fetchStudents } from '../../actions';
 
 import TextInput from '../text-input';
 import Students from '../students';
+import Spinner from '../../helpers/spinner.js';
 
 class Dashboard extends Component {
   constructor(props) {
@@ -19,7 +20,6 @@ class Dashboard extends Component {
 
 
   render() {
-    console.log(this);
     return (
       <div className="row">
         <div className="col s12">

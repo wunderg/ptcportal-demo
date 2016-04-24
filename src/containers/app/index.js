@@ -5,7 +5,7 @@ import Navbar from '../navbar';
 import Spinner from '../../helpers/spinner.js';
 import '../../../global.scss';
 
-import { loginWithToken } from '../../actions/login.js';
+import { loginWithToken, logout } from '../../actions/login.js';
 
 class App extends Component {
   constructor(props) {
@@ -26,7 +26,7 @@ class App extends Component {
 
     return (
       <div classNameName="">
-        <Navbar isAuthenticated={this.props.user.isAuthenticated} />
+        <Navbar isAuthenticated={this.props.user.isAuthenticated} logout={this.props.logout} />
         <div className="container">
           { this.props.children }
         </div>
@@ -47,4 +47,4 @@ function mapStateToProps(state) {
 }
 
 
-export default connect(mapStateToProps, { loginWithToken })(App);
+export default connect(mapStateToProps, { loginWithToken, logout })(App);
