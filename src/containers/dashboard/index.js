@@ -20,6 +20,9 @@ class Dashboard extends Component {
 
 
   render() {
+    if (this.props.data.isFetching) {
+      return <Spinner />
+    }
     return (
       <div className="row">
         <div className="col s12">

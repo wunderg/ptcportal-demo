@@ -29,10 +29,10 @@ render(
         <Route path="/about" component={About} />
         <Route path="/dashboard" component={requireAuth(Dashboard)} />
         <Route path="/add" component={requireAuth(Add)} />
-        <Route path="/student" component={Student} />
-        <Route path="/guide" component={Guide} />
-        <Route path="/faq" component={Faq} />
-        <Route path="/resources" component={Resources} />
+        <Route path="/student" component={requireAuth(Student)} />
+        <Route path="/guide" component={requireAuth(Guide)} />
+        <Route path="/faq" component={requireAuth(Faq)} />
+        <Route path="/resources" component={requireAuth(Resources)} />
         <Route path="/login" component={Login} />
       </Route>
     </Router>
