@@ -9,7 +9,7 @@ const style = {
 const Table = (props, link) => (
 
   <div className="student-list">
-    {props.data.students.map(student => <Card student={student} /> )}
+    {props.data.students.map(student => <Card student={student} key={student.name} /> )}
   </div>
 );
 
