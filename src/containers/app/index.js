@@ -5,7 +5,7 @@ import Navbar from '../navbar';
 import Spinner from '../../helpers/spinner.js';
 import '../../../global.scss';
 
-import { loginWithToken, logout } from '../../actions/login.js';
+import { loginWithToken, logout, fetchStudents } from '../../actions/login.js';
 
 class App extends Component {
   constructor(props) {
@@ -47,4 +47,4 @@ function mapStateToProps(state) {
 }
 
 
-export default connect(mapStateToProps, { loginWithToken, logout })(App);
+export default connect(mapStateToProps, { loginWithToken, logout, fetchStudents })(App);

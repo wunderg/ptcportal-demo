@@ -14,7 +14,7 @@ export default function(ComponentToCompose) {
       }
     }
 
-    componentWillUpdate(nextProps) {
+    componentWillReceiveProps(nextProps) {
       if (!nextProps.authenticated) {
         this.context.router.push('/');
       }

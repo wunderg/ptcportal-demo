@@ -16,7 +16,8 @@ import Student from './containers/student';
 import Guide from './containers/guide';
 import Faq from './containers/faq';
 import Resources from './containers/resources';
-import Login from './containers/login';
+import Login from './containers/login/signin.js';
+import SignUp from './containers/login/signup.js';
 
 
 const store = storeConfig();
@@ -34,6 +35,7 @@ render(
         <Route path="/faq" component={requireAuth(Faq)} />
         <Route path="/resources" component={requireAuth(Resources)} />
         <Route path="/login" component={Login} />
+        <Route path="/signup" component={SignUp} />
       </Route>
     </Router>
   </Provider>,

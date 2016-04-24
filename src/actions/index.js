@@ -21,20 +21,6 @@ export function addStudent(student) {
   };
 }
 
-// export function fetchStudents() {
-//   const token = localStorage.getItem('id_token') || null;
-//
-//   const config = {
-//     headers: { Authorization: token }
-//   };
-//
-//   const request = axios.get(`api/students`, config);
-//   return {
-//     type: ACTIONS.FETCH_STUDENTS,
-//     payload: request
-//   };
-// }
-
 export function fetchStudents() {
   const token = localStorage.getItem('id_token') || null;
 
