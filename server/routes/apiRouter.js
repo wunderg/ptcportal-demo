@@ -14,7 +14,7 @@ module.exports = (app, express) => {
   app.use('/api', apiRouter);
 
   apiRouter.use((req, res, next) => {
-    console.log('API CALL', req.headers.authorization);
+    // console.log('API CALL', req.headers.authorization);
     next();
   });
 
@@ -25,6 +25,7 @@ module.exports = (app, express) => {
 
   apiRouter.post('/login', requireSignin, UserController.signin);
   apiRouter.post('/signup', UserController.signup);
+  apiRouter.get('/tokenlogin', requireAuth, UserController.tokenLogin);
   apiRouter.get('/students', requireAuth, StudentController.get);
   apiRouter.post('/student', StudentController.post);
   apiRouter.delete('/student/:id', StudentController.delete);

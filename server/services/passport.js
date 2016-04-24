@@ -6,6 +6,7 @@ import User from '../models/userModel.js';
 const localOptions = { usernameField: 'email', passwordField: 'pass' };
 
 const localLogin = new LocalStrategy(localOptions, (email, password, done) => {
+  console.log(email, 'EMAIL');
   User.findOne({ email }, (err, user) => {
     if (err) {
       return done(err);
@@ -33,7 +34,8 @@ const jwtOptions = {
 };
 
 const jwtLogin = new Strategy(jwtOptions, (payload, done) => {
-  User.findOne(payload.sub, (err, user) => {
+  console.log(payload.sub,'payloadSUB');
+  User.findOne({ email: payload.sub }, (err, user) => {
     if (err) {
       return done(err, false);
     }
