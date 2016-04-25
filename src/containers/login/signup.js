@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import { reduxForm } from 'redux-form';
 import './style.scss';
-import { loginUser, signupUser } from '../../actions/login.js';
+import { signupUser } from '../../actions/login.js';
 
 class Signup extends Component {
   constructor(props) {
@@ -21,7 +21,7 @@ class Signup extends Component {
     }
   }
 
-  onSubmit(e, z) {
+  onSubmit() {
     e.preventDefault();
     const creds = {
       email: this.props.data.email.value || null,
@@ -112,4 +112,4 @@ export default reduxForm({
   form: 'signup',
   fields: ['email', 'pass', 'pass2'],
   validate
-}, mapStateToProps, { loginUser, signupUser })(Signup);
+}, mapStateToProps, { signupUser })(Signup);
