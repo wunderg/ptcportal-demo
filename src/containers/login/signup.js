@@ -21,7 +21,7 @@ class Signup extends Component {
     }
   }
 
-  onSubmit() {
+  onSubmit(e, z) {
     e.preventDefault();
     const creds = {
       email: this.props.data.email.value || null,
