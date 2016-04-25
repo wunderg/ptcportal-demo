@@ -8,6 +8,8 @@ function saveToLocalStorage(token) {
 function requestSignup(creds) {
   return {
     type: ACTIONS.SIGNUP_REQUEST,
+    isFetching: true,
+    isAuthenticated: false,
     creds
   };
 }
@@ -16,6 +18,8 @@ function recieveSignup(user) {
   saveToLocalStorage(user.data.id_token);
   return {
     type: ACTIONS.SIGNUP_SUCCESS,
+    isFetching: false,
+    isAuthenticated: true,
     id_token: user.data.id_token
   };
 }
@@ -23,6 +27,8 @@ function recieveSignup(user) {
 function signupError(message) {
   return {
     type: ACTIONS.SIGNUP_FAILURE,
+    isFetching: false,
+    isAuthenticated: false,
     message
   };
 }
@@ -39,6 +45,8 @@ export function signupUser(creds) {
 function requestLogin(creds) {
   return {
     type: ACTIONS.LOGIN_REQUEST,
+    isFetching: true,
+    isAuthenticated: false,
     creds
   };
 }
@@ -49,6 +57,8 @@ function recieveLogin(user) {
   }
   return {
     type: ACTIONS.LOGIN_SUCCESS,
+    isFetching: false,
+    isAuthenticated: true,
     name: user
   };
 }
@@ -56,6 +66,8 @@ function recieveLogin(user) {
 function loginError(message) {
   return {
     type: ACTIONS.LOGIN_FAILURE,
+    isFetching: false,
+    isAuthenticated: false,
     message
   };
 }
@@ -83,13 +95,17 @@ export function loginWithToken(token) {
 
 function requestLoginWithToken() {
   return {
-    type: ACTIONS.TOKEN_LOGIN_REQUEST
+    type: ACTIONS.TOKEN_LOGIN_REQUEST,
+    isFetching: true,
+    isAuthenticated: false,
   };
 }
 
 function recieveTokenLogin(user) {
   return {
     type: ACTIONS.TOKEN_LOGIN_SUCCESS,
+    isFetching: false,
+    isAuthenticated: true,
     name: user
   };
 }
@@ -97,12 +113,14 @@ function recieveTokenLogin(user) {
 function tokenLoginError(message) {
   return {
     type: ACTIONS.TOKEN_LOGIN_FAILURE,
+    isFetching: false,
+    isAuthenticated: false,
     message
   };
 }
 
 export function logout() {
-  localStorage.removeItem('id_token');
+  localStorage.removeItem('id_token', null);
   return {
     type: ACTIONS.LOGOUT
   }

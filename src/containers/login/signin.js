@@ -21,7 +21,7 @@ class Login extends Component {
     }
   }
 
-  onSubmit() {
+  onSubmit(e, z) {
     e.preventDefault();
     const creds = {
       email: this.props.data.email.value || null,
@@ -72,8 +72,6 @@ Login.propTypes = {
   data: PropTypes.object,
   resetForm: PropTypes.func,
   loginUser: PropTypes.func,
-  dispatch: PropTypes.func,
-  onSignup: PropTypes.func,
   signupUser: PropTypes.func,
   user: PropTypes.object,
 };
@@ -107,4 +105,4 @@ export default reduxForm({
   form: 'login',
   fields: ['email', 'pass'],
   validate
-}, mapStateToProps, { loginUser  })(Login);
+}, mapStateToProps, { loginUser })(Login);
