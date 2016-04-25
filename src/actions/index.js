@@ -40,7 +40,6 @@ function requestFetchStudents() {
 
   return {
     type: ACTIONS.FETCH_STUDENTS_REQUEST,
-    isFetching: true
   };
 }
 
