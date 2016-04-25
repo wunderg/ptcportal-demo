@@ -53,11 +53,11 @@ class Signup extends Component {
               <label>Confirm Password</label>
             </div>
             <div className="center-align login-buttons">
-            <button onClick={resetForm} disabled={submitting} className="btn waves-effect waves-light">
-              Clear
-            </button>
             <button onClick={this.onSubmit} disabled={email.error || pass.error} className="btn waves-effect waves-light">
               Signup
+            </button>
+            <button onClick={resetForm} disabled={submitting} className="btn waves-effect waves-light">
+              Clear
             </button>
             </div>
           </form>
