@@ -88,7 +88,6 @@ const validate = values => {
   if (!values.pass) {
     errors.pass = 'Password Required';
   } else if (values.pass.length < 6) {
-    console.log(values.pass);
     errors.pass = 'Has to be atleast 6 characters';
   }
 
