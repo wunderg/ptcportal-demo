@@ -1,5 +1,5 @@
 ####Master branch build status: 
-![](https://travis-ci.org/[your-username]/MovingHelper.svg?branch=master)
+![](https://travis-ci.org/[wunderg]/PTC?branch=master)
 
 # PTC Portal
 
