@@ -24,8 +24,15 @@ describe('actions', () => {
     it('has to have payload as an object', () => {
       expect(action.payload).to.be.an('object');
     });
-    it('has to have name property as string', () => {
-      expect(action.payload.name).to.be.a('function');
+    it('has to have correct propertins', () => {
+      console.log(action);
+      expect(action.payload.name).to.be.a('string');
+      expect(action.payload._id).to.be.a('number');
+      expect(action.payload.email).to.be.a('string');
+      expect(action.payload.level).to.be.a('number');
+      expect(action.payload.lesson).to.be.a('number');
+      expect(action.payload.interview).to.be.a('string');
+      expect(action.payload.decision).to.be.a('string');
     });
   });
 });
