@@ -1,5 +1,4 @@
-####Master branch build status: 
-![](https://travis-ci.org/wunderg/PTC?branch=master)
+[![Build Status](https://travis-ci.org/wunderg/PTC.svg?branch=master)](https://travis-ci.org/wunderg/PTC)
 
 # PTC Portal
 
