@@ -13,7 +13,7 @@ export default () => (
         <li>
           <div className="card">
             <div className="card-content">
-              <h4><b>Lesson 1 - Map usign Reduce</b></h4>
+              <h4><b>Lesson 1 - Map using Reduce</b></h4>
               <hr />
               <div className="">
                 <h5><b>Objectives:</b></h5>
