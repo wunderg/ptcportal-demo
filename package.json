@@ -5,13 +5,13 @@
   "main": "index.js",
   "scripts": {
     "start": "node ./dist/server.js",
-    "start-dev": "NODE_ENV=development babel-node ./server/server.js",
+    "start-dev": "npm test && NODE_ENV=development babel-node ./server/server.js",
     "build-client": "NODE_ENV=production webpack --config ./webpack.production.config.js --profile",
     "build-server": "babel -d ./dist ./server -s",
     "lint": "eslint src; exit 0",
     "clean": "rimraf dist",
     "postinstall": "npm run clean && npm run build-client && npm run build-server",
-    "test": "mocha --compilers js:babel-core/register --require ./test/test_helper.js --recursive ./test",
+    "test": "mocha --compilers js:babel-core/register --require ignore-styles --require ./test/test_helper.js --recursive ./test",
     "test:watch": "npm run test -- --watch"
   },
   "engines": {
@@ -92,6 +92,7 @@
     "eslint": "^1.10.3",
     "eslint-config-airbnb": "5.0.0",
     "eslint-plugin-react": "^3.16.1",
+    "ignore-styles": "^1.2.0",
     "jquery": "^2.2.3",
     "jsdom": "^8.4.0",
     "mocha": "^2.4.5",

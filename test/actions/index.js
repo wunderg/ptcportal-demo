@@ -16,16 +16,18 @@ describe('actions', () => {
         email: 'John@student.com'
       };
       action = addStudent(data);
-    })
-
+    });
+    it('has to exist', () => {
+      expect(action.type).to.be.a('string');
+    });
     it('has to be correct type', () => {
       expect(action.type).to.equal(ACTIONS.ADD_STUDENT);
     });
+
     it('has to have payload as an object', () => {
       expect(action.payload).to.be.an('object');
     });
     it('has to have correct propertins', () => {
-      console.log(action);
       expect(action.payload.name).to.be.a('string');
       expect(action.payload._id).to.be.a('number');
       expect(action.payload.email).to.be.a('string');

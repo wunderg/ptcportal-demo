@@ -2,10 +2,10 @@ import React from 'react';
 
 const style = {
   marginTop: '30%'
-}
+};
 
 export default () => (
-  <div className="center" style={style}>
+  <div className="center spinner" style={style}>
     <div className="preloader-wrapper big active">
       <div className="spinner-layer spinner-blue-only">
         <div className="circle-clipper left">

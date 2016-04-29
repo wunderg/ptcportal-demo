@@ -13,22 +13,24 @@ class App extends Component {
   }
 
   componentWillMount() {
-    const token = localStorage.getItem('id_token')
+    const token = window.localStorage.getItem('id_token');
     if (!this.props.user.isAuthenticated && token) {
-       this.props.loginWithToken(token);
+      this.props.loginWithToken(token);
     }
   }
 
   render() {
     if (this.props.user.isFetching) {
-      return <Spinner />
+      return <Spinner />;
     }
 
     return (
-      <div classNameName="">
-        <Navbar isAuthenticated={this.props.user.isAuthenticated} logout={this.props.logout} />
-        <div className="container">
-          { this.props.children }
+      <div id="main">
+        <div className="main-wrap">
+          <Navbar isAuthenticated={this.props.user.isAuthenticated} logout={this.props.logout} />
+          <div className="container">
+            { this.props.children }
+          </div>
         </div>
       </div>
     );

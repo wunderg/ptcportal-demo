@@ -1,6 +1,6 @@
 import * as ACTIONS from '../actions/constants';
 
-export default (state = {isFetching: true}, action) => {
+export default (state = { isFetching: true, students: [] }, action) => {
   switch (action.type) {
     case ACTIONS.ADD_STUDENT:
       return {...state, students: state.students.concat(action.payload)};
