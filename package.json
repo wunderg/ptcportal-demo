@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node ./dist/server.js",
-    "start-dev": "npm test && NODE_ENV=development babel-node ./server/server.js",
+    "start-dev": "NODE_ENV=development babel-node ./server/server.js",
     "build-client": "NODE_ENV=production webpack --config ./webpack.production.config.js --profile",
     "build-server": "babel -d ./dist ./server -s",
     "lint": "eslint src; exit 0",
@@ -89,6 +89,7 @@
     "babel-eslint": "^5.0.0-beta10",
     "chai": "^3.5.0",
     "chai-jquery": "^2.0.0",
+    "enzyme": "^2.2.0",
     "eslint": "^1.10.3",
     "eslint-config-airbnb": "5.0.0",
     "eslint-plugin-react": "^3.16.1",
