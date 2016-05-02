@@ -18,6 +18,7 @@ export const containsSolution =
     if (item === target) {
       result = true;
     }
+    return result;
   }, false);
 }
 
