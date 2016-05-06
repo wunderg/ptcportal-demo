@@ -3,7 +3,7 @@ import Info from './info';
 import Notes from './notes';
 import Sessions from './sessions';
 import Ratings from './ratings';
-import { connect } from 'react-redux'
+import { connect } from 'react-redux';
 import './style.scss';
 
 class Student extends Component {
@@ -31,7 +31,7 @@ class Student extends Component {
 function mapStateToProps(state) {
   return {
     student: state.slocal.selectedStudent
-  }
+  };
 }
 
 export default connect(mapStateToProps)(Student);

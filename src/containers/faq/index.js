@@ -55,6 +55,7 @@ class Faq extends Component {
               <hr />
               <p>If you have concerns about the student in terms of red flags such as memorization or inability to actually reason and logic and think like an engineer, you should address these concerns to the Admissions Manager <a mailto="josh.shaman@hackreactor.com">josh.shaman@hackreactor.com</a> prior to having the student schedule an interview.</p>
             </div>
+
             <div className="card-panel">
               <h5><b>Q: What should I do if I don’t hear back from a student?</b></h5>
               <hr />

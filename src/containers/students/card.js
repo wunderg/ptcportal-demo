@@ -23,7 +23,7 @@ export default ({ student, selectStudent }) => {
             <hr />
             <p className=''> Inverview:<span className="right">{student.interview}</span> </p>
             <p className=''> Decision:<span className="right"> {student.decision}</span> </p>
-            <p className='contacted'> Contacted: <input type="checkbox" id="contacted" checked="checked"/><label for="contacted" className="right" onClick={onCheckBoxClick}></label> </p>
+            <p className="contacted"> Contacted: <input type="checkbox" id="contacted" checked='checked' onChange={onCheckBoxClick} /><label htmlFor="contacted" className="right" ></label> </p>
             <span className="progress-text">Current progress: {student.lesson} of 8</span>
             <Progress className="students-progress-bar" />
             <p> <a className="waves-effect waves-light btn right details" onClick={onDetailsClick}>Details</a></p>

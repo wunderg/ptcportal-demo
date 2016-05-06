@@ -40,11 +40,11 @@ class Guide extends Component {
           </div>
 
           <div id="level4" className="section scrollspy">
-            <Level4 />
+            <Level5 />
           </div>
 
           <div id="level5" className="section scrollspy">
-            <Level5 />
+            <Level4 />
           </div>
 
           <div id="level6" className="section scrollspy">
