@@ -11,7 +11,6 @@ class Faq extends Component {
             <h3>Frequently Asked Questions</h3>
             <hr />
 
-
             <div className="card-panel">
               <h5><b>Q: What if students don't do homework or extra work outside of class? </b></h5>
               <hr />
@@ -21,22 +20,40 @@ class Faq extends Component {
             <div className="card-panel">
               <h5><b>Q: What do I do with a non-responsive student? </b></h5>
               <hr />
-              <p>A: If you've written 2-3x and it's been 5 business days, note in pipedrive and write to remote.beta.admissions@hackreactor.com. Then check the queue and ping the next student.</p>
+              <p>A: If you've written 2-3x and it's been 5 business days, note in pipedrive and write to <a href='mailto:remote.beta.admissions@hackreactor.com'>remote.beta.admissions@hackreactor.com</a>. Then check the queue and ping the next student.</p>
             </div>
 
 
             <div className="card-panel">
               <h5><b>Q: My student is missing sessions, what do I do?</b></h5>
               <hr />
-              <p>A: If they miss 2 sessions, give them a firm warning that you won't be able to continue with them if they miss another (not in Pipedrive and email remote.beta.admissions@hackreactor.com if they miss 2+). </p>
+              <p>A: If they miss 2 sessions, give them a firm warning that you won't be able to continue with them if they miss another (not in Pipedrive and email  <a href='mailto:remote.beta.admissions@hackreactor.com'>remote.beta.admissions@hackreactor.com</a> if they miss 2+). </p>
             </div>
 
 
+            <div className="card-panel">
+              <h5><b>Q: Am I required to recommend a student?</b></h5>
+              <hr />
+              <p>A: No, if the student is not ready at the end of 10 sessions, you can tell them, note in pipedrive and notify <a href='mailto:remote.beta.admissions@hackreactor.com'>remote.beta.admissions@hackreactor.com</a></p>
+            </div>
+
+
+            <div className="card-panel">
+              <h5><b>Q: What if the student is way off the mark?</b></h5>
+              <hr />
+              <p>A: Try at least 6 sessions to see how far you can get. If the progress is sufficient, try to finish out PTC with them. If it is minimal or stalled and they are FAR off, you can tell them their best next steps on how to study, etc. </p>
+            </div>
+
+            <div className="card-panel">
+              <h5><b>Q: What's a good way to check for memorization? How do I prevent it?</b></h5>
+              <hr />
+              <p>A: Get the student to talk their way through the logic of the problem AND switch the variable nomenclature to make sure the student actually understands the steps and how to solve even when the order / naming is changed.</p>
+            </div>
 
             <div className="card-panel">
               <h5><b>Q: What should I do if student raise any red flags - rude and agressive, lack of growth mindset, etc..?</b></h5>
               <hr />
-              <p>If you have concerns about the student in terms of red flags such as memorization or inability to actually reason and logic and think like an engineer, you should address these concerns to the Admissions Manager <a href="josh.shaman@hackreactor.com">josh.shaman@hackreactor.com</a> prior to having the student schedule an interview.</p>
+              <p>If you have concerns about the student in terms of red flags such as memorization or inability to actually reason and logic and think like an engineer, you should address these concerns to the Admissions Manager <a mailto="josh.shaman@hackreactor.com">josh.shaman@hackreactor.com</a> prior to having the student schedule an interview.</p>
             </div>
             <div className="card-panel">
               <h5><b>Q: What should I do if I don’t hear back from a student?</b></h5>
@@ -69,8 +86,7 @@ class Faq extends Component {
             <div className="card-panel">
               <h5><b>Q: What should I do with my student who wants to interview at the beginning of coaching rather than the end?</b></h5>
               <hr />
-              <p>A: One goal of the PTC program is avoid using TI time wastefully. The preference is that 
-students would take coaching first to increase their chance of getting an accept. However; if a student is really set on taking the interview early, that is their choice. In the future, PTC will be more queue-based so a student would lose their spot in the queue and move down and have to wait longer for coaching.</p>
+              <p>A: One goal of the PTC program is avoid using TI time wastefully. The preference is that students would take coaching first to increase their chance of getting an accept. However; if a student is really set on taking the interview early, that is their choice. In the future, PTC will be more queue-based so a student would lose their spot in the queue and move down and have to wait longer for coaching.</p>
             </div>
             <div className="card-panel">
               <h5><b>Q: Should I encourage my students to form a study group?</b></h5>
