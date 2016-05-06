@@ -1,6 +1,6 @@
 import React from 'react';
 import { expect } from '../test_helper.js';
-import { shallow, mount, render } from 'enzyme';
+import { shallow } from 'enzyme';
 import sinon from 'sinon';
 import Navbar from '../../src/containers/navbar/index.js';
 

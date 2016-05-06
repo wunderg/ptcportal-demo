@@ -10,10 +10,34 @@ class Faq extends Component {
           <div className="card-content">
             <h3>Frequently Asked Questions</h3>
             <hr />
+
+
+            <div className="card-panel">
+              <h5><b>Q: What if students don't do homework or extra work outside of class? </b></h5>
+              <hr />
+              <p> A: Tell the student that progress will not be sufficient for them to reinterview unless they complete work outside of the coaching sessions and that you need their commitment to accomplish the task of putting in extra time outside of class.</p>
+            </div>
+
+            <div className="card-panel">
+              <h5><b>Q: What do I do with a non-responsive student? </b></h5>
+              <hr />
+              <p>A: If you've written 2-3x and it's been 5 business days, note in pipedrive and write to remote.beta.admissions@hackreactor.com. Then check the queue and ping the next student.</p>
+            </div>
+
+
+            <div className="card-panel">
+              <h5><b>Q: My student is missing sessions, what do I do?</b></h5>
+              <hr />
+              <p>A: If they miss 2 sessions, give them a firm warning that you won't be able to continue with them if they miss another (not in Pipedrive and email remote.beta.admissions@hackreactor.com if they miss 2+). </p>
+            </div>
+
+
+
             <div className="card-panel">
               <h5><b>Q: What should I do if student raise any red flags - rude and agressive, lack of growth mindset, etc..?</b></h5>
               <hr />
-              <p>If you have concerns about the student in terms of red flags such as memorization or inability to actually reason and logic and think like an engineer, you should address these concerns to the Admissions Manager <a href="josh.shaman@hackreactor.com">josh.shaman@hackreactor.com</a> prior to having the student schedule an interview.</p> </div>
+              <p>If you have concerns about the student in terms of red flags such as memorization or inability to actually reason and logic and think like an engineer, you should address these concerns to the Admissions Manager <a href="josh.shaman@hackreactor.com">josh.shaman@hackreactor.com</a> prior to having the student schedule an interview.</p>
+            </div>
             <div className="card-panel">
               <h5><b>Q: What should I do if I don’t hear back from a student?</b></h5>
               <hr />
@@ -26,6 +50,7 @@ class Faq extends Component {
                 </p>
               <p>Note:  All admissions decision information should come from the admissions team. If a student is listed in Pipedrive as being accepted, the decision may not have been sent out to them yet.</p>
             </div>
+
             <div className="card-panel">
               <h5><b>Q: One of my students is looking to apply early because he is afraid of the seats filling up for the remote class. Is the class filling up something the PTC students need to worry about if they put off interviewing?</b></h5>
               <hr />
