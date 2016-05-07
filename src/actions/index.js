@@ -9,7 +9,7 @@ export function addStudent(student) {
     level: 0,
     interview: 'not set',
     decision: 'pending',
-    contacted: false,
+    contacted: '',
     name: student.name,
     email: student.email
   };
@@ -24,17 +24,17 @@ export function addStudent(student) {
 }
 
 export function selectStudent(student) {
-    return {
-      type: ACTIONS.SELECT_STUDENT,
-      payload: student
-    }
+  return {
+    type: ACTIONS.SELECT_STUDENT,
+    payload: student
+  };
 }
 
 export function updateStudent(student) {
   axios.put(`api/student`, student);
   return {
     type: ACTIONS.UPDATE_STUDENT,
-    payload: data
+    payload: student
   };
 }
 
@@ -54,7 +54,6 @@ export function fetchStudents() {
 }
 
 function requestFetchStudents() {
-
   return {
     type: ACTIONS.FETCH_STUDENTS_REQUEST,
   };
