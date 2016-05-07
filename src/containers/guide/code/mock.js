@@ -40,7 +40,7 @@ export const numberOfWins =
   `//example
 numbersOfWins('LWLWLWWWLLWW')  => {L: 5, W: 8};
 
-funciton numberOfWins('str') {
+funciton numberOfWins(str) {
   //your code here
 }
 `;
