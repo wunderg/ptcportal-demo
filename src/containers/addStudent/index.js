@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import { reduxForm } from 'redux-form';
-import { addStudent } from '../../actions/index';
 
+import { addStudent } from '../../actions/index';
 
 class NewStudent extends Component {
   constructor(props) {

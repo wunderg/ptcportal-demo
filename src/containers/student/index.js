@@ -4,6 +4,7 @@ import Notes from './notes';
 import Sessions from './sessions';
 import Ratings from './ratings';
 import { connect } from 'react-redux';
+import { updateStudent } from '../../actions/index.js';
 import './style.scss';
 
 class Student extends Component {
@@ -11,7 +12,7 @@ class Student extends Component {
   componentDidMount() {
     $(document).ready(function(){
       $('.collapsible').collapsible({
-        accordion : false // A setting that changes the collapsible behavior to expandable instead of the default accordion style
+        accordion: false // A setting that changes the collapsible behavior to expandable instead of the default accordion style
       });
     });
   }
@@ -20,7 +21,7 @@ class Student extends Component {
     return (
       <div className="row">
         <Info data={this.props.student}/>
-        <Ratings />
+        <Ratings updateStudent={updateStudent} data={this.props.student} />
         <Sessions />
         <Notes />
       </div>
@@ -34,4 +35,4 @@ function mapStateToProps(state) {
   };
 }
 
-export default connect(mapStateToProps)(Student);
+export default connect(mapStateToProps, { updateStudent })(Student);

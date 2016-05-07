@@ -9,7 +9,7 @@ export function addStudent(student) {
     level: 0,
     interview: 'not set',
     decision: 'pending',
-    contacted: false,
+    contacted: '',
     name: student.name,
     email: student.email
   };

@@ -13,6 +13,7 @@ export default {
     const { _id, name, email, lesson, level, interview, decision, contacted } = req.body;
 
     new Student({
+      _id,
       name,
       email,
       lesson,
@@ -27,11 +28,21 @@ export default {
   },
 
   put(req, res) {
-    console.log(req.body);
-    Student
-    .findById(req.param)
-    .then(item => console.log(item))
-    res.json({ok: true});
+    const { _id, name, email, lesson, level, interview, decision, contacted } = req.body;
+
+    new Student({
+      _id,
+      name,
+      email,
+      lesson,
+      level,
+      interview,
+      decision,
+      contacted
+    })
+    .save()
+    .then(result => res.json(result))
+    .catch(err => res.json(err));
   },
 
   delete(req, res) {
