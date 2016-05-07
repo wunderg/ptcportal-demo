@@ -11,9 +11,12 @@ export default ({ student, selectStudent }) => {
   };
 
   const onCheckBoxClick = () => {
-    selectStudent(student);
+    student.contacted = 'checked';
+    updateStudent(student);
+    updateRemoteStudent(student)
     console.log(student);
   };
+
 
   return (
     <div className="student">

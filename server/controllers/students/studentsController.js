@@ -26,6 +26,14 @@ export default {
     .catch(err => res.json(err));
   },
 
+  put(req, res) {
+    console.log(req.body);
+    Student
+    .findById(req.param)
+    .then(item => console.log(item))
+    res.json({ok: true});
+  }
+
   delete(req, res) {
     Student
     .findById(req.params.id)
