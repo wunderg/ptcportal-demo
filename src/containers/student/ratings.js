@@ -2,12 +2,11 @@ import React from 'react';
 import StarRating from 'react-star-rating';
 import './style.scss';
 
-export default (props) => {
+export default (prop) => {
   const updateRating = (_, stars) => {
-    console.log('updateRating');
-    const student = props.data;
+    const student = prop.data;
     student.ratings[stars.name] = stars.rating;
-    props.updateStudent(student);
+    prop.updateStudent(student);
   };
   return (
     <div className="card">
@@ -21,7 +20,7 @@ export default (props) => {
             size={30}
             name="logic"
             totalStars={7}
-            rating={props.data.ratings.logic}
+            rating={prop.data.ratings.logic}
             onRatingClick={updateRating}
             editing={true}
           />
@@ -33,7 +32,7 @@ export default (props) => {
             size={30}
             totalStars={7}
             name="motiv"
-            rating={props.data.ratings.motiv}
+            rating={prop.data.ratings.motiv}
             onRatingClick={updateRating}
             editing={true}
           />
@@ -45,7 +44,7 @@ export default (props) => {
             size={30}
             totalStars={7}
             name="effort"
-            rating={props.data.ratings.effort}
+            rating={prop.data.ratings.effort}
             onRatingClick={updateRating}
             editing={true}
           />
@@ -57,7 +56,7 @@ export default (props) => {
             size={30}
             totalStars={7}
             name="ethic"
-            rating={props.data.ratings.ethic}
+            rating={prop.data.ratings.ethic}
             onRatingClick={updateRating}
             editing={true}
           />
@@ -69,7 +68,7 @@ export default (props) => {
             size={30}
             totalStars={7}
             name="explain"
-            rating={props.data.ratings.explain}
+            rating={prop.data.ratings.explain}
             onRatingClick={updateRating}
             editing={true}
           />
@@ -81,7 +80,7 @@ export default (props) => {
             size={30}
             totalStars={7}
             name="confid"
-            rating={props.data.ratings.confid}
+            rating={prop.data.ratings.confid}
             onRatingClick={updateRating}
             editing={true}
           />
