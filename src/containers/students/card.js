@@ -1,17 +1,19 @@
 import React from 'react';
 import { browserHistory } from 'react-router';
+import { identity } from 'lodash';
 
 import Progress from '../../helpers/progress.js';
 
 export default ({ student, selectStudent }) => {
   const onDetailsClick = () => {
-    selectStudent(student)
+    selectStudent(student);
     browserHistory.push('/student');
-  }
+  };
 
   const onCheckBoxClick = () => {
-    console.log("checkbox studentID: ", student._id)
-  }
+    selectStudent(student);
+    console.log(student);
+  };
 
   return (
     <div className="student">
@@ -22,8 +24,9 @@ export default ({ student, selectStudent }) => {
             <p className='card-email'>{student.email}</p>
             <hr />
             <p className=''> Inverview:<span className="right">{student.interview}</span> </p>
-            <p className=''> Decision:<span className="right"> {student.decision}</span> </p>
-            <p className="contacted"> Contacted: <input type="checkbox" id="contacted" checked='checked' onChange={onCheckBoxClick} /><label htmlFor="contacted" className="right" ></label> </p>
+            <p className='' > Decision:<span className="right"> {student.decision}</span> </p>
+            <p className="contacted"> Contacted: <input type="checkbox" id="contacted" checked='' onChange={identity} />
+              <label htmlFor="contacted" className="right" onClick={onCheckBoxClick}></label> </p>
             <span className="progress-text">Current progress: {student.lesson} of 8</span>
             <Progress className="students-progress-bar" />
             <p> <a className="waves-effect waves-light btn right details" onClick={onDetailsClick}>Details</a></p>
@@ -37,5 +40,5 @@ export default ({ student, selectStudent }) => {
           </div>
         </div>
       </div>
-  )
+  );
 };

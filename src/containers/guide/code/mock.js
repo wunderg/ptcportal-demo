@@ -47,6 +47,10 @@ funciton numberOfWins('str') {
 
 export const defaultProps =
   `// should work as underscore _.default
-function defaultProp(){
+function defaults(object1, object2){
   //your code here
-}`;
+}
+var iceCream = {flavor: "chocolate"};
+_.defaults(iceCream, {flavor: "vanilla", sprinkles: "lots"});
+=> {flavor: "chocolate", sprinkles: "lots"}
+`;

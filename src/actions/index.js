@@ -30,12 +30,8 @@ export function selectStudent(student) {
     }
 }
 
-export function updateStudent(_id, date) {
-  const data = {
-    _id,
-    date
-  };
-  axios.put(`api/student`, data)
+export function updateStudent(student) {
+  axios.put(`api/student`, student);
   return {
     type: ACTIONS.UPDATE_STUDENT,
     payload: data
@@ -53,8 +49,8 @@ export function fetchStudents() {
     dispatch(requestFetchStudents());
     return axios.get(`api/students`, config)
     .then(res => dispatch(fetchStudentsSuccess(res)))
-    .catch(err => dispatch(fetchStudentFail(err)))
-  }
+    .catch(err => dispatch(fetchStudentFail(err)));
+  };
 }
 
 function requestFetchStudents() {
