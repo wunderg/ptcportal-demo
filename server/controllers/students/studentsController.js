@@ -13,6 +13,25 @@ export default {
     const { _id, name, email, lesson, level, interview, decision, contacted } = req.body;
 
     new Student({
+      _id,
+      name,
+      email,
+      lesson,
+      level,
+      interview,
+      decision,
+      contacted
+    })
+    .save()
+    .then(result => res.json(result))
+    .catch(err => res.json(err));
+  },
+
+  put(req, res) {
+    const { _id, name, email, lesson, level, interview, decision, contacted } = req.body;
+
+    new Student({
+      _id,
       name,
       email,
       lesson,

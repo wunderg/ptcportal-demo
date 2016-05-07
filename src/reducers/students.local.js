@@ -4,6 +4,8 @@ export default (state = { isFetching: true, students: [] }, action) => {
   switch (action.type) {
     case ACTIONS.ADD_STUDENT:
       return {...state, students: state.students.concat(action.payload)};
+    case ACTIONS.UPDATE_STUDENT:
+      return {...state, students: action.payload};
     case ACTIONS.FETCH_STUDENTS_REQUEST:
       return {...state, isFetching: true}
     case ACTIONS.FETCH_STUDENTS_SUCCESS:

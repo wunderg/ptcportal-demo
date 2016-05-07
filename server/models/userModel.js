@@ -11,10 +11,8 @@ const userSchema = new mongoose.Schema({
   password: String
 });
 
-
-userSchema.pre('save', function (next) {
+userSchema.pre('save', function hashPassword(next) {
   const user = this;
-  console.log(this);
 
   bcrypt.genSalt(10, (err, salt) => {
     if (err) {
@@ -32,7 +30,7 @@ userSchema.pre('save', function (next) {
   });
 });
 
-userSchema.methods.comparePassword = function (canditatePassword, callback) {
+userSchema.methods.comparePassword = function comparePass(canditatePassword, callback) {
   bcrypt.compare(canditatePassword, this.password, (err, isMatch) => {
     if (err) {
       return callback(err);
@@ -40,4 +38,5 @@ userSchema.methods.comparePassword = function (canditatePassword, callback) {
     callback(null, isMatch);
   });
 };
+
 export default mongoose.model('user', userSchema);
