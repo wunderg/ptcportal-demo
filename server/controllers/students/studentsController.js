@@ -32,7 +32,7 @@ export default {
     .findById(req.param)
     .then(item => console.log(item))
     res.json({ok: true});
-  }
+  },
 
   delete(req, res) {
     Student
