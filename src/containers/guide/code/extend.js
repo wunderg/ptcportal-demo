@@ -7,7 +7,7 @@ export const extendSolution =
 `function extend() {
   var args = Array.prototype.slice.call(arguments);
   return reduce(args, function(result, item) {
-    each(item, function(prop, value) {
+    each(item, function(value, prop) {
       result[prop] = value;
     });
     return result;
