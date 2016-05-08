@@ -1,10 +1,12 @@
 import React from 'react';
 
-export default ({ number })  => {
+export default ({ number }) => {
+
+  const width = number || 5;
 
   const style = {
-    width: '85%'
-  }
+    width: width + '0%'
+  };
 
   return (
     <div className="progress">
@@ -12,4 +14,4 @@ export default ({ number })  => {
       </div>
     </div>
   );
-}
+};

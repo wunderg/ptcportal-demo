@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
 import './style.scss';
-import Highlight from '../../helpers/highlight.js';
 import { Initial } from './templates.js';
 
 class Resources extends Component {
   componentDidMount(){
-    $(document).ready(function(){
+    $(document).ready(function (){
       $('ul.tabs').tabs();
     });
   }
