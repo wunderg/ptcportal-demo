@@ -18,6 +18,11 @@ export default ({ student, selectStudent, updateStudent }) => {
     updateStudent(student);
   };
 
+  const levelUp = () => {
+    student.level += 1;
+    updateStudent(student);
+  };
+
   return (
     <div className="student">
       {/* {console.log(student)} */}
@@ -32,13 +37,13 @@ export default ({ student, selectStudent, updateStudent }) => {
             <p className="contacted"> Contacted:
               <input type="checkbox" id="contacted" checked={student.contacted} onChange={identity} />
               <label htmlFor="contacted" className="right" onClick={onCheckBoxClick}></label> </p>
-            <span className="progress-text">Current progress: {student.lesson} of 8</span>
-            <Progress className="students-progress-bar" />
+            <span className="progress-text">Current progress: {student.level} of 8</span>
+            <Progress className="students-progress-bar" number={student.level} />
             <p><a className="waves-effect waves-light btn right details" onClick={onDetailsClick}>Details</a></p>
           </div>
           <div className="card-reveal">
             <span className="card-title purple-text text-darken-5">Actions<i className="fa fa-close right"></i></span>
-            <p className="action-text"> Complete Level: <a className="waves-effect waves-light btn right">Done</a> </p>
+            <p className="action-text"> Complete Level: <a onClick={levelUp} className="waves-effect waves-light btn right">Done</a> </p>
             <p className="action-text"> Introduction Email: <a href={message} className="waves-effect waves-light btn right">Send</a></p>
             <p className="action-text"> Reminder Email:<a className="waves-effect waves-light btn right">Send</a></p>
             <p className="action-text"> On-Hold Email:<a className="waves-effect waves-light btn right">Send</a></p>
