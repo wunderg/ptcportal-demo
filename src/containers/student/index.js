@@ -29,7 +29,7 @@ class Student extends Component {
       <div className="row">
         <Info data={this.props.student}/>
         <Ratings updateStudent={this.props.updateStudent} data={this.props.student} />
-        <Sessions />
+        <Sessions updateStudent={this.props.updateStudent} data={this.props.student} />
         <Notes updateStudent={this.props.updateStudent} data={this.props.student} />
       </div>
     );

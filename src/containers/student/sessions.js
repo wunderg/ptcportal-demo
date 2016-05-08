@@ -25,7 +25,7 @@ class Sessions extends Component {
   }
 
   render() {
-    const rows = this.props.data.notes.map((note, index) => (
+    const rows = this.props.data.sessions.map((note, index) => (
       <li key={index}>
         <div className="collapsible-header center">Session: {index}</div>
         <div className="collapsible-body"><p>{note}</p></div>

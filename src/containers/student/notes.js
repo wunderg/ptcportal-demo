@@ -26,7 +26,7 @@ class Notes extends Component {
   render() {
     const rows = this.props.data.notes.map((note, index) => (
       <li key={index}>
-        <div className="collapsible-header center">Session: {index}</div>
+        <div className="collapsible-header center">Note from Lesson {index + 1}</div>
         <div className="collapsible-body"><p>{note}</p></div>
       </li>
       )
@@ -37,7 +37,7 @@ class Notes extends Component {
         <div className="card-content black-text">
           <span className="card-title">
             Notes
-            <button href="#modal1" className="modal-trigger btn-floating btn-large waves-effect waves-light blue right">
+            <button href="#notes" className="modal-trigger btn-floating btn-large waves-effect waves-light blue right">
               <i className="fa fa-plus"></i>
             </button>
           </span>
@@ -46,7 +46,7 @@ class Notes extends Component {
             { rows }
           </ul>
         </div>
-        <div id="modal1" className="modal">
+        <div id="notes" className="modal">
           <div className="modal-content">
             <h4>Notes</h4>
             <p>What do you think of the student performance today?</p>
