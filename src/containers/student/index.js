@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import Info from './info';
 import Notes from './notes';
 import Sessions from './sessions';
@@ -23,7 +23,7 @@ class Student extends Component {
         <Info data={this.props.student}/>
         <Ratings updateStudent={updateStudent} data={this.props.student} />
         <Sessions />
-        <Notes />
+        <Notes data={this.props.student} updateStudent={updateStudent} />
       </div>
     );
   }
@@ -34,5 +34,10 @@ function mapStateToProps(state) {
     student: state.slocal.selectedStudent
   };
 }
+
+Student.PropTypes = {
+  student: PropTypes.object,
+  updateStudent: PropTypes.func
+};
 
 export default connect(mapStateToProps, { updateStudent })(Student);

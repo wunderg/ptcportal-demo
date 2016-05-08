@@ -1,6 +1,14 @@
 import React from 'react';
 
 export default (prop) => {
+  console.log(prop);
+  const rows = prop.data.notes.map((note, index) => (
+      <li key={index}>
+        <div className="collapsible-header center">Session: {index}</div>
+        <div className="collapsible-body"><p>{note}</p></div>
+      </li>
+    )
+  );
   return (
     <div className="card">
       <div className="card-content black-text">
@@ -10,18 +18,7 @@ export default (prop) => {
         </span>
         <hr />
         <ul className="collapsible" data-collapsible="expandable">
-          <li>
-            <div className="collapsible-header center">First</div>
-            <div className="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
-          </li>
-          <li>
-            <div className="collapsible-header center">Second</div>
-            <div className="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
-          </li>
-          <li>
-            <div className="collapsible-header center">Third</div>
-            <div className="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
-          </li>
+          { rows }
         </ul>
       </div>
     </div>
