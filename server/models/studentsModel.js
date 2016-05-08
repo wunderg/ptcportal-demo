@@ -27,7 +27,7 @@ const studentsSchema = new mongoose.Schema({
   },
   contacted: {
     type: String,
-    required: true
+    default: ''
   },
   sessions: {
     type: Array,
