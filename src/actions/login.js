@@ -81,17 +81,6 @@ export function loginUser(creds) {
   };
 }
 
-export function loginWithToken(token) {
-  const config = {
-    headers: { Authorization: token }
-  };
-  return dispatch => {
-    dispatch(requestLoginWithToken());
-    return axios.get('api/tokenlogin', config)
-    .then(res => dispatch(recieveTokenLogin(res)))
-    .catch(err => dispatch(tokenLoginError(err)));
-  };
-}
 
 function requestLoginWithToken() {
   return {
@@ -123,5 +112,17 @@ export function logout() {
   localStorage.removeItem('id_token', null);
   return {
     type: ACTIONS.LOGOUT
-  }
+  };
+}
+
+export function loginWithToken(token) {
+  const config = {
+    headers: { Authorization: token }
+  };
+  return dispatch => {
+    dispatch(requestLoginWithToken());
+    return axios.get('api/tokenlogin', config)
+    .then(res => dispatch(recieveTokenLogin(res)))
+    .catch(err => dispatch(tokenLoginError(err)));
+  };
 }
