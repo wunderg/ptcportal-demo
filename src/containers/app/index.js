@@ -1,6 +1,5 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
 import Navbar from '../navbar';
 import Spinner from '../../helpers/spinner.js';
 import '../../../global.scss';
@@ -38,7 +37,10 @@ export class App extends Component {
 }
 
 App.propTypes = {
-  children: PropTypes.object
+  children: PropTypes.object,
+  logout: PropTypes.func,
+  user: PropTypes.object,
+  loginWithToken: PropTypes.func
 };
 
 function mapStateToProps(state) {
