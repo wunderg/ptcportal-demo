@@ -9,7 +9,7 @@ class Signup extends Component {
     this.onSubmit = this.onSubmit.bind(this);
   }
 
-  componentWillMount(props) {
+  componentWillMount() {
     if (this.props.user.isAuthenticated) {
       this.context.router.push('/dashboard');
     }
@@ -21,7 +21,7 @@ class Signup extends Component {
     }
   }
 
-  onSubmit(e, z) {
+  onSubmit(e) {
     e.preventDefault();
     const creds = {
       email: this.props.data.email.value || null,
@@ -79,15 +79,16 @@ Signup.propTypes = {
   onSignup: PropTypes.func,
   signupUser: PropTypes.func,
   user: PropTypes.object,
+  submitting: PropTypes.boolean
 };
 
 const validate = values => {
   const errors = {};
 
   if (!values.email) {
-    errors.email = 'Email Required'
+    errors.email = 'Email Required';
   } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
-    errors.email = 'Invalid email address'
+    errors.email = 'Invalid email address';
   }
 
   if (!values.pass) {
@@ -99,7 +100,7 @@ const validate = values => {
   }
 
   return errors;
-}
+};
 
 function mapStateToProps(state) {
   return {
