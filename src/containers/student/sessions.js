@@ -18,7 +18,8 @@ class Sessions extends Component {
   updateSessions() {
     if (this.state.text) {
       const student = this.props.data;
-      student.sessions.push(this.state.text);
+      const code = `${this.state.text}`;
+      student.sessions.push(code);
       this.props.updateStudent(student);
       this.forceUpdate();
     }
