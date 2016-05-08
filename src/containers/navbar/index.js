@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import { Link } from 'react-router';
 import './style.scss';
 
@@ -6,7 +6,7 @@ class Navbar extends Component {
 
   componentDidMount() {
     if (!window.ENV_TEST) {
-      $(function() {
+      $(function () {
         $('.button-collapse').sideNav({
           menuWidth: 300, // Default is 240
           edge: 'right', // Choose the horizontal origin
@@ -60,12 +60,17 @@ class Navbar extends Component {
             <li><Link to={'/guide'}>Guide</Link></li>
             <li><Link to={'/resources'}>Resources</Link></li>
             <li><Link to={'/faq'}>FAQ</Link></li>
-            <li  onClick={this.props.logout}><Link to={''}>Loqout</Link></li>
+            <li onClick={this.props.logout}><Link to={''}>Loqout</Link></li>
           </ul>
         </div>
       </nav>
     );
   }
 }
+
+Navbar.propTypes = {
+  logout: PropTypes.func,
+  isAuthenticated: PropTypes.boolean
+};
 
 export default Navbar;
