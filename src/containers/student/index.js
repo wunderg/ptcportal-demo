@@ -14,6 +14,13 @@ class Student extends Component {
       $('.collapsible').collapsible({
         accordion: false // A setting that changes the collapsible behavior to expandable instead of the default accordion style
       });
+      $('.modal-trigger').leanModal({
+        dismissible: true, // Modal can be dismissed by clicking outside of the modal
+        opacity: 0.5, // Opacity of modal background
+        in_duration: 300, // Transition in duration
+        out_duration: 200, // Transition out duration
+      }
+       );
     });
   }
 
@@ -21,9 +28,9 @@ class Student extends Component {
     return (
       <div className="row">
         <Info data={this.props.student}/>
-        <Ratings updateStudent={updateStudent} data={this.props.student} />
+        <Ratings updateStudent={this.props.updateStudent} data={this.props.student} />
         <Sessions />
-        <Notes data={this.props.student} updateStudent={updateStudent} />
+        <Notes updateStudent={this.props.updateStudent} data={this.props.student} />
       </div>
     );
   }
@@ -31,11 +38,12 @@ class Student extends Component {
 
 function mapStateToProps(state) {
   return {
-    student: state.slocal.selectedStudent
+    student: state.slocal.selectedStudent,
+    students: state.slocal.students
   };
 }
 
-Student.PropTypes = {
+Student.propTypes = {
   student: PropTypes.object,
   updateStudent: PropTypes.func
 };
