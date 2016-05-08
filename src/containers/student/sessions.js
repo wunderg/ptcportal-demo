@@ -5,7 +5,7 @@ class Sessions extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      text: '',
+      text: ''
     };
     this.handleTextChange = this.handleTextChange.bind(this);
     this.updateSessions = this.updateSessions.bind(this);
@@ -18,7 +18,7 @@ class Sessions extends Component {
   updateSessions() {
     if (this.state.text) {
       const student = this.props.data;
-      student.notes.push(this.state.text);
+      student.sessions.push(this.state.text);
       this.props.updateStudent(student);
       this.forceUpdate();
     }
@@ -28,7 +28,7 @@ class Sessions extends Component {
     const rows = this.props.data.sessions.map((note, index) => (
       <li key={index}>
         <div className="collapsible-header center">Session: {index}</div>
-        <div className="collapsible-body"><p>{note}</p></div>
+        <div className="collapsible-body"><Highlight props={note} /></div>
       </li>
       )
     );
@@ -38,7 +38,7 @@ class Sessions extends Component {
         <div className="card-content black-text">
           <span className="card-title">
             Sessions
-            <button href="#modal1" className="modal-trigger btn-floating btn-large waves-effect waves-light blue right">
+            <button href="#sessions" className="modal-trigger btn-floating btn-large waves-effect waves-light blue right">
               <i className="fa fa-plus"></i>
             </button>
           </span>
@@ -47,10 +47,10 @@ class Sessions extends Component {
             { rows }
           </ul>
         </div>
-        <div id="modal1" className="modal">
+        <div id="sessions" className="modal">
           <div className="modal-content">
             <h4>Sessions</h4>
-            <p>What do you think of the student performance today?</p>
+            <p>Insert the code student typed during the session</p>
             <textarea
               value={this.state.text}
               onChange={this.handleTextChange}
