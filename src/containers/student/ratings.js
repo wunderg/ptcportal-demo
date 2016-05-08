@@ -8,6 +8,7 @@ export default (prop) => {
     student.ratings[stars.name] = stars.rating;
     prop.updateStudent(student);
   };
+
   return (
     <div className="card">
       <div className="card-content black-text">

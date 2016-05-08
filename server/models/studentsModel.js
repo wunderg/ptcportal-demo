@@ -30,12 +30,12 @@ const studentsSchema = new mongoose.Schema({
     required: true
   },
   sessions: {
-    type: Object,
-    default: { 1: 'here is going to be code from first session', 2: 'and here are code from second' }
+    type: Array,
+    default: ['here is going to be code from first session', 'and here are code from second']
   },
   notes: {
-    type: Object,
-    default: { 1: 'here is going to be notes from first session', 2: 'and here are from second' }
+    type: Array,
+    default: ['here is going to be notes from first session', 'and here are from second']
   },
   ratings: {
     type: Object,
