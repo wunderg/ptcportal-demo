@@ -30,7 +30,7 @@ class TextInput extends Component {
   }
 
   render() {
-    const filter = ['Not-Assigned', 'In-Progress', 'Not-Contacted', 'Accepted'];
+    const filter = ['Show All', 'Not-Assigned', 'In-Progress', 'Not-Contacted', 'Accepted'];
     const filterOptions = filter.map(item => (<option value={item} key={item}> {item} </option>));
     const instructorOptions = this.props.instructors.map(item => item.name).map(item => (<option value={item} key={item}> {item} </option>));
     return (
