@@ -20,6 +20,7 @@ class Sessions extends Component {
       const student = this.props.data;
       const code = `${this.state.text}`;
       student.sessions.push(code);
+      student.lesson += 1;
       this.props.updateStudent(student);
       this.forceUpdate();
     }

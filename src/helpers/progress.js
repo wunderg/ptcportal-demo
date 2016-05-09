@@ -2,7 +2,7 @@ import React from 'react';
 
 export default ({ number }) => {
 
-  const width = number || 7;
+  const width = number || .5;
 
   const style = {
     width: width + '0%'

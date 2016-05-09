@@ -8,7 +8,12 @@ const userSchema = new mongoose.Schema({
     lowercase: true
   },
 
-  password: String
+  password: String,
+
+  name: {
+    type: String,
+    unique: true
+  }
 });
 
 userSchema.pre('save', function hashPassword(next) {

@@ -7,8 +7,16 @@ const token = (user) => {
 };
 
 export default {
+
+  getNames(req, res) {
+    User.find()
+      .populate('name')
+      .then(student => res.json(student))
+      .catch(err => res.json(err));
+  },
+
   tokenLogin(req, res) {
-    return res.json({name: req.user.email})
+    return res.json({ name: req.user.email });
   },
 
   signin(req, res) {

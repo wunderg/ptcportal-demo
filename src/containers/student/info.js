@@ -12,9 +12,9 @@ export default (props) => (
       <section className="info"><span>Email:</span> <span> {props.data.email} </span></section>
       <section className="info">
         <span>Lesson:</span>
-        <span> {props.data.lesson} of 8</span>
+        <span> {props.data.lesson} of 10</span>
       </section>
-      <section className="info"><span>Level:</span><span> {props.data.level} of 5</span></section>
+      <section className="info"><span>Level:</span><span> {props.data.level} of 7</span></section>
       <section className="info"><span>Interview:</span><span><input type="date" className="datepicker" /></span></section>
       <section className="info"><span>Decision:</span><span> {props.data.decision} </span></section>
       <section className="info"><span>Contacted:</span><span> {props.data.contacted} </span></section>
