@@ -33,6 +33,7 @@ export default {
   signup(req, res, next) {
     const email = req.body.email;
     const password = req.body.pass;
+    const name = req.body.name;
 
     if (!email || !password) {
       return res.status(422).send({ error: 'Must provide email and password' });
@@ -50,7 +51,8 @@ export default {
 
       var newUser = new User({
         email,
-        password
+        password,
+        name
       });
 
       newUser.save(err2 => {

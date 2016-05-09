@@ -44,10 +44,17 @@ class Signup extends Component {
               <input type="text" className="validate form-control" {...email} />
               <label>Email</label>
             </div>
+
+            <div className="input-field">
+              <input type="text" className="validate form-control" {...email} />
+              <label>Email</label>
+            </div>
+
             <div className="input-field">
               <input type="password" className="validate form-control" {...pass} />
               <label>Password</label>
             </div>
+
             <div className="input-field">
               <input type="password" className="validate form-control" {...pass2} />
               <label>Confirm Password</label>
