@@ -28,7 +28,7 @@ class Dashboard extends Component {
     return (
       <div className="row">
         <div className="col s12">
-          <Filters />
+          <Filters instructors={ this.props.instructors.instructors } />
         </div>
         <div className="col s12">
           <Students data={ this.props.students } selectStudent={this.props.selectStudent} updateStudent={this.props.updateStudent}/>

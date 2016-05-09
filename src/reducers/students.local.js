@@ -1,4 +1,5 @@
 import * as ACTIONS from '../actions/constants';
+import visibility from './visibility.js';
 
 export default (state = { isFetching: true, students: [] }, action) => {
   switch (action.type) {

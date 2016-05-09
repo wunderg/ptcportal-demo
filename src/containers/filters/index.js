@@ -17,12 +17,12 @@ class TextInput extends Component {
 
   handleChangeInstructor(e) {
     this.setState({ instructor: e.target.value });
-    this.handleSubmit()
+    this.handleSubmit();
   }
 
   handleChangeFilter(e) {
     this.setState({ filter: e.target.value });
-    this.handleSubmit()
+    this.handleSubmit();
   }
 
   handleSubmit() {
@@ -30,21 +30,20 @@ class TextInput extends Component {
   }
 
   render() {
+    const filter = ['Not-Assigned', 'In-Progress', 'Not-Contacted', 'Accepted'];
+    const filterOptions = filter.map(item => (<option value={item} key={item}> {item} </option>));
+    const instructorOptions = this.props.instructors.map(item => item.name).map(item => (<option value={item} key={item}> {item} </option>));
     return (
       <div className="row">
         <div className="input-field col s6">
-          <Input s={12} type='select' label="Choose Instructor" onChange={this.handleChangeInstructor}>
-            <option value='1'>Option 1</option>
-            <option value='2'>Option 2</option>
-            <option value='3'>Option 3</option>
+          <Input s={12} type="select" label="Choose Instructor" onChange={this.handleChangeInstructor}>
+            { instructorOptions }
           </Input>
         </div>
 
         <div className="input-field col s6">
-          <Input s={12} type='select' label="Choose Filter" onChange={this.handleChangeFilter}>
-            <option value='1'>Option 1</option>
-            <option value='2'>Option 2</option>
-            <option value='3'>Option 3</option>
+          <Input s={12} type="select" label="Choose Filter" onChange={this.handleChangeFilter}>
+             { filterOptions }
           </Input>
         </div>
       </div>
@@ -54,6 +53,9 @@ class TextInput extends Component {
 
 TextInput.propTypes = {
   text: PropTypes.string,
+  instructors: PropTypes.array,
+  filter: PropTypes.string,
+  instructor: PropTypes.string
 };
 
 export default TextInput;
