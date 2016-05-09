@@ -16,7 +16,6 @@ export const filterVisibility = (students, filter) => {
 };
 
 export const filterInstructor = (students, instructor) => {
-  console.log(students, instructor);
   switch (instructor) {
     case 'None':
       return students;

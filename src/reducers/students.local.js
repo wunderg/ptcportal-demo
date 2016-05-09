@@ -1,9 +1,7 @@
 import * as ACTIONS from '../actions/constants';
 import { filterVisibility, filterInstructor } from './visibility.js';
 
-console.log(filterInstructor, filterVisibility);
 export default (state = { isFetching: true, students: [] }, action) => {
-  console.log(action);
   switch (action.type) {
     case ACTIONS.ADD_STUDENT:
       return {...state, students: state.students.concat(action.payload)};
