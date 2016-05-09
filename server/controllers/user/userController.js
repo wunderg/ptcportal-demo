@@ -9,8 +9,7 @@ const token = (user) => {
 export default {
 
   getNames(req, res) {
-    User.find()
-      .populate('name')
+    User.find({}, 'name')
       .then(student => res.json(student))
       .catch(err => res.json(err));
   },

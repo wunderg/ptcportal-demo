@@ -25,14 +25,15 @@ class Signup extends Component {
     e.preventDefault();
     const creds = {
       email: this.props.data.email.value || null,
-      pass: this.props.data.pass.value || null
+      pass: this.props.data.pass.value || null,
+      name: this.props.data.name.value || null
     };
 
     this.props.signupUser(creds);
   }
 
   render() {
-    const { fields: { email, pass, pass2 }, user, resetForm, submitting } = this.props;
+    const { fields: { email, pass, pass2, name }, user, resetForm, submitting } = this.props;
     return (
         <div className="middle valign-wrapper">
           <form className="login-form" onSubmit={this.onSubmit}>
@@ -40,9 +41,10 @@ class Signup extends Component {
               {email.touched && email.error && <div>{email.error}</div>}
               {pass.touched && pass.error && <div>{pass.error}</div>}
             </div>
+
             <div className="input-field">
-              <input type="text" className="validate form-control" {...email} />
-              <label>Email</label>
+              <input type="text" className="validate form-control" {...name} />
+              <label>Name</label>
             </div>
 
             <div className="input-field">
@@ -86,7 +88,7 @@ Signup.propTypes = {
   onSignup: PropTypes.func,
   signupUser: PropTypes.func,
   user: PropTypes.object,
-  submitting: PropTypes.boolean
+  submitting: PropTypes.bool
 };
 
 const validate = values => {
@@ -118,6 +120,6 @@ function mapStateToProps(state) {
 
 export default reduxForm({
   form: 'signup',
-  fields: ['email', 'pass', 'pass2'],
+  fields: ['email','name', 'pass', 'pass2'],
   validate
 }, mapStateToProps, { signupUser })(Signup);
