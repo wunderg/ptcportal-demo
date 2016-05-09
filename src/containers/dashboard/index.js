@@ -3,7 +3,8 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { fetchStudents, fetchInstructors, selectStudent, updateStudent } from '../../actions';
 
-import TextInput from '../text-input';
+// import TextInput from '../text-input';
+import Filters from '../filters';
 import Students from '../students';
 import Spinner from '../../helpers/spinner.js';
 
@@ -21,13 +22,13 @@ class Dashboard extends Component {
 
 
   render() {
-    if (this.props.students.isFetching) {
+    if (this.props.students.isFetching || this.props.instructors.isFetching) {
       return <Spinner />;
     }
     return (
       <div className="row">
         <div className="col s12">
-          <TextInput />
+          <Filters />
         </div>
         <div className="col s12">
           <Students data={ this.props.students } selectStudent={this.props.selectStudent} updateStudent={this.props.updateStudent}/>
@@ -45,7 +46,7 @@ function mapStateToProps(state) {
   return {
     students: state.slocal,
     user: state.user,
-    instructors: state.instructors
+    instructors: state.instructors,
   };
 }
 
@@ -59,7 +60,9 @@ Dashboard.propTypes = {
   fetchStudents: PropTypes.func,
   history: PropTypes.object,
   selectStudent: PropTypes.func,
-  updateStudent: PropTypes.func
+  updateStudent: PropTypes.func,
+  fetchInstructors: PropTypes.func,
+  instructors: PropTypes.object
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Dashboard);
