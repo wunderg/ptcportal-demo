@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { fetchStudents, fetchInstructors, selectStudent, updateStudent } from '../../actions';
+import { fetchStudents, fetchInstructors, selectStudent, updateStudent, updateVisibility } from '../../actions';
 
 // import TextInput from '../text-input';
 import Filters from '../filters';
@@ -28,7 +28,7 @@ class Dashboard extends Component {
     return (
       <div className="row">
         <div className="col s12">
-          <Filters instructors={ this.props.instructors.instructors } />
+          <Filters instructors={ this.props.instructors.instructors } updateVisibility={ this.props.updateVisibility } />
         </div>
         <div className="col s12">
           <Students data={ this.props.students } selectStudent={this.props.selectStudent} updateStudent={this.props.updateStudent}/>
@@ -52,7 +52,7 @@ function mapStateToProps(state) {
 }
 
 function mapDispatchToProps(dispatch) {
-  return bindActionCreators({ fetchStudents, selectStudent, updateStudent, fetchInstructors }, dispatch);
+  return bindActionCreators({ fetchStudents, selectStudent, updateStudent, fetchInstructors, updateVisibility }, dispatch);
 }
 
 Dashboard.propTypes = {
@@ -63,7 +63,8 @@ Dashboard.propTypes = {
   selectStudent: PropTypes.func,
   updateStudent: PropTypes.func,
   fetchInstructors: PropTypes.func,
-  instructors: PropTypes.object
+  instructors: PropTypes.object,
+  updateVisibility: PropTypes.func
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Dashboard);

@@ -29,13 +29,17 @@ const studentsSchema = new mongoose.Schema({
     type: String,
     default: ''
   },
+  instructor: {
+    type: String,
+    default: ''
+  },
   sessions: {
     type: Array,
-    default: ['here is going to be code from first session', 'and here are code from second']
+    default: []
   },
   notes: {
     type: Array,
-    default: ['here is going to be notes from first session', 'and here are from second']
+    default: []
   },
   ratings: {
     type: Object,

@@ -11,7 +11,8 @@ export function addStudent(student) {
     decision: 'pending',
     contacted: '',
     name: student.name,
-    email: student.email
+    email: student.email,
+    instructor: student.instructor
   };
 
   axios.post(`api/student`, data)
@@ -112,5 +113,13 @@ export function fetchInstructors() {
     return axios.get(`api/instructors`, config)
     .then(res => dispatch(fetchInstructorsSuccess(res)))
     .catch(err => dispatch(fetchInstructorsFail(err)));
+  };
+}
+
+export function updateVisibility(instructor, filter) {
+  return {
+    type: ACTIONS.UPDATE_VISIBILITY,
+    instructor,
+    filter
   };
 }

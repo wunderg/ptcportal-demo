@@ -5,28 +5,23 @@ class TextInput extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      instructor: this.props.instructor || '',
-      filter: this.props.filter || ''
+      instructor: this.props.instructor || 'None',
+      filter: this.props.filter || 'Show All'
     };
 
     this.handleChangeInstructor = this.handleChangeInstructor.bind(this);
     this.handleChangeFilter = this.handleChangeFilter.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
 
   handleChangeInstructor(e) {
     this.setState({ instructor: e.target.value });
-    this.handleSubmit();
+    this.props.updateVisibility(this.state.instructor, this.state.filter);
   }
 
   handleChangeFilter(e) {
     this.setState({ filter: e.target.value });
-    this.handleSubmit();
-  }
-
-  handleSubmit() {
-    console.log(this.state);
+    this.props.updateVisibility(this.state.instructor, this.state.filter);
   }
 
   render() {
@@ -37,6 +32,7 @@ class TextInput extends Component {
       <div className="row">
         <div className="input-field col s6">
           <Input s={12} type="select" label="Choose Instructor" onChange={this.handleChangeInstructor}>
+            <option>None</option>
             { instructorOptions }
           </Input>
         </div>
@@ -55,7 +51,8 @@ TextInput.propTypes = {
   text: PropTypes.string,
   instructors: PropTypes.array,
   filter: PropTypes.string,
-  instructor: PropTypes.string
+  instructor: PropTypes.string,
+  updateVisibility: PropTypes.func
 };
 
 export default TextInput;

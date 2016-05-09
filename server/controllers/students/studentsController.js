@@ -10,7 +10,7 @@ export default {
   },
 
   post(req, res) {
-    const { name, email, lesson, level, interview, decision } = req.body;
+    const { name, email, lesson, level, interview, decision, instructor } = req.body;
 
     new Student({
       name,
@@ -18,7 +18,8 @@ export default {
       lesson,
       level,
       interview,
-      decision
+      decision,
+      instructor
     })
     .save()
     .then(result => res.json(result))

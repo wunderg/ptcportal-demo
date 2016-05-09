@@ -1,18 +1,26 @@
-import * as ACTIONS from '../actions/constants';
-
-export default (students, filter) => {
+export const filterVisibility = (students, filter) => {
   switch (filter) {
-    case ACTIONS.ADD_STUDENT:
-      return {...state, students: state.students.concat(action.payload)};
-    case ACTIONS.UPDATE_STUDENT:
-      return {...state};
-    case ACTIONS.FETCH_STUDENTS_REQUEST:
-      return {...state, isFetching: true}
-    case ACTIONS.FETCH_STUDENTS_SUCCESS:
-      return {...state, isFetching: false, students: action.data.data}
-    case ACTIONS.FETCH_STUDENTS_FAILURE:
-      return {...state, isFetching: false, message: action.data.message}
+    case 'Show All':
+      return students;
+    case 'Not-Assigned':
+      return students.filter(item => !item.instructor);
+    case 'In-Progress':
+      return students.filter(item => item.decision === 'pending');
+    case 'Not-Contacted':
+      return students.filter(item => item.contacted === '');
+    case 'Accepted':
+      return students.filter(item => item.decision !== 'pending');
     default:
-      return state;
+      return students;
+  }
+};
+
+export const filterInstructor = (students, instructor) => {
+  console.log(students, instructor);
+  switch (instructor) {
+    case 'None':
+      return students;
+    default:
+      return students.filter(item => item.instructor === instructor);
   }
 };
