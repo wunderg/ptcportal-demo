@@ -22,6 +22,7 @@ class Sessions extends Component {
       student.sessions.push(code);
       student.lesson += 1;
       this.props.updateStudent(student);
+      this.setState({ text: '' });
       this.forceUpdate();
     }
   }
