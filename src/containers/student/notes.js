@@ -19,6 +19,7 @@ class Notes extends Component {
       const student = this.props.data;
       student.notes.push(this.state.text);
       this.props.updateStudent(student);
+      this.setState({ text: '' });
       this.forceUpdate();
     }
   }
