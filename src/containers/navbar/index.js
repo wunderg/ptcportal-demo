@@ -70,7 +70,7 @@ class Navbar extends Component {
 
 Navbar.propTypes = {
   logout: PropTypes.func,
-  isAuthenticated: PropTypes.Boolean
+  isAuthenticated: PropTypes.bool
 };
 
 export default Navbar;
