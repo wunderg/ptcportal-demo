@@ -6,6 +6,7 @@ import promise from 'redux-promise';
 import slocal from '../reducers/students.local';
 import sremote from '../reducers/students.remote';
 import user from '../reducers/user.js';
+import instructors from '../reducers/instructors.js';
 
 // import jwt from '../middlewares/token.js';
 
@@ -17,7 +18,8 @@ export const rootReducer = combineReducers({
   form: formReducer,
   slocal,
   sremote,
-  user
+  user,
+  instructors
 });
 
 const createStoreWithMiddleware = applyMiddleware(

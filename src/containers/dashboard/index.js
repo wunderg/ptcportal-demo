@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { fetchStudents, selectStudent, updateStudent } from '../../actions';
+import { fetchStudents, fetchInstructors, selectStudent, updateStudent } from '../../actions';
 
 import TextInput from '../text-input';
 import Students from '../students';
@@ -15,12 +15,13 @@ class Dashboard extends Component {
   componentWillMount() {
     if (this.props.user.isAuthenticated) {
       this.props.fetchStudents();
+      this.props.fetchInstructors();
     }
   }
 
 
   render() {
-    if (this.props.data.isFetching) {
+    if (this.props.students.isFetching) {
       return <Spinner />;
     }
     return (
@@ -29,7 +30,7 @@ class Dashboard extends Component {
           <TextInput />
         </div>
         <div className="col s12">
-          <Students data={ this.props.data } selectStudent={this.props.selectStudent} updateStudent={this.props.updateStudent}/>
+          <Students data={ this.props.students } selectStudent={this.props.selectStudent} updateStudent={this.props.updateStudent}/>
         </div>
       </div>
     );
@@ -42,18 +43,19 @@ Dashboard.contextTypes = {
 
 function mapStateToProps(state) {
   return {
-    data: state.slocal,
-    user: state.user
+    students: state.slocal,
+    user: state.user,
+    instructors: state.instructors
   };
 }
 
 function mapDispatchToProps(dispatch) {
-  return bindActionCreators({ fetchStudents, selectStudent, updateStudent }, dispatch);
+  return bindActionCreators({ fetchStudents, selectStudent, updateStudent, fetchInstructors }, dispatch);
 }
 
 Dashboard.propTypes = {
   user: PropTypes.object,
-  data: PropTypes.object,
+  students: PropTypes.object,
   fetchStudents: PropTypes.func,
   history: PropTypes.object,
   selectStudent: PropTypes.func,

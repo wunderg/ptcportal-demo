@@ -78,3 +78,39 @@ export function fetchStudents() {
     .catch(err => dispatch(fetchStudentFail(err)));
   };
 }
+
+/* instructors*/
+function requestFetchInstructors() {
+  return {
+    type: ACTIONS.FETCH_INSTRUCTORS_REQUEST,
+  };
+}
+
+function fetchInstructorsSuccess(data) {
+  return {
+    type: ACTIONS.FETCH_INSTRUCTORS_SUCCESS,
+    data
+  };
+}
+
+function fetchInstructorsFail(message) {
+  return {
+    type: ACTIONS.FETCH_INSTRUCTORS_FAILURE,
+    message
+  };
+}
+
+export function fetchInstructors() {
+  const token = localStorage.getItem('id_token') || null;
+
+  const config = {
+    headers: { Authorization: token }
+  };
+
+  return dispatch => {
+    dispatch(requestFetchInstructors());
+    return axios.get(`api/instructors`, config)
+    .then(res => dispatch(fetchInstructorsSuccess(res)))
+    .catch(err => dispatch(fetchInstructorsFail(err)));
+  };
+}
