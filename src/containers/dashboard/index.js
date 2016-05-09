@@ -43,6 +43,7 @@ Dashboard.contextTypes = {
 };
 
 function mapStateToProps(state) {
+  console.log(state);
   return {
     students: state.slocal,
     user: state.user,

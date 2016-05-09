@@ -4,6 +4,7 @@ import './style.scss';
 
 const Table = (props) => (
   <div className="student-list">
+    {console.log(props)}
     {props.data.students.map(student =>
       <Card
         student={student}
