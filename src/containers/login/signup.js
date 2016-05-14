@@ -100,6 +100,14 @@ const validate = values => {
     errors.email = 'Invalid email address';
   }
 
+  if (!values.name) {
+    errors.name = 'name Required';
+  } else if (!/([a-zA-Z]+)\w+/g.test(values.name)) {
+    errors.email = 'Must be a valid name';
+  } else if (values.name.length < 3) {
+    errors.pass = 'Has to be atleast 3 characters';
+  }
+
   if (!values.pass) {
     errors.pass = 'Password Required';
   } else if (values.pass.length < 6) {
@@ -120,6 +128,6 @@ function mapStateToProps(state) {
 
 export default reduxForm({
   form: 'signup',
-  fields: ['email','name', 'pass', 'pass2'],
+  fields: ['email', 'name', 'pass', 'pass2'],
   validate
 }, mapStateToProps, { signupUser })(Signup);
