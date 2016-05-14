@@ -94,6 +94,7 @@
     "eslint": "^1.10.3",
     "eslint-config-airbnb": "5.0.0",
     "eslint-plugin-react": "^3.16.1",
+    "eslint_d": "^3.1.0",
     "ignore-styles": "^1.2.0",
     "jquery": "^2.2.3",
     "jsdom": "^8.4.0",

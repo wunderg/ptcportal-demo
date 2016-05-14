@@ -1,11 +1,13 @@
-export const array = `var array = [{name: 'Justin'}, 'Justin', 5];`;
+export const array = `var array = [{age: '5', year: '2532'}, 'Justin', 5];`;
 
 export const multiply =
 `function multiply(num) {
   return num * 2;
 }`;
 
-export const useMult = `multiply(array[2]); // => 10`;
+export const useMult =
+`//use multiply on the age property in the first object in the array
+multiply(array[0][age]); // => 10`;
 
 export const each =
 `function each(collection, callback){
@@ -51,14 +53,24 @@ function defaults(object1, object2){
   //your code here
 }
 var iceCream = {flavor: "chocolate"};
-_.defaults(iceCream, {flavor: "vanilla", sprinkles: "lots"});
+defaults(iceCream, {flavor: "vanilla", sprinkles: "lots"});
 => {flavor: "chocolate", sprinkles: "lots"}
 
 // Solution //
 function defaults(object1, object2){
-  return _.reduce(object2, function(result, v, k) {
+  return reduce(object2, function(result, v, k) {
     result[k] = object1[k] || object2[k]
     return result
   }, {})
+}
+
+// Solution #2 //
+function defaults(object1, object2){
+  return reduce(object2, function(result, v, k) {
+    if (result[k] === undefined) {
+      result[k] = v;
+    }
+    return result;
+  }, object1);
 }
 `;
