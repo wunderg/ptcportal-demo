@@ -29,7 +29,7 @@ export default ({ student, selectStudent, updateStudent }) => {
       <div className="card student-card">
           <div className="card-content">
             <span className="card-title activator grey-text text-darken-4" >{student.name}
-              <i className="fa fa-edit right"> Actions</i></span>
+              <i className="fa fa-edit right"> Contact</i></span>
             <p className="card-email">{student.email}</p>
             <hr />
             <p className=""> Inverview:<span className="right">{student.interview}</span> </p>
@@ -42,8 +42,7 @@ export default ({ student, selectStudent, updateStudent }) => {
             <p><a className="waves-effect waves-light btn right details" onClick={onDetailsClick}>Details</a></p>
           </div>
           <div className="card-reveal">
-            <span className="card-title purple-text text-darken-5">Actions<i className="fa fa-close right"></i></span>
-            <p className="action-text"> Complete Level: <a onClick={levelUp} className="waves-effect waves-light btn right">Done</a> </p>
+            <span className="card-title purple-text text-darken-5">Contact<i className="fa fa-close right"></i></span>
             <p className="action-text"> Introduction Email: <a href={message} className="waves-effect waves-light btn right">Send</a></p>
             <p className="action-text"> Reminder Email:<a className="waves-effect waves-light btn right">Send</a></p>
             <p className="action-text"> On-Hold Email:<a className="waves-effect waves-light btn right">Send</a></p>

@@ -51,7 +51,7 @@ class Navbar extends Component {
             <li><Link to={'/guide'}>Guide</Link></li>
             <li><Link to={'/resources'}>Resources</Link></li>
             <li><Link to={'/faq'}>FAQ</Link></li>
-            <li className="logout" onClick={this.props.logout}><Link to={''}>Loqout</Link></li>
+            <li className="logout" onClick={this.props.logout}><Link to={''}>Logout</Link></li>
           </ul>
           <ul className="side-nav" id="mobile-demo">
             <li><Link to={'/add'}>Add Student</Link></li>

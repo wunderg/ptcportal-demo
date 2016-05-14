@@ -22,6 +22,7 @@ export default (props) => {
     props.updateStudent(student);
   };
 
+  // <section className="action-text"> Complete Level: <a onClick={levelUp} className="waves-effect waves-light btn right">Done</a> </section>
   return (
     <div className="card">
       <div className="card-content black-text">
@@ -34,21 +35,26 @@ export default (props) => {
         </section>
         <section className="info"><span>Level:</span><span> {props.data.level} of 5</span></section>
         <section className="info"><span>Instructor:</span><span> {props.data.instructor} </span></section>
-        <section className="info"><span>Contacted:</span><span> {props.data.contacted} </span></section>
-        <section className="info"><span>Interview:</span>
-          <span><input type="text" className="datepicker" value={props.data.interview} onClick={onDateClick} /></span>
-        </section>
-        <section className="info"><span>Decision:</span>
-          <span className="decision">
-            <Input type="select" onChange={onDecisionClick}>
-              <option>{props.data.decision}</option>
-              <option>Pending</option>
-              <option>Accepted</option>
-              <option>Denied</option>
-            </Input>
-          </span>
-        </section>
-        <section className="info"><span>Contacted:</span><span> {props.data.contacted} </span></section>
+        <section className="info"><span>Contacted:</span>{props.data.contacted}</section>
+        <div className="row">
+          <section className="info col s6"><span>Decision:</span>
+              <Input className="decision-input" type="select" onChange={onDecisionClick}>
+                <option>{props.data.decision}</option>
+                <option>Pending</option>
+                <option>Accepted</option>
+                <option>Denied</option>
+              </Input>
+          </section>
+          <section className="info col s6"><span>Interview:</span>
+            <input
+              type="text"
+              className="datepicker"
+              value={props.data.interview}
+              onClick={onDateClick}
+              onChange={onDateClick}
+            />
+          </section>
+        </div>
       </div>
     </div>
   );
