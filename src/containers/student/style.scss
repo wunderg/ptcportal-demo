@@ -1,7 +1,8 @@
-.row {
+.student-row {
   display: flex;
   flex-flow: row wrap;
   align-items: stretch;
+  padding-top: 1rem;
 }
 .card {
   flex: 1 1 40%;

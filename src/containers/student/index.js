@@ -19,14 +19,19 @@ class Student extends Component {
         opacity: 0.5, // Opacity of modal background
         in_duration: 300, // Transition in duration
         out_duration: 200, // Transition out duration
-      }
-       );
+      });
     });
+  }
+
+  componentWillMount() {
+    if (!this.props.student) {
+      console.log('getStudent');
+    }
   }
 
   render() {
     return (
-      <div className="row">
+      <div className="row student-row">
         <Info updateStudent={this.props.updateStudent} data={this.props.student}/>
         <Ratings updateStudent={this.props.updateStudent} data={this.props.student} />
         <Notes updateStudent={this.props.updateStudent} data={this.props.student} />
@@ -39,7 +44,8 @@ class Student extends Component {
 function mapStateToProps(state) {
   return {
     student: state.slocal.selectedStudent,
-    students: state.slocal.students
+    students: state.slocal.students,
+    user: state.user
   };
 }
 

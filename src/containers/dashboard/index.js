@@ -69,7 +69,7 @@ Dashboard.propTypes = {
   updateStudent: PropTypes.func,
   fetchInstructors: PropTypes.func,
   instructors: PropTypes.object,
-  updateVisibility: PropTypes.func
+  updateVisibility: PropTypes.func,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Dashboard);
