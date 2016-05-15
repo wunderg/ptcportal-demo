@@ -31,7 +31,7 @@ class Filters extends Component {
       <div className="row">
         <div className="input-field col s6">
           <Input s={12} type="select" label="Choose Instructor" onChange={this.handleChangeInstructor}>
-            <option>None</option>
+            <option>All</option>
             { instructorOptions }
           </Input>
         </div>

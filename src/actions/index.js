@@ -9,7 +9,7 @@ export function addStudent(student) {
     lesson: 0,
     level: 0,
     interview: moment(new Date()).format('YYYY/MM/DD'),
-    decision: 'pending',
+    decision: 'Pending',
     contacted: '',
     name: student.name,
     email: student.email,
