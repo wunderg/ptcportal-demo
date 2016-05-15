@@ -3,7 +3,7 @@ export const filterVisibility = (students, filter) => {
     case 'Show All':
       return students;
     case 'Not-Assigned':
-      return students.filter(item => !item.instructor);
+      return students.filter(item => item.instructor === 'None');
     case 'In-Progress':
       return students.filter(item => item.decision === 'Pending');
     case 'Not-Contacted':

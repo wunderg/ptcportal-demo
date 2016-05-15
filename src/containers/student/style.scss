@@ -6,7 +6,7 @@
 .card {
   flex: 1 1 40%;
   margin: .5em;
-  padding: 1.5em 1em;
+  padding: 0.1em 1em;
   line-height: 2.4rem;
   font-size: 1.3em;
   min-width: 400px;
@@ -23,6 +23,7 @@
 .stars {
   display: flex;
   justify-content: space-between;
+  padding: 5px;
 }
 .card hr {
   margin-top: 0;
