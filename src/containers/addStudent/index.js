@@ -15,10 +15,6 @@ class NewStudent extends Component {
     };
   }
 
-  handleChangeInstructor(e) {
-    this.setState({ instructor: e.target.value });
-  }
-
   onSubmit(e) {
     e.preventDefault();
     const student = { name: this.props.data.name.value, email: this.props.data.email.value, instructor: this.state.instructor };
@@ -26,12 +22,20 @@ class NewStudent extends Component {
     this.props.resetForm();
   }
 
+  handleChangeInstructor(e) {
+    this.setState({ instructor: e.target.value });
+  }
+
   render() {
     const instructorOptions = this.props.instructors.map(item => item.name).map(item => (<option value={item} key={item}> {item} </option>));
     const { fields: { name, email, instructor } } = this.props;
     return (
-      <div className="row">
+      <div className="row add-student-form">
         <form className="col s12" onSubmit={this.onSubmit} >
+        <div className="error-message center">
+          {email.touched && email.error && <div>{email.error}</div>}
+          {name.touched && name.error && <div>{name.error}</div>}
+        </div>
           <div className="row">
             <div className="divider"></div>
             <div className="input-field col s6 offset-s3">
@@ -43,7 +47,7 @@ class NewStudent extends Component {
               <label htmlFor="icon_telephone">Email</label>
             </div>
             <div className="input-field col s6 offset-s3">
-              <Input s={12} type="select" label="Choose Instructor" onChange={this.handleChangeInstructor}>
+              <Input s={12} type="select" label="Choose Instructor" onChange={this.handleChangeInstructor} {...instructor}>
                 <option>None</option>
                 { instructorOptions }
               </Input>
@@ -64,8 +68,31 @@ NewStudent.propTypes = {
   handleSubmit: PropTypes.func,
   data: PropTypes.object,
   addStudent: PropTypes.func,
-  resetForm: PropTypes.func
+  resetForm: PropTypes.func,
+  instructors: PropTypes.array,
+  instructor: PropTypes.string
 };
+
+const validate = values => {
+  const errors = {};
+
+  if (!values.email) {
+    errors.email = 'Email Required';
+  } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
+    errors.email = 'Invalid email address';
+  }
+
+  if (!values.name) {
+    errors.name = 'Name Required';
+  } else if (!/([a-zA-Z]+)\w+/g.test(values.name)) {
+    errors.email = 'Must be a valid name';
+  } else if (values.name.length < 3) {
+    errors.pass = 'Has to be atleast 3 characters';
+  }
+
+  return errors;
+};
+
 
 function mapStateToProps(state) {
   return {
@@ -76,5 +103,6 @@ function mapStateToProps(state) {
 
 export default reduxForm({
   form: 'NewStudent',
-  fields: ['name', 'email', 'instructor']
+  fields: ['name', 'email', 'instructor'],
+  validate
 }, mapStateToProps, { addStudent })(NewStudent);
