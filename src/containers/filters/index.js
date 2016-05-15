@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import { Input } from 'react-materialize';
 
-class TextInput extends Component {
+class Filters extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -12,7 +12,6 @@ class TextInput extends Component {
     this.handleChangeInstructor = this.handleChangeInstructor.bind(this);
     this.handleChangeFilter = this.handleChangeFilter.bind(this);
   }
-
 
   handleChangeInstructor(e) {
     this.setState({ instructor: e.target.value });
@@ -47,7 +46,7 @@ class TextInput extends Component {
   }
 }
 
-TextInput.propTypes = {
+Filters.propTypes = {
   text: PropTypes.string,
   instructors: PropTypes.array,
   filter: PropTypes.string,
@@ -55,4 +54,4 @@ TextInput.propTypes = {
   updateVisibility: PropTypes.func
 };
 
-export default TextInput;
+export default Filters;

@@ -20,6 +20,7 @@ class NewStudent extends Component {
     const student = { name: this.props.data.name.value, email: this.props.data.email.value, instructor: this.state.instructor };
     this.props.addStudent(student);
     this.props.resetForm();
+    this.context.router.push('/dashboard');
   }
 
   handleChangeInstructor(e) {
@@ -28,7 +29,7 @@ class NewStudent extends Component {
 
   render() {
     const instructorOptions = this.props.instructors.map(item => item.name).map(item => (<option value={item} key={item}> {item} </option>));
-    const { fields: { name, email, instructor } } = this.props;
+    const { fields: { name, email } } = this.props;
     return (
       <div className="row add-student-form">
         <form className="col s12" onSubmit={this.onSubmit} >
@@ -47,7 +48,7 @@ class NewStudent extends Component {
               <label htmlFor="icon_telephone">Email</label>
             </div>
             <div className="input-field col s6 offset-s3">
-              <Input s={12} type="select" label="Choose Instructor" onChange={this.handleChangeInstructor} {...instructor}>
+              <Input s={12} type="select" label="Choose Instructor" onChange={this.handleChangeInstructor} >
                 <option>None</option>
                 { instructorOptions }
               </Input>
@@ -62,6 +63,10 @@ class NewStudent extends Component {
     );
   }
 }
+
+NewStudent.contextTypes = {
+  router: PropTypes.object.isRequired
+};
 
 NewStudent.propTypes = {
   fields: PropTypes.object,
@@ -103,6 +108,6 @@ function mapStateToProps(state) {
 
 export default reduxForm({
   form: 'NewStudent',
-  fields: ['name', 'email', 'instructor'],
+  fields: ['name', 'email'],
   validate
 }, mapStateToProps, { addStudent })(NewStudent);

@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { fetchStudents, fetchInstructors, selectStudent, updateStudent, updateVisibility } from '../../actions';
 
-// import TextInput from '../text-input';
 import Filters from '../filters';
 import Students from '../students';
 import Spinner from '../../helpers/spinner.js';
@@ -28,10 +27,17 @@ class Dashboard extends Component {
     return (
       <div className="row">
         <div className="col s12">
-          <Filters instructors={ this.props.instructors.instructors } updateVisibility={ this.props.updateVisibility } />
+          <Filters
+            instructors={ this.props.instructors.instructors }
+            updateVisibility={ this.props.updateVisibility }
+          />
         </div>
         <div className="col s12">
-          <Students data={ this.props.students } selectStudent={this.props.selectStudent} updateStudent={this.props.updateStudent}/>
+          <Students
+            data={ this.props.students }
+            selectStudent={this.props.selectStudent}
+            updateStudent={this.props.updateStudent}
+          />
         </div>
       </div>
     );
