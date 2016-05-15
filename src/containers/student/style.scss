@@ -37,6 +37,18 @@
   justify-content: space-between;
 }
 
+.info span {
+  margin-top: 5px;
+}
+
 .decision, .datepicker {
   width: 100px;
+}
+
+input.datepicker {
+  margin-left: 10px;
+}
+
+.decision-input {
+  margin-top: -15px;
 }
