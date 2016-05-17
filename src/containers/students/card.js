@@ -4,14 +4,12 @@ import { identity } from 'lodash';
 
 import Progress from '../../helpers/progress.js';
 
-export default ({ student, selectStudent, updateStudent, saveStudentToLocalStorage }) => {
+export default ({ student, selectStudent, updateStudent }) => {
   const message = `mailto:student@email.com?subject=Coaching By Hack Reactor&body=Hello
   -Student Name Here -,%0D%0A%0D%0A Welcome to your Personal Coaching .%0D%0A%0D%0A
   Here will body of the email where we can put whatever we like`;
   const onDetailsClick = () => {
     selectStudent(student);
-    console.log(saveStudentToLocalStorage);
-    saveStudentToLocalStorage(student);
     browserHistory.push('/student');
   };
 

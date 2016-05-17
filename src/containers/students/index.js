@@ -11,7 +11,6 @@ const Table = (props) => (
         selectStudent={props.selectStudent}
         key={student.name}
         updateStudent={props.updateStudent}
-        saveStudentToLocalStorage={props.saveStudentToLocalStorage}
       />
     )}
   </div>
