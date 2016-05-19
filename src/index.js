@@ -16,6 +16,7 @@ import Faq from './containers/faq';
 import Resources from './containers/resources';
 import Login from './containers/login/signin.js';
 import SignUp from './containers/login/signup.js';
+import Results from './containers/results/results.js';
 
 
 const store = storeConfig();
@@ -26,6 +27,7 @@ render(
       <Route path="/" component={App}>
         <IndexRoute component={Login} />
         <Route path="/about" component={About} />
+        <Route path="/results" component={requireAuth(Results)} />
         <Route path="/dashboard" component={requireAuth(Dashboard)} />
         <Route path="/add" component={requireAuth(Add)} />
         <Route path="/student" component={requireAuth(Student)} />
