@@ -4,17 +4,12 @@
 
 ## Table of Contents
 
-1. [Team](#team)
-2. [Usage](#Usage)
-3. [Development](#development)
-4. [Contributing](#contributing)
-5. [Test Data](#test-data)
-6. [DB Schema](#db-schema)
-7. [Server API](#server-api)
+1. [Usage](#Usage)
+2. [Development](#development)
+3. [Test Data](#test-data)
+4. [DB Schema](#db-schema)
+5. [Server API](#server-api)
 
-## Team
-
- to be determined
 
 ## Development
 
@@ -28,9 +23,20 @@ npm install
 
 This will handle both client and server-side dependencies as outlined in [package.json](package.json).
 
+
+Make sure that you have created `secrets.js` file that contains secret for JWT
+and address for the mongoDB instance. Example below:
+
+```sh
+export default {
+  mongo: 'mongodb://localhost/myLocalDatabaseInstance',
+  jwt: 'mysecret'
+};
+```
+
 after installation has completed
 ```sh
-npm run start-dev
+npm start
 ```
 
 then navigate to `localhost:3001/`
@@ -39,29 +45,29 @@ then navigate to `localhost:3001/`
 
 to be determnied
 
-## Contributing
-
-See [CONTRIBUTING.md](CONTRIBUTING.md) for contribution guidelines.
 Make sure you have [Node](https://nodejs.org/en/) installed, and then from within the root directory:
+
+Node 5 or above has to be installed
 
 ## Internal APIs
 On any project there are many internal APIs. For ease of reference, for both the development team and future contributers, they are exhaustively documented here.
 
 ### Test
 
+To run test:
 ```sh
 npm test
 ```
 
-TODO//
-Additionally, this repo contains a dummy-data file that will help you test feel
-and look. To add records to the database just run:
+To run test continiously:
+
 ```sh
-./dummy-data.sh
+npm test:watch
 ```
 
+
 ### DB Schema
-There is one types of objects stored in the database so far: students. To minimize http requests on the server, when retrieved, all references to other objects will be fully populated with complete objects, not just is numbers. The schema are as follows:
+There are two  types of objects stored in the database so far: students and users. To minimize http requests on the server, when retrieved, all references to other objects will be fully populated with complete objects, not just is numbers. The schema are as follows:
 
 ####[User](server/controllers/students/studentsController.js)
 ```javascript
@@ -85,5 +91,9 @@ Most routes follow a `/api/:data_type/:data_identifier` pattern. Note that when 
 GET     api/students                // Get list of students
 POST    api/student                 // Add new student
 DELETE  api/student/:id             // Delete the student
+
+GET     api/users                 // Get list of user
+POST    api/users                 // Add new user
+DELETE  api/users/:id             // Delete the user
 ```
 
