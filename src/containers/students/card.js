@@ -5,7 +5,9 @@ import { identity } from 'lodash';
 import Progress from '../../helpers/progress.js';
 
 export default ({ student, selectStudent, updateStudent }) => {
-const message = `mailto:${student.email}?subject=Coaching By Hack Reactor&body=I'm ${student.instructor}, currently a Hacker-in-Residence at Hack Reactor Remote. I’m contacting you because you’ve enrolled in the Personal Tech Coaching program. Let’s work out a schedule and get started!
+  const message = `mailto:${student.email}?subject=Coaching By Hack Reactor&body=Hey ${student.name}
+.%0D%0A%0D%0A
+I'm ${student.instructor}, currently a Hacker-in-Residence at Hack Reactor Remote. I’m contacting you because you’ve enrolled in the Personal Tech Coaching program. Let’s work out a schedule and get started!
 .%0D%0A%0D%0A
 You can view my calendar and book times for us to meet twice a week using this link.[LINK HERE]. For your reference, we’ll meet for 45–60 minutes twice a week. We are going to use Skype for our sessions and I will contact you at time of your appoitment.
 %0D%0A%0D%0A
