@@ -57,8 +57,8 @@ Thank you and I'm looking forward to working with you!
             <p className="contacted"> Contacted:
               <input type="checkbox" id="contacted" checked={student.contacted} onChange={identity} />
               <label htmlFor="contacted" className="right contacted-label" onClick={onCheckBoxClick}></label> </p>
-            <span className="progress-text">Current progress: {student.level} of 8</span>
-            <Progress className="students-progress-bar" number={student.level} />
+            <span className="progress-text">Current progress: {student.lesson} of 8</span>
+            <Progress className="students-progress-bar" number={student.lesson} />
             <p><a className="waves-effect waves-light btn right details" onClick={onDetailsClick}>Details</a></p>
           </div>
           <div className="card-reveal">
