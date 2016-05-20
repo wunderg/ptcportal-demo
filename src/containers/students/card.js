@@ -51,9 +51,10 @@ Thank you and I'm looking forward to working with you!
             <hr />
             <p className=""> Inverview:<span className="right">{student.interview}</span> </p>
             <p className=""> Decision:<span className="right">{student.decision}</span> </p>
+            <p className=""> Instructor:<span className="right">{student.instructor}</span> </p>
             <p className="contacted"> Contacted:
               <input type="checkbox" id="contacted" checked={student.contacted} onChange={identity} />
-              <label htmlFor="contacted" className="right" onClick={onCheckBoxClick}></label> </p>
+              <label htmlFor="contacted" className="right contacted-label" onClick={onCheckBoxClick}></label> </p>
             <span className="progress-text">Current progress: {student.level} of 8</span>
             <Progress className="students-progress-bar" number={student.level} />
             <p><a className="waves-effect waves-light btn right details" onClick={onDetailsClick}>Details</a></p>

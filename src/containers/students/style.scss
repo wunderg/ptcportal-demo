@@ -10,6 +10,10 @@
   min-height: auto;
 }
 
+.student-card {
+  padding-bottom: 40px !important;
+}
+
 .student .card-content i {
   padding-top: 15px;
 }
@@ -22,8 +26,12 @@
   padding-right: 20px;
 }
 
-.contacted {
+#contacted {
  padding-top: 8px !important;
+}
+
+.contacted-label {
+  margin-top: 7px;
 }
 
 .progress-text {
