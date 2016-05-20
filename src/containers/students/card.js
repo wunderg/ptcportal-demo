@@ -8,12 +8,15 @@ export default ({ student, selectStudent, updateStudent }) => {
   const message = `mailto:student@email.com?subject=Coaching By Hack Reactor&body=Hello
   -Student Name Here -,%0D%0A%0D%0A Welcome to your Personal Coaching .%0D%0A%0D%0A
   Here will body of the email where we can put whatever we like`;
+
   const onDetailsClick = () => {
     selectStudent(student);
     browserHistory.push('/student');
   };
 
-  const onCheckBoxClick = () => {
+  const onCheckBoxClick = (e) => {
+
+    e.preventDefault();
     student.contacted = student.contacted === '' ? 'checked' : '';
     updateStudent(student);
   };
@@ -25,7 +28,6 @@ export default ({ student, selectStudent, updateStudent }) => {
 
   return (
     <div className="student">
-      {/* {console.log(student)} */}
       <div className="card student-card">
           <div className="card-content">
             <span className="card-title activator grey-text text-darken-4" >{student.name}
