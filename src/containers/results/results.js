@@ -1,11 +1,14 @@
 import React, { Component, PropTypes } from 'react';
+import { connect } from 'react-redux';
+import { mainData, getTotal  } from './processData.js';
 import './style.scss';
 
-import Row from './row.js';
-
+import Rows from './rows.js';
 
 export class Results extends Component {
   render() {
+    const total = getTotal(this.props.students);
+    const instructors = mainData(this.props.students);
     return (
       <div className="row">
         <div className="col s12">
@@ -21,12 +24,12 @@ export class Results extends Component {
             </thead>
 
             <tbody>
-              <Row />
-              <tr>
+              {instructors.map((item, index) => <Rows instructor={item} key={index} /> )}
+              <tr className="last-row">
                 <td>Total</td>
-                <td>5</td>
-                <td>10</td>
-                <td>20</td>
+                <td>{total.pending}</td>
+                <td>{total.accepted}</td>
+                <td>{total.will}</td>
               </tr>
             </tbody>
           </table>
@@ -36,4 +39,10 @@ export class Results extends Component {
   }
 }
 
-export default Results;
+function mapStateToProps(state) {
+  return {
+    students: state.slocal.source
+  };
+}
+
+export default connect(mapStateToProps)(Results);
