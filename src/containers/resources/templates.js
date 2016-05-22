@@ -5,7 +5,7 @@ export const Initial = () => (
     <h5>Hey [student]</h5>
 
     <p>
-    I'm [yourName], currently a Hacker-in-Residence at Hack Reactor Remote. I’m contacting you because you’ve enrolled in the Personal Tech Coaching program. Let’s work out a schedule and get started!
+    I'm [yourName], currently a Resident at My school. I’m contacting you because you’ve enrolled in the Personal Tech Coaching program. Let’s work out a schedule and get started!
 
       <br />
       <br />
@@ -23,7 +23,7 @@ export const Initial = () => (
 
       <br />
       <br />
-    If you don't agree to the above, please contact remote.beta.admissions@hackreactor.com to discuss more.
+    If you don't agree to the above, please contact here to discuss more.
       <br />
       <br />
 
@@ -31,12 +31,12 @@ export const Initial = () => (
 
      <br />
      <br />
-     Using my calendar link above please book sessions (2x/week) for the coming week. Then, reply to me here ( [first.last]@hackreactor.com ) if you've got any questions or scheduling concerns.
+     Using my calendar link above please book sessions (2x/week) for the coming week. Then, reply to me here ( [first.last]@here.com ) if you've got any questions or scheduling concerns.
 
 
     <br/>
     <br/>
-Thank you and I'm looking forward to working with you!
+    Thank you and I'm looking forward to working with you!
 
    </p>
         </section>

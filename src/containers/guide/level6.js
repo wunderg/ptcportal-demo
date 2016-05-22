@@ -18,11 +18,6 @@ export default () => (
                 <h5><b>Objectives:</b></h5>
                 <ul className="prompts">
                   <li><i className="fa fa-check green-text text-lighten-2"></i><span> Teach student how to edit each and reduce to give additional functionality to current function</span></li>
-                  <li><i className="fa fa-check green-text text-lighten-2"></i><span> Teach how to pass arguments down the chain by passing them into the callback</span></li>
-                  <li><i className="fa fa-check green-text text-lighten-2"></i><span> Teach how to extract those arguments in the following functions</span></li>
-                  <li><i className="fa fa-check green-text text-lighten-2"></i><span> Refer to reduce implementation</span></li>
-                  <li><i className="fa fa-check green-text text-lighten-2"></i><span> Help student to create example</span></li>
-                  <li><i className="fa fa-check green-text text-lighten-2"></i><span> Help student to walk thru every iteration - STEP by STEP</span></li>
                 </ul>
               </div>
               <div className="">
@@ -30,8 +25,6 @@ export default () => (
               </div>
               <ul className="prompts">
                 <li><i className="fa fa-check green-text text-lighten-2"></i><span> Create function objectProps</span></li>
-                <li><i className="fa fa-check green-text text-lighten-2"></i><span> ObjectProps should accept collection</span></li>
-                <li><i className="fa fa-check green-text text-lighten-2"></i><span> ObjectProps should use reduce and empty array as a startingValue</span></li>
               </ul>
             </div>
             <div className="code">
@@ -41,12 +34,6 @@ export default () => (
             <div className="code">
               <h5><b>Example:</b></h5>
               <Highlight props={objectPropsExample} />
-            </div>
-            <div className="code">
-              <h5><b>Solution:</b></h5>
-              <Highlight props={objectPropsSolution} />
-              <Highlight props={eachModified} />
-              <Highlight props={reduceModified} />
             </div>
           </div>
         </li>
@@ -60,8 +47,6 @@ export default () => (
                 <h5><b>Objectives:</b></h5>
                 <ul className="prompts">
                   <li><i className="fa fa-check green-text text-lighten-2"></i><span> Teach student how to edit each and reduce to give additional functionality</span></li>
-                  <li><i className="fa fa-check green-text text-lighten-2"></i><span> Teach how to pass arguments down the line by passing them into the callback</span></li>
-                  <li><i className="fa fa-check green-text text-lighten-2"></i><span> Teach how to extract those arguments in the following functions</span></li>
                 </ul>
               </div>
               <div className="">
@@ -69,10 +54,6 @@ export default () => (
               </div>
               <ul className="prompts">
                 <li><i className="fa fa-check green-text text-lighten-2"></i><span> Create function indexOf</span></li>
-                <li><i className="fa fa-check green-text text-lighten-2"></i><span> IndexOf should accept collection and target</span></li>
-                <li><i className="fa fa-check green-text text-lighten-2"></i><span> IndexOf should use reduce and no startingValue</span></li>
-                <li><i className="fa fa-check green-text text-lighten-2"></i><span> Explain that KEY in reduce would represent both KEY for object and INDEX for array</span></li>
-                <li><i className="fa fa-check green-text text-lighten-2"></i><span> Make sure that Each can operate on strings by adding || - (OR)</span></li>
               </ul>
             </div>
             <div className="code">
@@ -82,12 +63,6 @@ export default () => (
             <div className="code">
               <h5><b>Example:</b></h5>
               <Highlight props={indexOfExample} />
-            </div>
-            <div className="code">
-              <h5><b>Solution:</b></h5>
-              <Highlight props={eachModifiedIndex} />
-              <Highlight props={reduceModifiedIndex} />
-              <Highlight props={indexOfSolution} />
             </div>
           </div>
         </li>
