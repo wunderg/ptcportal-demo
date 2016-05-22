@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/wunderg/PTC.svg?branch=master)](https://travis-ci.org/wunderg/PTC)
+[![Build Status](https://travis-ci.org/wunderg/ptcportal-demo.svg?branch=master)](https://travis-ci.org/wunderg/ptcportal-demo.svg)
 
 # PTC Portal
 
